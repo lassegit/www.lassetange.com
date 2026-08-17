@@ -1,0 +1,693 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Lasse Tange",
+    "label": "Tech Lead & Full-Stack Developer",
+    "email": "contact@lassetange.com",
+    "url": "https://www.lassetange.com",
+    "summary": "Full-stack developer and tech lead with 15+ years planning, architecting and building web and mobile products. Most of my career has been spent in international startups and scale-ups in Berlin and Copenhagen — leading teams, owning architecture decisions, and helping early-stage companies grow into successful businesses. Since 2023 I have built and launched four AI products of my own, including the profitable SQLAI.ai (150,000+ users, 25M+ queries generated). Before that, a decade of client work across automotive marketplaces, crypto banking, e-learning, delivery apps and Danish public-sector platforms — from front-end architecture and design systems to APIs, search and geospatial data. I care about strong product thinking, a good eye for UX/UI, and code that stays simple, testable and maintainable. I lead with results over processes and personal responsibility over micro-management.",
+    "location": {
+      "city": "Copenhagen",
+      "countryCode": "DK"
+    },
+    "profiles": []
+  },
+  "work": [
+    {
+      "name": "ViewDiff.ai",
+      "position": "Founder & Full-Stack Developer",
+      "url": "https://viewdiff.ai",
+      "startDate": "2025",
+      "summary": "Solo-built AI-assisted diff viewer for professional writers and editorial workflows. Shows original and AI-modified text side by side so writers can review and accept changes deliberately instead of trusting a black box. Built the diff engine, the generation flow and the subscription tiers. Key technologies: TypeScript, React, Node.js, LLM APIs, Stripe.",
+      "highlights": [
+        "Defined the product concept and scope for an AI-assisted diff viewer aimed at professional writers",
+        "Designed and built the text diffing engine and the side-by-side review interface",
+        "Integrated LLM APIs for the text generation and rewriting flow",
+        "Implemented free tier, paid plans and subscription billing",
+        "Operated the product in production, including hosting, deployment and monitoring"
+      ],
+      "keywords": [
+        "Product Design",
+        "Frontend",
+        "Backend",
+        "LLM APIs",
+        "Prompt Engineering",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "REST API",
+        "Stripe",
+        "SaaS",
+        "Cloud",
+        "Git"
+      ]
+    },
+    {
+      "name": "WebsiteFeedback.ai",
+      "position": "Founder & Full-Stack Developer",
+      "url": "https://websitefeedback.ai",
+      "startDate": "2024",
+      "summary": "Solo-built AI reviewer for landing pages and marketing sites. Analyses a page for clarity, positioning and UX and returns structured, actionable feedback in seconds. Covers page ingestion, the evaluation prompting pipeline and the reporting interface. Key technologies: TypeScript, React, Node.js, LLM APIs, Stripe.",
+      "highlights": [
+        "Built an AI reviewer that evaluates landing pages for clarity, positioning and UX",
+        "Implemented page ingestion and content extraction",
+        "Designed the evaluation prompting pipeline and the structured output format",
+        "Built the reporting interface and feedback presentation",
+        "Implemented billing and subscription handling"
+      ],
+      "keywords": [
+        "Product Design",
+        "Digital Strategy",
+        "Conversion Optimisation",
+        "UX",
+        "Frontend",
+        "Backend",
+        "LLM APIs",
+        "Prompt Engineering",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "REST API",
+        "Stripe",
+        "Cloud",
+        "Git"
+      ]
+    },
+    {
+      "name": "Chartmaker.io",
+      "position": "Founder & Full-Stack Developer",
+      "url": "https://chartmaker.io",
+      "startDate": "2024",
+      "summary": "Solo-built AI charting tool. Accepts data in any shape, reformats it automatically, and generates interactive charts from a natural-language description. Built the data-normalisation layer, chart rendering and customisation, and image/embed export. Key technologies: TypeScript, React, Node.js, LLM APIs, charting libraries, Stripe.",
+      "highlights": [
+        "Built an AI charting tool that turns arbitrary data into interactive, customisable charts",
+        "Implemented the data-normalisation layer that reformats messy input automatically",
+        "Built natural-language chart generation on top of LLM APIs",
+        "Implemented chart rendering, customisation, image export and embedding",
+        "Owned hosting, deployment and billing"
+      ],
+      "keywords": [
+        "Data Visualisation",
+        "Data Analytics",
+        "Product Design",
+        "Frontend",
+        "Backend",
+        "LLM APIs",
+        "Prompt Engineering",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Charting Libraries",
+        "Stripe",
+        "Cloud",
+        "Git"
+      ]
+    },
+    {
+      "name": "SQLAI.ai",
+      "position": "Founder & Full-Stack Developer",
+      "url": "https://www.sqlai.ai",
+      "startDate": "2023-01",
+      "summary": "Founded, built and operate a profitable AI-powered SQL workspace for generating, explaining, optimizing and validating SQL without losing control. Grown from first paying customer to 150,000+ users and 25M+ queries generated across 30+ database engines, including PostgreSQL, MySQL, Snowflake, BigQuery and MongoDB. Sole engineer and operator across the full stack: text-to-SQL generation, query optimizer, validator and cross-engine converter; schema import and live database connections handling large schemas (900+ tables); schema-aware autosuggest, a VS Code-style editor and query diffing. Applied AI work spans RAG, embeddings, vector search and prompt design — always aimed at solving real business problems rather than producing demos. Also own the commercial side: Stripe and Lemon Squeezy billing, subscription lifecycle, SEO and paid acquisition. Key technologies: TypeScript, React, Next.js, Astro, Node.js, PostgreSQL, LLM APIs, RAG/vector search, Vercel, Cloudflare, DigitalOcean, Stripe, Lemon Squeezy.",
+      "highlights": [
+        "Founded and built a profitable AI SQL workspace as sole engineer and operator",
+        "Designed and implemented text-to-SQL generation, query optimizer, validator, explainer and cross-engine converter",
+        "Built schema import and live database connections handling large schemas of 900+ tables",
+        "Implemented RAG, embeddings and vector search for schema-aware generation and autosuggest",
+        "Built a VS Code-style SQL editor with query diff viewing",
+        "Added and maintained support for 30+ database engines, including PostgreSQL, MySQL, Snowflake, BigQuery and MongoDB",
+        "Owned architecture, infrastructure and deployment, scaling the product to 150,000+ users and 25M+ generated queries",
+        "Ran the commercial side: Stripe and Lemon Squeezy billing, subscription lifecycle, pricing, SEO and paid acquisition"
+      ],
+      "keywords": [
+        "Business Management",
+        "Product Design",
+        "Digital Strategy",
+        "Backend",
+        "Frontend",
+        "Database Development",
+        "Database Design",
+        "Data Modelling",
+        "PostgreSQL",
+        "ORM",
+        "LLM APIs",
+        "Vector Search (RAG)",
+        "Prompt Engineering",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "REST API",
+        "Stripe",
+        "Cloud",
+        "SEO",
+        "Data Analytics"
+      ]
+    },
+    {
+      "name": "Alpakas (alpakas.app)",
+      "position": "Lead Mobile & Web Developer",
+      "location": "Berlin, Germany",
+      "startDate": "2022-02",
+      "endDate": "2022-05",
+      "summary": "Architected and developed the native mobile and web apps for a Berlin delivery startup, with end-to-end responsibility for design, structure and technical implementation. Established the shared codebase, patterns and conventions the in-house team continued to build on. Key technologies: React Native, React, TypeScript, GraphQL.",
+      "highlights": [
+        "Architected the native mobile and web applications for a delivery startup",
+        "Took end-to-end responsibility for design, structure and technical implementation",
+        "Built shared components and business logic across React Native and React",
+        "Integrated GraphQL APIs",
+        "Established codebase conventions, patterns and tooling for the in-house team to build on"
+      ],
+      "keywords": [
+        "Software Architecture",
+        "Mobile Development",
+        "React Native",
+        "React",
+        "TypeScript",
+        "GraphQL",
+        "Frontend",
+        "Product Design",
+        "Cloud",
+        "Git"
+      ]
+    },
+    {
+      "name": "brandTURBO",
+      "position": "Contract Developer",
+      "location": "Berlin, Germany",
+      "startDate": "2021-11",
+      "endDate": "2021-12",
+      "summary": "Short, focused development engagement for a Berlin-based company.",
+      "highlights": ["Delivered a short, focused development engagement to a fixed scope"],
+      "keywords": ["Frontend", "JavaScript", "Git"]
+    },
+    {
+      "name": "Nuri (formerly Bitwala)",
+      "position": "React Native Developer",
+      "location": "Berlin, Germany",
+      "startDate": "2021-01",
+      "endDate": "2021-07",
+      "summary": "Developed the native mobile app for a Berlin crypto bank, focused on secure and user-friendly access to digital banking and cryptocurrency services. Worked in a regulated fintech environment with high standards for security, correctness and release quality. Engaged via UPPER Technologies GmbH. Key technologies: React Native, TypeScript, GraphQL.",
+      "highlights": [
+        "Developed the native mobile app for a Berlin crypto bank",
+        "Built secure, user-friendly flows for digital banking and cryptocurrency services",
+        "Worked against GraphQL APIs in a TypeScript React Native codebase",
+        "Contributed to release quality and testing in a regulated fintech environment",
+        "Collaborated in a cross-functional product team"
+      ],
+      "keywords": ["React Native", "TypeScript", "GraphQL", "Mobile Development", "Frontend", "Fintech", "Security", "Cloud", "Git"]
+    },
+    {
+      "name": "hey.car",
+      "position": "Developer & Tech Lead",
+      "location": "Berlin, Germany",
+      "startDate": "2019-05",
+      "endDate": "2020-11",
+      "summary": "Long-running engagement on Germany's first complete platform for end-to-end digital car purchases, backed by Volkswagen Financial Services and Daimler Mobility. Started as a frontend developer on the core marketplace and grew into technical leadership — owning architecture decisions, reviewing and mentoring, and driving frontend standards across teams. Moved onto the new direct-to-consumer (D2C) stream in late 2020 to help launch online car sales. Worked in a server-side-rendered React codebase at scale, with performance, SEO and conversion as first-class concerns, supported by A/B testing and feature flags. Engaged via MVPF Global Talent Solutions GmbH. Key technologies: SSR React, Redux, CSS-in-JS, TypeScript, Kotlin REST APIs.",
+      "highlights": [
+        "Developed features on the core marketplace of Germany's first end-to-end digital car purchase platform",
+        "Grew into a tech lead role, owning architecture decisions and driving frontend standards across teams",
+        "Reviewed code and mentored other developers",
+        "Worked in a large server-side-rendered React codebase with performance, SEO and conversion as first-class concerns",
+        "Ran A/B tests and managed feature flags for controlled rollouts",
+        "Integrated Kotlin REST APIs",
+        "Moved onto the direct-to-consumer (D2C) stream in late 2020 to help launch online car sales"
+      ],
+      "keywords": [
+        "Tech Leadership",
+        "Software Architecture",
+        "Mentoring",
+        "Frontend",
+        "React",
+        "SSR",
+        "Redux",
+        "CSS-in-JS",
+        "TypeScript",
+        "REST API",
+        "Kotlin",
+        "A/B Testing",
+        "Feature Flags",
+        "Performance Optimisation",
+        "SEO",
+        "E-commerce",
+        "Cloud",
+        "Git"
+      ]
+    },
+    {
+      "name": "Wonderwerk",
+      "position": "Frontend Developer",
+      "location": "Berlin, Germany",
+      "startDate": "2018-08",
+      "endDate": "2018-12",
+      "summary": "Built a React application for a Berlin e-learning startup, working test-first in a small product team. Full-time on-site engagement covering feature development, component architecture and test coverage. Key technologies: React, JavaScript, TDD (Jest, Testing Library).",
+      "highlights": [
+        "Built a React application for a Berlin e-learning startup",
+        "Worked test-first (TDD) using Jest and Testing Library",
+        "Designed component architecture and maintained test coverage",
+        "Delivered features full-time on-site in a small product team"
+      ],
+      "keywords": ["React", "JavaScript", "Test-Driven Development", "Jest", "Testing Library", "Frontend", "E-learning", "Git"]
+    },
+    {
+      "name": "TOMCode.com",
+      "position": "Contract Full-Stack Developer",
+      "location": "Stuttgart, Germany",
+      "startDate": "2018-08",
+      "endDate": "2018-08",
+      "summary": "Intensive delivery sprint on a web application, engaged through the Stuttgart-based developer network Coder Society.",
+      "highlights": [
+        "Delivered an intensive development sprint on a web application",
+        "Worked to a fixed, short deadline via the Coder Society developer network"
+      ],
+      "keywords": ["Frontend", "Backend", "JavaScript", "Git"]
+    },
+    {
+      "name": "Danish Ministry of Higher Education and Science (UFM)",
+      "position": "Freelance Full-Stack Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2016-05",
+      "endDate": "2018-04",
+      "summary": "The longest-running of my Danish public-sector engagements, delivered via the agency Headnet ApS. Rebuilt and redesigned ufm.dk as a fixed-price project, then designed and built the ministry's new intranet across 2017-2018. Ongoing responsibility for frontend architecture, portlet and template work, EU-portal support, accessibility and cross-browser compatibility on a high-traffic government site. Key technologies: React, Redux, Flask, Python, MySQL.",
+      "highlights": [
+        "Rebuilt and redesigned ufm.dk as a fixed-price project",
+        "Designed and built the ministry's new intranet across 2017-2018",
+        "Owned frontend architecture, portlet and template development",
+        "Delivered accessibility and cross-browser compatibility on a high-traffic public site",
+        "Provided development support for the ministry's EU portal",
+        "Handled ongoing ticket-based maintenance and bug fixing over a two-year period"
+      ],
+      "keywords": [
+        "Frontend",
+        "React",
+        "Redux",
+        "Flask",
+        "Python",
+        "MySQL",
+        "Web Architecture",
+        "Accessibility",
+        "Cross-browser Compatibility",
+        "Public Sector",
+        "Digital Strategy",
+        "Git"
+      ]
+    },
+    {
+      "name": "Autobranchen",
+      "position": "Freelance Front-End Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2016-06",
+      "endDate": "2017-11",
+      "summary": "Built the member portal for a Danish automotive trade association, via Headnet ApS: member profiles and bulk member import, find-a-member search, role-based login and access control, news and event listings with custom sorting, calendar views and a mega-menu navigation rebuild. Key technologies: WordPress, PHP, JavaScript, MySQL.",
+      "highlights": [
+        "Built the member portal for a Danish automotive trade association",
+        "Implemented member profiles and bulk member import",
+        "Built find-a-member search",
+        "Implemented role-based login and access control for different user types",
+        "Built news and event listings with custom sorting logic and calendar views",
+        "Rebuilt the mega-menu navigation"
+      ],
+      "keywords": [
+        "WordPress",
+        "PHP",
+        "JavaScript",
+        "MySQL",
+        "Frontend",
+        "Backend",
+        "Access Control",
+        "Search",
+        "Membership Portals",
+        "Database Design",
+        "Git"
+      ]
+    },
+    {
+      "name": "Integrationsviden.dk",
+      "position": "Freelance Front-End Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2017-09",
+      "endDate": "2017-09",
+      "summary": "Full theming and front-end build of a Danish knowledge portal on integration research, delivered as a fixed-scope project via Headnet ApS.",
+      "highlights": [
+        "Delivered full theming and the front-end build of a Danish knowledge portal on integration research",
+        "Delivered the project to fixed scope and budget"
+      ],
+      "keywords": ["Frontend", "Theming", "PHP", "JavaScript", "Responsive Design", "Public Sector"]
+    },
+    {
+      "name": "Danish Evaluation Institute (EVA / NB-ECEC)",
+      "position": "Freelance Front-End Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2017-08",
+      "endDate": "2017-08",
+      "summary": "Designed and built the front end for NB-ECEC, the Nordic research database on early childhood education and care, as a fixed-price delivery via Headnet ApS. Included the multilingual translation module and editorial interface.",
+      "highlights": [
+        "Designed and built the front end for the Nordic research database on early childhood education and care",
+        "Implemented the multilingual translation module",
+        "Built the editorial interface",
+        "Delivered the project as a fixed-price engagement"
+      ],
+      "keywords": [
+        "Frontend",
+        "Multilingual / i18n",
+        "PHP",
+        "JavaScript",
+        "Content Management",
+        "Research Databases",
+        "Responsive Design",
+        "Public Sector"
+      ]
+    },
+    {
+      "name": "Socialstyrelsen (Danish National Board of Social Services)",
+      "position": "Freelance Front-End Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2017-06",
+      "endDate": "2017-08",
+      "summary": "Built the front end for the agency's intranet as a fixed-price project via Headnet ApS, plus follow-up work on its practitioner forum.",
+      "highlights": [
+        "Built the front end for the agency's intranet as a fixed-price project",
+        "Delivered follow-up development on its practitioner forum"
+      ],
+      "keywords": ["Frontend", "Intranet", "PHP", "JavaScript", "Responsive Design", "Public Sector"]
+    },
+    {
+      "name": "Forsk.dk",
+      "position": "Lead Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2016-12",
+      "endDate": "2016-12",
+      "summary": "Sole developer on the forsk.dk web shop, delivered end to end as a fixed-price project via Headnet ApS.",
+      "highlights": [
+        "Acted as sole developer on the forsk.dk web shop",
+        "Delivered the project end to end — architecture, implementation and launch — as a fixed-price engagement"
+      ],
+      "keywords": ["E-commerce", "Frontend", "Backend", "PHP", "JavaScript", "MySQL", "Database Design", "Project Delivery"]
+    },
+    {
+      "name": "Fritz Schur Group",
+      "position": "Freelance Full-Stack Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2016-08",
+      "endDate": "2016-12",
+      "summary": "Built the corporate web platform for a Danish industrial group, via Headnet ApS: multisite and multilingual configuration, page builder modules, product and employee content types, supplier and datasheet templates, search, breadcrumbs and newsletter signup — plus the mobile ordering flow for the accu-chek.guide product site. Key technologies: WordPress multisite, PHP, JavaScript.",
+      "highlights": [
+        "Built the corporate web platform for a Danish industrial group",
+        "Configured WordPress multisite and the multilingual setup",
+        "Built page-builder modules and content types for products and employees",
+        "Built supplier and datasheet templates",
+        "Implemented search, breadcrumb navigation and newsletter signup",
+        "Built the mobile ordering flow for the accu-chek.guide product site"
+      ],
+      "keywords": [
+        "WordPress Multisite",
+        "PHP",
+        "JavaScript",
+        "Multilingual / i18n",
+        "Content Modelling",
+        "Frontend",
+        "Backend",
+        "Responsive Design",
+        "Git"
+      ]
+    },
+    {
+      "name": "Danish Environmental Board of Appeal (Natur- og Miljøklagenævnet)",
+      "position": "Lead Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2015-12",
+      "endDate": "2015-12",
+      "summary": "Sole developer on nmknafgoerelser.dk, the board's public database of appeal decisions, delivered end to end as a fixed-price project via Headnet ApS. Structured search over a large decisions corpus with a containerised deployment. Key technologies: Backbone, Flask, Python, Elasticsearch, Docker.",
+      "highlights": [
+        "Acted as sole developer on the board's public database of appeal decisions",
+        "Built structured search over a large corpus of decisions using Elasticsearch",
+        "Implemented the front end in Backbone against a Flask backend",
+        "Set up containerised deployment with Docker",
+        "Delivered the project end to end as a fixed-price engagement"
+      ],
+      "keywords": [
+        "Backbone",
+        "Flask",
+        "Python",
+        "Elasticsearch",
+        "Docker",
+        "Search",
+        "Backend",
+        "Frontend",
+        "Data Modelling",
+        "Cloud",
+        "Public Sector",
+        "Project Delivery"
+      ]
+    },
+    {
+      "name": "Fredninger.dk (Danish nature conservation)",
+      "position": "Freelance Front-End Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2014-12",
+      "endDate": "2015-11",
+      "summary": "Principal front-end developer on an interactive public map platform for Denmark's protected nature areas, via Headnet ApS. Built the map and geodata integration, geospatial and typeahead search, show-my-location and route display, mobile map UX, embeddable map widgets, print output and social sharing. The single largest engagement of the Headnet period, taken from theme skeleton through launch, optimisation and cross-browser hardening. Key technologies: JavaScript, CartoDB/SQL geodata, Drupal, PHP, responsive CSS.",
+      "highlights": [
+        "Acted as principal front-end developer on an interactive public map platform for Denmark's protected nature areas",
+        "Built the map and geodata integration using CartoDB and SQL",
+        "Implemented geospatial search and typeahead autocomplete",
+        "Built show-my-location and route display features",
+        "Optimised the map experience for mobile and touch devices",
+        "Built embeddable map widgets for use on third-party sites",
+        "Implemented print output and social sharing",
+        "Carried the project from theme skeleton through launch, optimisation and cross-browser hardening"
+      ],
+      "keywords": [
+        "JavaScript",
+        "Geodata / GIS",
+        "CartoDB",
+        "SQL",
+        "Drupal",
+        "PHP",
+        "Search",
+        "Frontend",
+        "Responsive Design",
+        "Cross-browser Compatibility",
+        "Performance Optimisation",
+        "Public Sector"
+      ]
+    },
+    {
+      "name": "Bolighed.dk",
+      "position": "Freelance Full-Stack Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2015-04",
+      "endDate": "2015-09",
+      "summary": "Front-end and feature development for a Danish property marketplace, via Headnet ApS: the BoligCV tenant profile editor, SMS verification flow, map polygon search and ongoing frontend work. Key technologies: JavaScript, PHP, MySQL, map/geodata APIs.",
+      "highlights": [
+        "Built the BoligCV tenant profile editor",
+        "Implemented the SMS verification flow",
+        "Built polygon-based map search",
+        "Delivered ongoing front-end features and fixes"
+      ],
+      "keywords": [
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "Map / Geodata APIs",
+        "Frontend",
+        "Backend",
+        "PropTech",
+        "Forms & Validation",
+        "Database Development"
+      ]
+    },
+    {
+      "name": "FEE.Global",
+      "position": "Freelance Full-Stack Developer",
+      "startDate": "2015-02",
+      "endDate": "2015-09",
+      "summary": "Built a Podio API integration and CartoDB mapping layer for an international NGO federation, via Headnet ApS — including data import and sync scripts, a member directory across sub-sites, test deployments and technical documentation. Key technologies: JavaScript, PHP, Podio API, CartoDB.",
+      "highlights": [
+        "Built a Podio API integration for an international NGO federation",
+        "Built a CartoDB mapping layer on top of the federation's member data",
+        "Wrote data import and synchronisation scripts",
+        "Built a member directory spanning multiple sub-sites",
+        "Ran test deployments and wrote technical documentation"
+      ],
+      "keywords": [
+        "REST API",
+        "Podio API",
+        "CartoDB",
+        "System Integration",
+        "Data Sync",
+        "Geodata",
+        "JavaScript",
+        "PHP",
+        "Backend",
+        "Technical Documentation"
+      ]
+    },
+    {
+      "name": "Akademikernes A-kasse",
+      "position": "Freelance Front-End Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2013-06",
+      "endDate": "2015-05",
+      "summary": "Multi-year front-end engagement for one of Denmark's largest unemployment insurance funds, via Headnet ApS. Built the Akademikernes job statistics web app as a fixed-price delivery, integrated live chat, set up analytics and A/B testing, and produced the 2013 and 2014 interactive annual report sites. Key technologies: JavaScript, Drupal, PHP, analytics/AB-testing tooling.",
+      "highlights": [
+        "Built the Akademikernes job statistics web app as a fixed-price delivery",
+        "Produced the interactive annual report sites for 2013 and 2014",
+        "Integrated live chat into the member-facing site",
+        "Set up analytics tracking and A/B testing",
+        "Delivered ongoing front-end features and fixes across a two-year engagement"
+      ],
+      "keywords": [
+        "JavaScript",
+        "Drupal",
+        "PHP",
+        "Data Visualisation",
+        "Data Analytics",
+        "A/B Testing",
+        "Frontend",
+        "Responsive Design",
+        "Cross-browser Compatibility"
+      ]
+    },
+    {
+      "name": "Aarhus School of Architecture",
+      "position": "Freelance Front-End Developer",
+      "location": "Aarhus, Denmark",
+      "startDate": "2014-11",
+      "endDate": "2015-02",
+      "summary": "Built the front end for the school's advanced research portal and its Pure research-database search interface, via Headnet ApS — including result listings, person profiles, faceted search behaviour and mobile search UX. Key technologies: JavaScript, Drupal, PHP.",
+      "highlights": [
+        "Built the front end for the school's advanced research portal",
+        "Built the search interface for the Pure research database",
+        "Implemented result listings, person profiles and faceted search behaviour",
+        "Optimised the search experience for mobile"
+      ],
+      "keywords": ["JavaScript", "Drupal", "PHP", "Search UI", "Faceted Search", "Frontend", "Responsive Design", "Higher Education"]
+    },
+    {
+      "name": "The National Museum of Denmark",
+      "position": "Freelance Front-End Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2014-10",
+      "endDate": "2014-10",
+      "summary": "Front-end work on the museum's online collections browsing experience, via Headnet ApS — media slider, infinite scroll and full-screen slideshow presentation, tuned for mobile. Key technologies: Angular, Express, Elasticsearch.",
+      "highlights": [
+        "Built the media slider for the museum's online collections",
+        "Implemented infinite scroll for collection browsing",
+        "Built full-screen slideshow presentation",
+        "Tuned the browsing experience for mobile"
+      ],
+      "keywords": ["Angular", "Express", "Elasticsearch", "JavaScript", "Frontend", "Responsive Design", "Search", "Cultural Heritage"]
+    },
+    {
+      "name": "Sammen om Motion",
+      "position": "Freelance Full-Stack Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2013-04",
+      "endDate": "2014-06",
+      "summary": "Long-running build of a Danish community platform for group exercise, via Headnet ApS. Delivered the team and group system with role-based coordinator (tovholder) permissions, member galleries, shared calendar, comment threads, SMS and email notification preferences, signup and contact forms, plus the full responsive and cross-browser layer and production rollout. Key technologies: Drupal (Organic Groups, Views, Panels, Features), PHP, JavaScript, responsive CSS.",
+      "highlights": [
+        "Built a Danish community platform for group exercise",
+        "Implemented the team and group system with role-based coordinator (tovholder) permissions",
+        "Built member galleries, a shared calendar and comment threads",
+        "Implemented SMS and email notification preferences",
+        "Built signup and contact forms",
+        "Delivered the full responsive and cross-browser layer",
+        "Handled environment configuration and rollout to production"
+      ],
+      "keywords": [
+        "Drupal",
+        "Organic Groups",
+        "PHP",
+        "JavaScript",
+        "Backend",
+        "Frontend",
+        "Access Control",
+        "Community Platforms",
+        "Responsive Design",
+        "Cross-browser Compatibility",
+        "Database Development"
+      ]
+    },
+    {
+      "name": "Cykelsuperstier (Copenhagen Cycle Superhighways)",
+      "position": "Freelance Front-End Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2013-09",
+      "endDate": "2013-10",
+      "summary": "Front-end and integration work on the cycle route platform for the Greater Copenhagen cycle superhighway network, via Headnet ApS — integrating the ibikecph route maps and service-station data with the Drupal backend, route description display and mobile/tablet optimisation. Key technologies: JavaScript, Drupal, PHP, mapping APIs.",
+      "highlights": [
+        "Integrated the ibikecph route maps with the Drupal backend",
+        "Integrated service-station and route data into the platform",
+        "Built route description display",
+        "Optimised the map experience for mobile and tablet"
+      ],
+      "keywords": [
+        "JavaScript",
+        "Drupal",
+        "PHP",
+        "Mapping APIs",
+        "Geodata",
+        "System Integration",
+        "Frontend",
+        "Responsive Design",
+        "Public Sector"
+      ]
+    },
+    {
+      "name": "Additional clients via Headnet ApS",
+      "position": "Freelance Developer",
+      "location": "Copenhagen, Denmark",
+      "startDate": "2013",
+      "endDate": "2018",
+      "summary": "Shorter engagements and maintenance work across the same period: Socialministeriet, Mødrehjælpen (analytics), Hans Buch & Co, XO Shipping, V.DK, AT Work, Tommy V.C, and a commercial SiteAttention WordPress plugin delivered as a fixed-price project.",
+      "highlights": [
+        "Delivered shorter feature, maintenance and analytics engagements across a range of Danish clients",
+        "Built and released a commercial SiteAttention plugin for WordPress as a fixed-price project",
+        "Set up analytics goal tracking and reporting",
+        "Provided ongoing bug fixing and cross-browser support"
+      ],
+      "keywords": ["WordPress", "Plugin Development", "PHP", "JavaScript", "Drupal", "Data Analytics", "Maintenance & Support", "Frontend"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "keywords": ["React", "React Native", "Next.js", "Astro", "TypeScript", "Redux", "Zustand", "Tailwind CSS", "SSR/SSG", "CSS-in-JS"]
+    },
+    {
+      "name": "Backend & Data",
+      "keywords": ["Node.js", "REST APIs", "GraphQL", "PostgreSQL", "MySQL", "Redis", "Prisma", "Drizzle", "Elasticsearch", "Stripe"]
+    },
+    {
+      "name": "AI",
+      "keywords": ["LLM APIs", "RAG", "Embeddings", "Vector search", "Prompt engineering", "AI-assisted development"]
+    },
+    {
+      "name": "Programming languages",
+      "keywords": ["TypeScript", "JavaScript", "Python", "SQL", "PHP"]
+    },
+    {
+      "name": "DevOps & Tooling",
+      "keywords": ["Docker", "GitHub Actions", "AWS", "Cloudflare", "Vercel", "Vite", "Jest", "Testing Library", "Playwright"]
+    },
+    {
+      "name": "Practices",
+      "keywords": ["Test-driven development", "Domain-driven design", "A/B testing", "Feature flags", "Technical leadership"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Danish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "German",
+      "fluency": "Full professional proficiency"
+    },
+    {
+      "language": "English",
+      "fluency": "Full professional proficiency"
+    }
+  ]
+}

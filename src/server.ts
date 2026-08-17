@@ -29,7 +29,7 @@ server.use(csrf({ origin: (origin, c) => origin === publicUrl(c).origin || ALLOW
 server.use(trimTrailingSlash({ alwaysRedirect: true }));
 
 /** Old paths that should keep working. One place to add to, rather than a handler each. */
-const REDIRECTS: Record<string, string> = { '/home': '/' };
+const REDIRECTS: Record<string, string> = {};
 
 for (const [from, to] of Object.entries(REDIRECTS)) {
   server.get(from, (c) => c.redirect(to, 301));
