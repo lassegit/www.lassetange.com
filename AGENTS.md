@@ -30,6 +30,10 @@ Browser defaults where they work: semantic elements, real headings, underlined l
 except the CV's print button. The measure is capped near 70 characters and the palette is neutral
 plus one blue.
 
+Below `sm` the header's tab strip collapses into a burger menu, and that rule still holds: the menu is
+a native `<details>` disclosure whose open state the browser owns and announces. Reach for the same
+before reaching for a script.
+
 Styling is Tailwind utilities in the markup. `src/styles.css` holds only the `@theme` block those
 utilities resolve against — `canvas`, `surface`, `ink`, `muted`, `line`, `line-strong`, `accent`,
 plus `text-display`, `text-heading` and `max-w-shell`. Use those names, not `zinc-800` or `blue-700`;

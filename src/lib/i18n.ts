@@ -80,6 +80,8 @@ export interface Dictionary {
 
   skipToContent: string;
   sections: string;
+  /** The burger button's accessible name, below `sm` where the tab strip becomes a menu. */
+  menu: string;
   contact: string;
   homeLabel: string;
 
@@ -129,6 +131,7 @@ const da: Dictionary = {
 
   skipToContent: 'Gå til indhold',
   sections: 'Sektioner',
+  menu: 'Menu',
   contact: 'Kontakt',
   homeLabel: 'Forside',
 
@@ -181,6 +184,7 @@ const en: Dictionary = {
 
   skipToContent: 'Skip to content',
   sections: 'Sections',
+  menu: 'Menu',
   contact: 'Contact',
   homeLabel: 'Home',
 
@@ -233,6 +237,7 @@ const de: Dictionary = {
 
   skipToContent: 'Zum Inhalt springen',
   sections: 'Bereiche',
+  menu: 'Menü',
   contact: 'Kontakt',
   homeLabel: 'Startseite',
 
