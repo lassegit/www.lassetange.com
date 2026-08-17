@@ -7,11 +7,11 @@ Fire produkter jeg har taget hele vejen selv: idé, arkitektur, UX, drift, marke
 
 ## SQLAI.ai {#sqlai}
 
-### AI-drevet SQL-arbejdsflade
+### AI-drevet SQL-multiværktøj
 
-En AI-drevet SQL-arbejdsflade til at generere, forklare, optimere og validere SQL uden at give slip på kontrollen. Produktet er vokset fra den første betalende kunde til over **150.000 brugere** og **25 millioner genererede forespørgsler** på tværs af **30+ databasemotorer**, heriblandt PostgreSQL, MySQL, Snowflake, BigQuery og MongoDB.
+Et AI-drevet SQL-multiværktøj til at generere, forklare, optimere og validere SQL uden at give slip på kontrollen. Produktet er vokset fra den første betalende kunde til over **150.000 brugere** og **25 millioner genererede forespørgsler** på tværs af **30+ databasemotorer**, heriblandt PostgreSQL, MySQL, Snowflake, BigQuery og MongoDB.
 
-Jeg er eneste udvikler og driftsansvarlig på hele stakken: tekst-til-SQL-generering, optimizer, validator og konvertering mellem databasemotorer; skemaimport og live databaseforbindelser, der håndterer skemaer med 900+ tabeller; skemabevidst autosuggest, en VS Code-agtig editor og diff af forespørgsler. Den anvendte AI dækker RAG, embeddings, vektorsøgning og promptdesign. Jeg ejer også den kommercielle side: abonnementer via Stripe og Lemon Squeezy, prissætning, SEO og betalt annoncering.
+Den anvendte AI dækker RAG, embeddings, vektorsøgning og promptdesign. Jeg ejer også den kommercielle side: abonnementer via Stripe og Lemon Squeezy, prissætning, SEO og betalt annoncering.
 
 ## Chartmaker.io {#chartmaker}
 

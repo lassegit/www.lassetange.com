@@ -7,11 +7,11 @@ Vier Produkte, die ich vollständig selbst verantwortet habe: Idee, Architektur,
 
 ## SQLAI.ai {#sqlai}
 
-### KI-gestützte SQL-Arbeitsumgebung
+### KI-gestütztes SQL-Multitool
 
-Eine KI-gestützte Arbeitsumgebung, um SQL zu erzeugen, zu erklären, zu optimieren und zu prüfen, ohne die Kontrolle abzugeben. Vom ersten zahlenden Kunden auf über **150.000 Nutzerinnen und Nutzer** und **25 Millionen erzeugte Abfragen** über **mehr als 30 Datenbank-Engines** gewachsen, darunter PostgreSQL, MySQL, Snowflake, BigQuery und MongoDB.
+Ein KI-gestütztes SQL-Multitool, um SQL zu erzeugen, zu erklären, zu optimieren und zu prüfen, ohne die Kontrolle abzugeben. Vom ersten zahlenden Kunden auf über **150.000 Nutzerinnen und Nutzer** und **25 Millionen erzeugte Abfragen** über **mehr als 30 Datenbank-Engines** gewachsen, darunter PostgreSQL, MySQL, Snowflake, BigQuery und MongoDB.
 
-Ich bin alleiniger Entwickler und Betreiber über den gesamten Stack: Text-zu-SQL-Generierung, Optimizer, Validator und Konvertierung zwischen Engines; Schema-Import und Live-Datenbankverbindungen für Schemata mit über 900 Tabellen; schemabewusstes Autosuggest, ein Editor im Stil von VS Code und Abfrage-Diffs. Die angewandte KI umfasst RAG, Embeddings, Vektorsuche und Prompt-Design. Auch die kommerzielle Seite gehört dazu: Abrechnung über Stripe und Lemon Squeezy, Abo-Verwaltung, Preisgestaltung, SEO und bezahlte Akquise.
+Die angewandte KI umfasst RAG, Embeddings, Vektorsuche und Prompt-Design. Auch die kommerzielle Seite gehört dazu: Abrechnung über Stripe und Lemon Squeezy, Abo-Verwaltung, Preisgestaltung, SEO und bezahlte Akquise.
 
 ## Chartmaker.io {#chartmaker}
 

@@ -13,6 +13,7 @@ Jeg arbejder på tværs af den moderne TypeScript-stak med React i centrum — f
 - Promptdesign
 - AI-assisteret udvikling (Claude Code, Codex CLI)
 - Produktdesign med anvendt AI
+- Agentiske AI-workflows
 
 ## Frontend
 
@@ -37,7 +38,7 @@ Jeg arbejder på tværs af den moderne TypeScript-stak med React i centrum — f
 ## Programmeringssprog
 
 - TypeScript
-- JavaScript (ESNext)
+- JavaScript
 - SQL
 - Python
 - PHP

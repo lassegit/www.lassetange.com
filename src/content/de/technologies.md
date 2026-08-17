@@ -13,6 +13,7 @@ Ich arbeite über den modernen TypeScript-Stack hinweg, mit React im Zentrum —
 - Prompt-Design
 - KI-gestützte Entwicklung (Claude Code, Codex CLI)
 - Produktgestaltung mit angewandter KI
+- Agentische KI-Workflows
 
 ## Frontend
 
@@ -37,7 +38,7 @@ Ich arbeite über den modernen TypeScript-Stack hinweg, mit React im Zentrum —
 ## Programmiersprachen
 
 - TypeScript
-- JavaScript (ESNext)
+- JavaScript
 - SQL
 - Python
 - PHP

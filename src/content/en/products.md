@@ -7,11 +7,11 @@ Four products I have taken all the way myself: idea, architecture, UX, operation
 
 ## SQLAI.ai {#sqlai}
 
-### AI-powered SQL workspace
+### AI-powered SQL multitool
 
-An AI-powered SQL workspace for generating, explaining, optimising and validating SQL without losing control. It has grown from first paying customer to over **150,000 users** and **25 million generated queries** across **30+ database engines**, including PostgreSQL, MySQL, Snowflake, BigQuery and MongoDB.
+An AI-powered SQL multitool for generating, explaining, optimising and validating SQL without losing control. It has grown from first paying customer to over **150,000 users** and **25 million generated queries** across **30+ database engines**, including PostgreSQL, MySQL, Snowflake, BigQuery and MongoDB.
 
-I am the sole engineer and operator across the whole stack: text-to-SQL generation, the query optimiser, validator and cross-engine converter; schema import and live database connections handling schemas of 900+ tables; schema-aware autosuggest, a VS Code-style editor and query diffing. The applied AI spans RAG, embeddings, vector search and prompt design. I also own the commercial side: Stripe and Lemon Squeezy billing, subscription lifecycle, pricing, SEO and paid acquisition.
+The applied AI spans RAG, embeddings, vector search and prompt design. I also own the commercial side: Stripe and Lemon Squeezy billing, subscription lifecycle, pricing, SEO and paid acquisition.
 
 ## Chartmaker.io {#chartmaker}
 

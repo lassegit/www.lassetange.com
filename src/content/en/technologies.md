@@ -13,6 +13,7 @@ I work across the modern TypeScript stack with React at the centre — from fron
 - Prompt engineering
 - AI-assisted development (Claude Code, Codex CLI)
 - Applied AI product design
+- Agentic AI workflows
 
 ## Frontend
 
@@ -37,7 +38,7 @@ I work across the modern TypeScript stack with React at the centre — from fron
 ## Programming languages
 
 - TypeScript
-- JavaScript (ESNext)
+- JavaScript
 - SQL
 - Python
 - PHP
