@@ -1,0 +1,6 @@
+# Which dependencies may run an install script. pnpm runs none it has not been told about, and
+# fails the install rather than skip one quietly — so anything added later belongs here too.
+# `false` means the script was looked at: these ship their real binary as an optional dependency.
+allowBuilds:
+  esbuild: false
+  workerd: false
