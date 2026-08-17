@@ -3,7 +3,7 @@ title: Kundenprojekte
 description: Rollen für Startups, Scale-ups und dänische öffentliche Institutionen in Berlin und Kopenhagen — von Automobil-Marktplätzen und Krypto-Banking bis zu Geodaten und digitaler Verwaltung.
 ---
 
-Ein Jahrzehnt Kundenarbeit, zunächst freiberuflich in Kopenhagen, später in der Berliner Startup-Szene. Die hervorgehobenen Projekte unten sind die umfangreichsten; die vollständige Liste steht im [Lebenslauf](/de/resume).
+Ein Jahrzehnt Kundenarbeit, zunächst freiberuflich in Kopenhagen, später in der Berliner Startup-Szene. Alle Projekte stehen unten, die neuesten zuerst; der [Lebenslauf](/de/resume) führt dieselbe Liste in Kurzform.
 
 ## alpakas.app {#alpakas}
 
@@ -12,6 +12,12 @@ Ein Jahrzehnt Kundenarbeit, zunächst freiberuflich in Kopenhagen, später in de
 Architekt und Entwickler der nativen Mobile- und Web-Apps für ein Berliner Lieferdienst-Startup, mit durchgehender Verantwortung für Design, Struktur und technische Umsetzung.
 
 Ich habe die gemeinsame Codebasis sowie die Muster und Konventionen aufgebaut, auf denen das interne Team weitergearbeitet hat — gemeinsame Komponenten und Geschäftslogik über React Native und React hinweg, Anbindung an GraphQL-APIs und das Werkzeug-Setup für die Weiterentwicklung.
+
+## brandTURBO {#brandturbo}
+
+### Vertragsentwickler
+
+Kurzes, klar umrissenes Entwicklungsprojekt für ein Berliner Unternehmen, zu festem Umfang geliefert.
 
 ## Nuri (vormals Bitwala) {#nuri}
 
@@ -37,6 +43,12 @@ Eine React-Anwendung für ein Berliner E-Learning-Startup, testgetrieben in eine
 
 Das Projekt lief in Vollzeit vor Ort und umfasste Feature-Entwicklung, Komponentenarchitektur und Testabdeckung mit Jest und Testing Library.
 
+## TOMCode.com {#tomcode}
+
+### Vertragsentwickler, Full Stack
+
+Intensiver Entwicklungssprint an einer Webanwendung, zu einer kurzen, festen Deadline. Beauftragt über das Stuttgarter Entwicklernetzwerk Coder Society.
+
 ## Dänisches Ministerium für Hochschulbildung und Wissenschaft {#ufm}
 
 ### Freiberuflicher Full-Stack-Entwickler
@@ -44,26 +56,6 @@ Das Projekt lief in Vollzeit vor Ort und umfasste Feature-Entwicklung, Komponent
 Das längste meiner Projekte für die dänische öffentliche Hand, geliefert über Headnet ApS. Ich habe ufm.dk als Festpreisprojekt neu aufgebaut und gestaltet und anschließend 2017–2018 das neue Intranet des Ministeriums entworfen und umgesetzt.
 
 Laufende Verantwortung für Frontend-Architektur, Portlet- und Template-Entwicklung, Unterstützung des EU-Portals des Ministeriums, Barrierefreiheit und Browser-Kompatibilität auf einer stark frequentierten Behördenseite — dazu zwei Jahre ticketbasierte Wartung.
-
-## Fredninger.dk {#fredninger}
-
-### Leitender Frontend-Entwickler
-
-Leitender Frontend-Entwickler einer interaktiven öffentlichen Kartenplattform für die Naturschutzgebiete Dänemarks, geliefert über Headnet ApS.
-
-Ich habe die Karten- und Geodaten-Integration auf CartoDB und SQL gebaut, Geosuche mit Typeahead, Standortanzeige und Routendarstellung, die Kartenbedienung für Mobilgeräte und Touch, einbettbare Karten-Widgets für Drittseiten sowie Druckausgabe und Teilen. Es war das größte Einzelprojekt der Headnet-Zeit — vom Theme-Gerüst über den Launch bis zu Optimierung und Browser-Härtung.
-
-## brandTURBO {#brandturbo}
-
-### Vertragsentwickler
-
-Kurzes, klar umrissenes Entwicklungsprojekt für ein Berliner Unternehmen, zu festem Umfang geliefert.
-
-## TOMCode.com {#tomcode}
-
-### Vertragsentwickler, Full Stack
-
-Intensiver Entwicklungssprint an einer Webanwendung, zu einer kurzen, festen Deadline. Beauftragt über das Stuttgarter Entwicklernetzwerk Coder Society.
 
 ## Autobranchen Danmark {#autobranchen}
 
@@ -106,6 +98,14 @@ Die Unternehmensplattform einer dänischen Industriegruppe: Multisite- und Mehrs
 ### Leitender Entwickler
 
 Alleiniger Entwickler von nmknafgoerelser.dk, der öffentlichen Entscheidungsdatenbank der Kammer. Strukturierte Suche über einen großen Korpus von Entscheidungen mit Elasticsearch, ein Backbone-Frontend gegen ein Flask-Backend und containerisiertes Deployment mit Docker.
+
+## Fredninger.dk {#fredninger}
+
+### Leitender Frontend-Entwickler
+
+Leitender Frontend-Entwickler einer interaktiven öffentlichen Kartenplattform für die Naturschutzgebiete Dänemarks, geliefert über Headnet ApS.
+
+Ich habe die Karten- und Geodaten-Integration auf CartoDB und SQL gebaut, Geosuche mit Typeahead, Standortanzeige und Routendarstellung, die Kartenbedienung für Mobilgeräte und Touch, einbettbare Karten-Widgets für Drittseiten sowie Druckausgabe und Teilen. Es war das größte Einzelprojekt der Headnet-Zeit — vom Theme-Gerüst über den Launch bis zu Optimierung und Browser-Härtung.
 
 ## Bolighed.dk {#bolighed}
 

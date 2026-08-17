@@ -91,10 +91,21 @@ export function Facts({ items, children }: { items: readonly string[]; children?
   );
 }
 
-/** Period · place · agency, assembled the same way on `/client-work` and on the CV. */
+/**
+ * “Copenhagen, Denmark” — where an engagement sat, named in the reader's language. An array rather
+ * than a string, so a remote engagement contributes nothing to the line it is spread into.
+ */
+export function placeLabel(engagement: Engagement, locale: Locale): string[] {
+  if (!engagement.place) return [];
+  return [`${placeName(engagement.place, locale)}, ${countryName(engagement.place, locale)}`];
+}
+
+/**
+ * Period · place · agency, for the CV. `/client-work` composes the same pieces itself: it sets the
+ * period beside the title and leaves the agency out, so only the place reaches its facts line.
+ */
 export function engagementFacts(engagement: Engagement, locale: Locale): string[] {
-  const facts = [formatPeriod(engagement.start, engagement.end, locale)];
-  if (engagement.place) facts.push(`${placeName(engagement.place, locale)}, ${countryName(engagement.place, locale)}`);
+  const facts = [formatPeriod(engagement.start, engagement.end, locale), ...placeLabel(engagement, locale)];
   if (engagement.via) facts.push(engagement.via);
   return facts;
 }

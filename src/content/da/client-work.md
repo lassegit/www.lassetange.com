@@ -3,7 +3,7 @@ title: Kundeopgaver
 description: Roller for startups, scale-ups og danske offentlige institutioner i Berlin og København — fra bilmarkedspladser og kryptobank til geodata og digital forvaltning.
 ---
 
-Et årti med kundeopgaver, først som freelancer i København og siden i det tyske startup-miljø. De fremhævede opgaver herunder er dem, der fyldte mest; den fulde liste ligger på [CV'et](/resume).
+Et årti med kundeopgaver, først som freelancer i København og siden i det tyske startup-miljø. Alle opgaver står herunder, de nyeste først; [CV'et](/resume) har den samme liste i kort form.
 
 ## alpakas.app {#alpakas}
 
@@ -12,6 +12,12 @@ Et årti med kundeopgaver, først som freelancer i København og siden i det tys
 Arkitekt og udvikler på de native mobil- og webapps for en Berlin-baseret leveringstjeneste, med ansvar fra ende til anden for design, struktur og teknisk implementering.
 
 Jeg lagde den fælles kodebase og de mønstre og konventioner, det interne team byggede videre på — delte komponenter og forretningslogik på tværs af React Native og React, integration mod GraphQL-API'er, og den værktøjskasse teamet arbejdede videre i.
+
+## brandTURBO {#brandturbo}
+
+### Kontraktudvikler
+
+Kort, fokuseret udviklingsopgave for en Berlin-baseret virksomhed, leveret til fast aftalt omfang.
 
 ## Nuri (tidl. Bitwala) {#nuri}
 
@@ -37,6 +43,12 @@ React-applikation for en Berlin-baseret e-læringsstartup, bygget testdrevet i e
 
 Opgaven var fuldtid on-site og dækkede featureudvikling, komponentarkitektur og testdækning med Jest og Testing Library.
 
+## TOMCode.com {#tomcode}
+
+### Kontraktudvikler, full-stack
+
+Intensivt udviklingsforløb på en webapplikation, med kort og fast deadline. Engageret gennem udviklernetværket Coder Society i Stuttgart.
+
 ## Uddannelses- og Forskningsministeriet {#ufm}
 
 ### Freelance full-stack-udvikler
@@ -44,26 +56,6 @@ Opgaven var fuldtid on-site og dækkede featureudvikling, komponentarkitektur og
 Den længstvarende af mine opgaver for den danske offentlige sektor, leveret gennem Headnet ApS. Jeg genopbyggede og redesignede ufm.dk som fastprisprojekt og designede derefter ministeriets nye intranet i 2017–2018.
 
 Løbende ansvar for frontend-arkitektur, portlet- og skabelonudvikling, support på ministeriets EU-portal, tilgængelighed og browserkompatibilitet på et offentligt site med høj trafik — plus to års sagsbaseret vedligeholdelse.
-
-## Fredninger.dk {#fredninger}
-
-### Ledende frontend-udvikler
-
-Ledende frontend-udvikler på en interaktiv, offentlig kortplatform over Danmarks fredede naturområder, leveret gennem Headnet ApS.
-
-Jeg byggede kort- og geodataintegrationen på CartoDB og SQL, geografisk søgning med typeahead, vis-min-position og rutevisning, kortoplevelsen til mobil og touch, indlejrbare kort-widgets til tredjepartssites samt print og deling. Det var den største enkeltopgave i Headnet-perioden — fra skelet til lancering, optimering og browserhærdning.
-
-## brandTURBO {#brandturbo}
-
-### Kontraktudvikler
-
-Kort, fokuseret udviklingsopgave for en Berlin-baseret virksomhed, leveret til fast aftalt omfang.
-
-## TOMCode.com {#tomcode}
-
-### Kontraktudvikler, full-stack
-
-Intensivt udviklingsforløb på en webapplikation, med kort og fast deadline. Engageret gennem udviklernetværket Coder Society i Stuttgart.
 
 ## Autobranchen Danmark {#autobranchen}
 
@@ -106,6 +98,14 @@ Virksomhedsplatform for en dansk industrikoncern: multisite- og flersprogsopsæt
 ### Ledende udvikler
 
 Eneste udvikler på nmknafgoerelser.dk, nævnets offentlige database over afgørelser. Struktureret søgning i et stort korpus af afgørelser med Elasticsearch, frontend i Backbone mod en Flask-backend og containeriseret udrulning med Docker.
+
+## Fredninger.dk {#fredninger}
+
+### Ledende frontend-udvikler
+
+Ledende frontend-udvikler på en interaktiv, offentlig kortplatform over Danmarks fredede naturområder, leveret gennem Headnet ApS.
+
+Jeg byggede kort- og geodataintegrationen på CartoDB og SQL, geografisk søgning med typeahead, vis-min-position og rutevisning, kortoplevelsen til mobil og touch, indlejrbare kort-widgets til tredjepartssites samt print og deling. Det var den største enkeltopgave i Headnet-perioden — fra skelet til lancering, optimering og browserhærdning.
 
 ## Bolighed.dk {#bolighed}
 

@@ -116,11 +116,9 @@ export interface Engagement {
   /** Absent means ongoing. */
   end?: string;
   place?: Place;
-  /** The agency or talent partner the engagement ran through, where there was one. */
+  /** The agency or talent partner the engagement ran through, where there was one. Shown on `/resume`. */
   via?: string;
   stack: readonly string[];
-  /** Featured engagements get their own entry on `/client-work`; the rest are listed on `/resume`. */
-  featured?: true;
 }
 
 export const CLIENT_WORK: readonly Engagement[] = [
@@ -132,7 +130,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     end: '2022-05',
     place: 'berlin',
     stack: ['React Native', 'React', 'TypeScript', 'GraphQL'],
-    featured: true,
   },
   {
     id: 'brandturbo',
@@ -151,7 +148,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     place: 'berlin',
     via: 'UPPER Technologies GmbH',
     stack: ['React Native', 'TypeScript', 'GraphQL'],
-    featured: true,
   },
   {
     id: 'heycar',
@@ -162,7 +158,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     place: 'berlin',
     via: 'MVPF Global Talent Solutions GmbH',
     stack: ['React', 'SSR', 'Redux', 'CSS-in-JS', 'TypeScript', 'Kotlin', 'A/B testing'],
-    featured: true,
   },
   {
     id: 'wonderwerk',
@@ -172,7 +167,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     end: '2018-12',
     place: 'berlin',
     stack: ['React', 'JavaScript', 'TDD', 'Jest', 'Testing Library'],
-    featured: true,
   },
   {
     id: 'tomcode',
@@ -192,7 +186,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     place: 'copenhagen',
     via: 'Headnet ApS',
     stack: ['React', 'Redux', 'Flask', 'Python', 'MySQL', 'Accessibility'],
-    featured: true,
   },
   {
     id: 'autobranchen',
@@ -267,7 +260,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     place: 'copenhagen',
     via: 'Headnet ApS',
     stack: ['JavaScript', 'CartoDB', 'SQL', 'Drupal', 'PHP', 'Geodata'],
-    featured: true,
   },
   {
     id: 'bolighed',
@@ -342,8 +334,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     stack: ['WordPress', 'Drupal', 'PHP', 'JavaScript', 'Analytics'],
   },
 ];
-
-export const FEATURED_WORK = CLIENT_WORK.filter((engagement) => engagement.featured);
 
 /* -------------------------------------------------------------------------------------------------
  * Open source

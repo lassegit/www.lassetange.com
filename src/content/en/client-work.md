@@ -3,7 +3,7 @@ title: Client work
 description: Roles for startups, scale-ups and Danish public institutions in Berlin and Copenhagen — from automotive marketplaces and crypto banking to geospatial data and digital government.
 ---
 
-A decade of client work, first freelancing in Copenhagen and later inside the German startup scene. The featured engagements below are the ones that took up the most ground; the full list is on the [CV](/en/resume).
+A decade of client work, first freelancing in Copenhagen and later inside the German startup scene. Every engagement is below, newest first; the [CV](/en/resume) has the same list in short form.
 
 ## alpakas.app {#alpakas}
 
@@ -12,6 +12,12 @@ A decade of client work, first freelancing in Copenhagen and later inside the Ge
 Architect and developer of the native mobile and web apps for a Berlin delivery startup, with end-to-end responsibility for design, structure and technical implementation.
 
 I established the shared codebase and the patterns and conventions the in-house team went on to build on — shared components and business logic across React Native and React, integration against GraphQL APIs, and the tooling the team continued in.
+
+## brandTURBO {#brandturbo}
+
+### Contract developer
+
+A short, focused development engagement for a Berlin-based company, delivered to a fixed scope.
 
 ## Nuri (formerly Bitwala) {#nuri}
 
@@ -37,6 +43,12 @@ A React application for a Berlin e-learning startup, built test-first in a small
 
 The engagement was full-time on-site and covered feature development, component architecture and test coverage with Jest and Testing Library.
 
+## TOMCode.com {#tomcode}
+
+### Contract full-stack developer
+
+An intensive delivery sprint on a web application, worked to a short, fixed deadline. Engaged through the Stuttgart-based developer network Coder Society.
+
 ## Danish Ministry of Higher Education and Science {#ufm}
 
 ### Freelance full-stack developer
@@ -44,26 +56,6 @@ The engagement was full-time on-site and covered feature development, component 
 The longest-running of my Danish public-sector engagements, delivered via Headnet ApS. I rebuilt and redesigned ufm.dk as a fixed-price project, then designed and built the ministry's new intranet across 2017–2018.
 
 Ongoing responsibility for front-end architecture, portlet and template development, support for the ministry's EU portal, accessibility and cross-browser compatibility on a high-traffic government site — plus two years of ticket-based maintenance.
-
-## Fredninger.dk {#fredninger}
-
-### Principal front-end developer
-
-Principal front-end developer on an interactive public map platform for Denmark's protected nature areas, delivered via Headnet ApS.
-
-I built the map and geodata integration on CartoDB and SQL, geospatial search with typeahead, show-my-location and route display, the map experience for mobile and touch, embeddable map widgets for third-party sites, and print output and sharing. It was the single largest engagement of the Headnet period — from theme skeleton through launch, optimisation and cross-browser hardening.
-
-## brandTURBO {#brandturbo}
-
-### Contract developer
-
-A short, focused development engagement for a Berlin-based company, delivered to a fixed scope.
-
-## TOMCode.com {#tomcode}
-
-### Contract full-stack developer
-
-An intensive delivery sprint on a web application, worked to a short, fixed deadline. Engaged through the Stuttgart-based developer network Coder Society.
 
 ## Autobranchen Danmark {#autobranchen}
 
@@ -106,6 +98,14 @@ The corporate web platform for a Danish industrial group: multisite and multilin
 ### Lead developer
 
 Sole developer on nmknafgoerelser.dk, the board's public database of appeal decisions. Structured search over a large corpus of decisions with Elasticsearch, a Backbone front end against a Flask backend, and containerised deployment with Docker.
+
+## Fredninger.dk {#fredninger}
+
+### Principal front-end developer
+
+Principal front-end developer on an interactive public map platform for Denmark's protected nature areas, delivered via Headnet ApS.
+
+I built the map and geodata integration on CartoDB and SQL, geospatial search with typeahead, show-my-location and route display, the map experience for mobile and touch, embeddable map widgets for third-party sites, and print output and sharing. It was the single largest engagement of the Headnet period — from theme skeleton through launch, optimisation and cross-browser hardening.
 
 ## Bolighed.dk {#bolighed}
 

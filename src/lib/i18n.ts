@@ -104,7 +104,6 @@ export interface Dictionary {
   printHint: string;
   profile: string;
   spokenLanguages: string;
-  alsoBuilt: string;
   fullHistory: string;
 
   moreOnGithub: string;
@@ -154,7 +153,6 @@ const da: Dictionary = {
   printHint: 'Åbner browserens printdialog. Vælg “Gem som PDF” for at hente CV’et som fil.',
   profile: 'Profil',
   spokenLanguages: 'Sprog',
-  alsoBuilt: 'Øvrige opgaver',
   fullHistory: 'Fuld arbejdshistorik',
 
   moreOnGithub: 'Se flere projekter på GitHub',
@@ -207,7 +205,6 @@ const en: Dictionary = {
   printHint: 'Opens your browser’s print dialog. Choose “Save as PDF” to download the CV as a file.',
   profile: 'Profile',
   spokenLanguages: 'Languages',
-  alsoBuilt: 'Other engagements',
   fullHistory: 'Full work history',
 
   moreOnGithub: 'More projects on GitHub',
@@ -260,7 +257,6 @@ const de: Dictionary = {
   printHint: 'Öffnet den Druckdialog des Browsers. Wählen Sie „Als PDF speichern“, um den Lebenslauf herunterzuladen.',
   profile: 'Profil',
   spokenLanguages: 'Sprachen',
-  alsoBuilt: 'Weitere Projekte',
   fullHistory: 'Vollständiger Werdegang',
 
   moreOnGithub: 'Weitere Projekte auf GitHub',
