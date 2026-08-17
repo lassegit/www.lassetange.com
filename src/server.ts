@@ -2,7 +2,10 @@ import { onServerError, publicUrl } from '@rshono/core/server';
 import { Hono } from 'hono';
 import { bodyLimit } from 'hono/body-limit';
 import { csrf } from 'hono/csrf';
+import { secureHeaders } from 'hono/secure-headers';
 import { trimTrailingSlash } from 'hono/trailing-slash';
+import { PROFILE } from './lib/data';
+import { LOCALES, PAGES, localePath } from './lib/i18n';
 
 /**
  * Mounted at `/` ahead of the page routes, so middleware registered here wraps page requests too — auth,
@@ -19,6 +22,12 @@ onServerError((error, { source, request }) => {
 /** Caps every request body before anything downstream buffers it. Raise it where you accept uploads. */
 server.use(bodyLimit({ maxSize: 1024 * 1024 }));
 
+/**
+ * HSTS, `X-Content-Type-Options`, a referrer policy and the rest of Hono's hardened defaults. No CSP:
+ * nonce-based policies force every document to render per request, and every page here is prerendered.
+ */
+server.use(secureHeaders());
+
 /** Cross-origin hosts allowed to post server actions, alongside this app's own. */
 const ALLOWED_ORIGINS: string[] = [];
 
@@ -29,14 +38,60 @@ server.use(csrf({ origin: (origin, c) => origin === publicUrl(c).origin || ALLOW
 server.use(trimTrailingSlash({ alwaysRedirect: true }));
 
 /** Old paths that should keep working. One place to add to, rather than a handler each. */
-const REDIRECTS: Record<string, string> = {};
+const REDIRECTS: Record<string, string> = {
+  '/cv': '/resume',
+  '/kontakt': '/contact',
+  '/de/lebenslauf': '/de/resume',
+};
 
 for (const [from, to] of Object.entries(REDIRECTS)) {
   server.get(from, (c) => c.redirect(to, 301));
 }
 
-/** A JSON API route, with no page involved. The layout links to it. */
-server.get('/api/health', (c) => c.json({ status: 'ok' }));
+/** Danish is the unprefixed language, so `/da/…` is not a second copy of it — it is a redirect to it. */
+server.get('/da', (c) => c.redirect('/', 301));
+server.get('/da/*', (c) => c.redirect(publicUrl(c).pathname.slice('/da'.length) || '/', 301));
+
+/**
+ * Every page in every language, with `hreflang` alternates so the three versions of a page are
+ * understood as one page in three languages. Generated from the same table the tabs are built from,
+ * so a new page cannot be added to the site and forgotten here.
+ */
+server.get('/sitemap.xml', (c) => {
+  const paths = [...PAGES.map((page) => page.path), '/contact'];
+
+  const urls = paths
+    .flatMap((path) =>
+      LOCALES.map((locale) => {
+        const alternates = LOCALES.map(
+          (alternate) => `    <xhtml:link rel="alternate" hreflang="${alternate}" href="${url(path, alternate)}" />`,
+        ).join('\n');
+
+        return [
+          '  <url>',
+          `    <loc>${url(path, locale)}</loc>`,
+          alternates,
+          `    <xhtml:link rel="alternate" hreflang="x-default" href="${url(path, 'da')}" />`,
+          '  </url>',
+        ].join('\n');
+      }),
+    )
+    .join('\n');
+
+  const xml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
+    urls,
+    '</urlset>',
+    '',
+  ].join('\n');
+
+  return c.body(xml, 200, { 'content-type': 'application/xml; charset=utf-8' });
+});
+
+function url(path: string, locale: (typeof LOCALES)[number]): string {
+  return new URL(localePath(path, locale), PROFILE.siteUrl).href;
+}
 
 export default server;
 

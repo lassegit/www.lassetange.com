@@ -1,14 +1,23 @@
 import type { ErrorPageProps } from '@rshono/core';
+import { PROFILE } from '../lib/data';
+import { canonicalPath, dictionary, localeFromPath, localePath } from '../lib/i18n';
 import { Layout } from './layout';
 
-export default function ServerError({ error }: ErrorPageProps) {
+export default function ServerError({ url, error }: ErrorPageProps) {
+  const locale = localeFromPath(url.pathname);
+  const t = dictionary(locale);
+
   return (
-    <Layout title="Something went wrong">
-      <h1>500</h1>
-      <p>{error.message}</p>
-      {error.stack && <pre>{error.stack}</pre>}
-      <p>
-        <a href="/">Back home</a>
+    <Layout locale={locale} path={canonicalPath(url.pathname)} title={`${t.errorTitle} — ${PROFILE.name}`} noIndex>
+      <p className="error-code">500</p>
+      <h1 className="page-title">{t.errorTitle}</h1>
+      <p className="lead">{error.message}</p>
+      {/* Present in development only — the framework redacts the stack in production. */}
+      {error.stack && <pre className="error-detail">{error.stack}</pre>}
+      <p className="section">
+        <a href={localePath('/', locale)}>
+          {t.backHome} <span aria-hidden="true">→</span>
+        </a>
       </p>
     </Layout>
   );

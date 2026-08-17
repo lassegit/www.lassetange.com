@@ -1,37 +1,85 @@
 import type { ReactNode } from 'react';
 import '../styles.css';
+import { PROFILE } from '../lib/data';
+import { LOCALES, LOCALE_TAGS, dictionary, localePath, type Locale } from '../lib/i18n';
+import { Footer } from './footer';
+import { Header } from './header';
 
-export const appName = process.env.PUBLIC_APP_NAME ?? 'www.lassetange.com';
+export interface LayoutProps {
+  locale: Locale;
+  /** The page's canonical (unprefixed) path, e.g. `/products`. Drives the tabs, canonical and hreflang. */
+  path: string;
+  /** The full `<title>`, composed by the page. */
+  title: string;
+  description?: string;
+  /** Set on the 404 and 500 pages, which should not enter an index. */
+  noIndex?: boolean;
+  /** Structured data for this page, serialised into a JSON-LD script. */
+  jsonLd?: object;
+  children: ReactNode;
+}
 
-export function Layout({ title, description, children }: { title?: string; description?: string; children: ReactNode }) {
-  const heading = title ? `${title} · ${appName}` : appName;
+/**
+ * The document every page renders through: head, skip link, header, main, footer.
+ *
+ * The head is where the multilingual part of the site becomes visible to machines — a canonical URL
+ * per language, `hreflang` alternates in all three plus `x-default`, and `og:locale` — so the Danish,
+ * English and German versions of a page are understood as the same page rather than as duplicates.
+ */
+export function Layout({ locale, path, title, description, noIndex, jsonLd, children }: LayoutProps) {
+  const t = dictionary(locale);
+  const canonical = new URL(localePath(path, locale), PROFILE.siteUrl).href;
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{heading}</title>
+        <title>{title}</title>
         {description && <meta name="description" content={description} />}
+        {noIndex && <meta name="robots" content="noindex, follow" />}
+
+        {/* A 404 has no canonical form and no translations — claiming otherwise would invite a crawler
+            to index three copies of an error. */}
+        {!noIndex && (
+          <>
+            <link rel="canonical" href={canonical} />
+            {LOCALES.map((alternate) => (
+              <link
+                key={alternate}
+                rel="alternate"
+                hrefLang={alternate}
+                href={new URL(localePath(path, alternate), PROFILE.siteUrl).href}
+              />
+            ))}
+            <link rel="alternate" hrefLang="x-default" href={new URL(path, PROFILE.siteUrl).href} />
+          </>
+        )}
+
+        <meta property="og:type" content="profile" />
+        <meta property="og:site_name" content={PROFILE.name} />
+        <meta property="og:title" content={title} />
+        {description && <meta property="og:description" content={description} />}
+        <meta property="og:url" content={canonical} />
+        <meta property="og:locale" content={LOCALE_TAGS[locale].replace('-', '_')} />
+        <meta property="og:image" content={new URL(PROFILE.socialImage, PROFILE.siteUrl).href} />
+        <meta name="twitter:card" content="summary" />
+
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131315" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+        {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
       </head>
-      <body className="bg-zinc-50 text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100">
-        <header className="mx-auto max-w-2xl px-6 py-5">
-          <nav className="flex items-center justify-between gap-4">
-            <a href="/" className="font-semibold no-underline">
-              {appName}
-            </a>
-            <a href="/api/health" data-native className="text-sm">
-              /api/health
-            </a>
-          </nav>
-        </header>
-        <main className="mx-auto max-w-2xl px-6 pt-4 pb-16">{children}</main>
-        <footer className="mx-auto max-w-2xl border-t border-zinc-200 px-6 py-8 text-sm text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
-          <p>
-            Built with <a href="https://github.com/rshono/rshono">rshono</a> — Hono + Rspack + React Server Components.
-          </p>
-        </footer>
+      <body>
+        <a className="skip-link" href="#main">
+          {t.skipToContent}
+        </a>
+        <Header locale={locale} path={path} />
+        <main className="site-main" id="main">
+          <div className="shell">{children}</div>
+        </main>
+        <Footer locale={locale} path={path} />
       </body>
     </html>
   );
