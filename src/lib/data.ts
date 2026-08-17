@@ -116,8 +116,6 @@ export interface Engagement {
   /** Absent means ongoing. */
   end?: string;
   place?: Place;
-  /** The agency or talent partner the engagement ran through, where there was one. Shown on `/resume`. */
-  via?: string;
   stack: readonly string[];
 }
 
@@ -146,7 +144,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2021-01',
     end: '2021-07',
     place: 'berlin',
-    via: 'UPPER Technologies GmbH',
     stack: ['React Native', 'TypeScript', 'GraphQL'],
   },
   {
@@ -156,7 +153,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2019-05',
     end: '2020-11',
     place: 'berlin',
-    via: 'MVPF Global Talent Solutions GmbH',
     stack: ['React', 'SSR', 'Redux', 'CSS-in-JS', 'TypeScript', 'Kotlin', 'A/B testing'],
   },
   {
@@ -174,7 +170,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2018-08',
     end: '2018-08',
     place: 'stuttgart',
-    via: 'Coder Society',
     stack: ['JavaScript', 'Frontend', 'Backend'],
   },
   {
@@ -184,7 +179,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2016-05',
     end: '2018-04',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['React', 'Redux', 'Flask', 'Python', 'MySQL', 'Accessibility'],
   },
   {
@@ -193,7 +187,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2016-06',
     end: '2017-11',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['WordPress', 'PHP', 'JavaScript', 'MySQL'],
   },
   {
@@ -202,7 +195,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2017-09',
     end: '2017-09',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['PHP', 'JavaScript', 'Responsive design'],
   },
   {
@@ -211,7 +203,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2017-08',
     end: '2017-08',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['PHP', 'JavaScript', 'i18n', 'Content management'],
   },
   {
@@ -220,7 +211,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2017-06',
     end: '2017-08',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['PHP', 'JavaScript', 'Responsive design'],
   },
   {
@@ -229,7 +219,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2016-12',
     end: '2016-12',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['PHP', 'JavaScript', 'MySQL', 'E-commerce'],
   },
   {
@@ -238,7 +227,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2016-08',
     end: '2016-12',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['WordPress multisite', 'PHP', 'JavaScript', 'i18n'],
   },
   {
@@ -248,7 +236,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2015-12',
     end: '2015-12',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['Backbone', 'Flask', 'Python', 'Elasticsearch', 'Docker'],
   },
   {
@@ -258,7 +245,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2014-12',
     end: '2015-11',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['JavaScript', 'CartoDB', 'SQL', 'Drupal', 'PHP', 'Geodata'],
   },
   {
@@ -267,7 +253,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2015-04',
     end: '2015-09',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['JavaScript', 'PHP', 'MySQL', 'Geodata'],
   },
   {
@@ -275,7 +260,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     name: 'FEE.Global',
     start: '2015-02',
     end: '2015-09',
-    via: 'Headnet ApS',
     stack: ['JavaScript', 'PHP', 'Podio API', 'CartoDB'],
   },
   {
@@ -284,7 +268,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2013-06',
     end: '2015-05',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['JavaScript', 'Drupal', 'PHP', 'A/B testing', 'Analytics'],
   },
   {
@@ -293,7 +276,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2014-11',
     end: '2015-02',
     place: 'aarhus',
-    via: 'Headnet ApS',
     stack: ['JavaScript', 'Drupal', 'PHP', 'Faceted search'],
   },
   {
@@ -303,7 +285,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2014-10',
     end: '2014-10',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['Angular', 'Express', 'Elasticsearch'],
   },
   {
@@ -312,7 +293,6 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2013-04',
     end: '2014-06',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['Drupal', 'PHP', 'JavaScript', 'Responsive design'],
   },
   {
@@ -321,16 +301,14 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2013-09',
     end: '2013-10',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['JavaScript', 'Drupal', 'PHP', 'Mapping APIs'],
   },
   {
     id: 'headnet-other',
-    name: 'Additional clients via Headnet ApS',
+    name: 'Additional clients',
     start: '2013',
     end: '2018',
     place: 'copenhagen',
-    via: 'Headnet ApS',
     stack: ['WordPress', 'Drupal', 'PHP', 'JavaScript', 'Analytics'],
   },
 ];

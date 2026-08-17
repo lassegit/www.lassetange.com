@@ -25,7 +25,7 @@ Kort, fokuseret udviklingsopgave for en Berlin-baseret virksomhed, leveret til f
 
 Udvikler på den native mobilapp for en Berlin-baseret kryptobank, med fokus på sikker og letforståelig adgang til digital bankdrift og kryptovaluta.
 
-Arbejdet foregik i et reguleret fintech-miljø, hvor kravene til sikkerhed, korrekthed og udgivelseskvalitet er høje. TypeScript og React Native mod GraphQL-API'er, i et tværfagligt produktteam. Engageret gennem UPPER Technologies GmbH.
+Arbejdet foregik i et reguleret fintech-miljø, hvor kravene til sikkerhed, korrekthed og udgivelseskvalitet er høje. TypeScript og React Native mod GraphQL-API'er, i et tværfagligt produktteam.
 
 ## hey.car {#heycar}
 
@@ -33,7 +33,7 @@ Arbejdet foregik i et reguleret fintech-miljø, hvor kravene til sikkerhed, korr
 
 Langvarig opgave på Tysklands første komplette platform for helt digitale bilkøb, bakket op af Volkswagen Financial Services og Daimler Mobility.
 
-Jeg startede som frontend-udvikler på selve markedspladsen og voksede ind i en teknisk lederrolle: ansvar for arkitekturbeslutninger, kodegennemgang og mentoring, og frontend-standarder på tværs af teams. Kodebasen var server-side-renderet React i stor skala, hvor ydeevne, SEO og konvertering var førsteklasses hensyn understøttet af A/B-test og feature flags. I slutningen af 2020 gik jeg over på det nye direct-to-consumer-spor for at være med til at lancere onlinesalg af biler. Engageret gennem MVPF Global Talent Solutions GmbH.
+Jeg startede som frontend-udvikler på selve markedspladsen og voksede ind i en teknisk lederrolle: ansvar for arkitekturbeslutninger, kodegennemgang og mentoring, og frontend-standarder på tværs af teams. Kodebasen var server-side-renderet React i stor skala, hvor ydeevne, SEO og konvertering var førsteklasses hensyn understøttet af A/B-test og feature flags. I slutningen af 2020 gik jeg over på det nye direct-to-consumer-spor for at være med til at lancere onlinesalg af biler.
 
 ## Wonderwerk {#wonderwerk}
 
@@ -47,13 +47,13 @@ Opgaven var fuldtid on-site og dækkede featureudvikling, komponentarkitektur og
 
 ### Kontraktudvikler, full-stack
 
-Intensivt udviklingsforløb på en webapplikation, med kort og fast deadline. Engageret gennem udviklernetværket Coder Society i Stuttgart.
+Intensivt udviklingsforløb på en webapplikation, med kort og fast deadline.
 
 ## Uddannelses- og Forskningsministeriet {#ufm}
 
 ### Freelance full-stack-udvikler
 
-Den længstvarende af mine opgaver for den danske offentlige sektor, leveret gennem Headnet ApS. Jeg genopbyggede og redesignede ufm.dk som fastprisprojekt og designede derefter ministeriets nye intranet i 2017–2018.
+Den længstvarende af mine opgaver for den danske offentlige sektor. Jeg genopbyggede og redesignede ufm.dk som fastprisprojekt og designede derefter ministeriets nye intranet i 2017–2018.
 
 Løbende ansvar for frontend-arkitektur, portlet- og skabelonudvikling, support på ministeriets EU-portal, tilgængelighed og browserkompatibilitet på et offentligt site med høj trafik — plus to års sagsbaseret vedligeholdelse.
 
@@ -67,7 +67,7 @@ Medlemsportal for en dansk brancheforening i bilbranchen: medlemsprofiler og mas
 
 ### Freelance frontend-udvikler
 
-Fuld temaopsætning og frontend-build af en dansk videnportal om integrationsforskning, leveret som fastprisprojekt gennem Headnet ApS.
+Fuld temaopsætning og frontend-build af en dansk videnportal om integrationsforskning, leveret som fastprisprojekt.
 
 ## Danmarks Evalueringsinstitut (NB-ECEC) {#eva}
 
@@ -85,7 +85,7 @@ Frontend på styrelsens intranet som fastprisprojekt, samt efterfølgende udvikl
 
 ### Ledende udvikler
 
-Eneste udvikler på webshoppen forsk.dk — arkitektur, implementering og lancering leveret fra ende til anden som fastprisprojekt gennem Headnet ApS.
+Eneste udvikler på webshoppen forsk.dk — arkitektur, implementering og lancering leveret fra ende til anden som fastprisprojekt.
 
 ## Fritz Schur Group {#fritzschur}
 
@@ -103,9 +103,9 @@ Eneste udvikler på nmknafgoerelser.dk, nævnets offentlige database over afgør
 
 ### Ledende frontend-udvikler
 
-Ledende frontend-udvikler på en interaktiv, offentlig kortplatform over Danmarks fredede naturområder, leveret gennem Headnet ApS.
+Ledende frontend-udvikler på en interaktiv, offentlig kortplatform over Danmarks fredede naturområder.
 
-Jeg byggede kort- og geodataintegrationen på CartoDB og SQL, geografisk søgning med typeahead, vis-min-position og rutevisning, kortoplevelsen til mobil og touch, indlejrbare kort-widgets til tredjepartssites samt print og deling. Det var den største enkeltopgave i Headnet-perioden — fra skelet til lancering, optimering og browserhærdning.
+Jeg byggede kort- og geodataintegrationen på CartoDB og SQL, geografisk søgning med typeahead, vis-min-position og rutevisning, kortoplevelsen til mobil og touch, indlejrbare kort-widgets til tredjepartssites samt print og deling. Det var den største enkeltopgave i mine år i København — fra skelet til lancering, optimering og browserhærdning.
 
 ## Bolighed.dk {#bolighed}
 
@@ -149,7 +149,7 @@ Dansk fællesskabsplatform for motion i grupper. Hold- og gruppesystem med rolle
 
 Frontend og integration på cykelrutesitet for hovedstadsregionens supercykelstier: ibikecph-rutekort og servicestationsdata koblet til Drupal-backenden, visning af rutebeskrivelser og optimering til mobil og tablet.
 
-## Øvrige kunder via Headnet ApS {#headnet-other}
+## Øvrige kunder {#headnet-other}
 
 ### Freelance udvikler
 

@@ -18,9 +18,9 @@ import { ENTRY_TITLE, Facts, LEAD, PAGE_TITLE, Prose, QUIET_LINK, placeLabel } f
  * Below `sm` they fall in under the title rather than crowd it, which keeps the reading order the same
  * at both widths.
  *
- * The stack is plain dot-separated text rather than chips, and the agency an engagement ran through is
- * left off — repeated down a list this long both turn into texture. `/resume` keeps the agency, and the
- * prose names it wherever it mattered.
+ * The stack is plain dot-separated text rather than chips: repeated down a list this long, chips turn
+ * into texture. Engagements are listed by the client they were for, not by whoever the contract ran
+ * through, so an agency or talent partner in the middle goes unnamed here and on `/resume`.
  */
 export default function ClientWork({ url }: PageProps) {
   const locale = localeFromPath(url.pathname);

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { countryName, placeName, type Engagement } from '../lib/data';
-import { formatPeriod, type Locale } from '../lib/i18n';
+import { type Locale } from '../lib/i18n';
 
 /* -------------------------------------------------------------------------------------------------
  * Shared class strings
@@ -93,21 +93,13 @@ export function Facts({ items, children }: { items: readonly string[]; children?
 
 /**
  * “Copenhagen, Denmark” — where an engagement sat, named in the reader's language. An array rather
- * than a string, so a remote engagement contributes nothing to the line it is spread into.
+ * than a string, so a remote engagement contributes nothing to the line it is spread into. Both
+ * `/client-work` and `/resume` set the period beside the title, so place is all their facts lines
+ * carry beyond the role.
  */
 export function placeLabel(engagement: Engagement, locale: Locale): string[] {
   if (!engagement.place) return [];
   return [`${placeName(engagement.place, locale)}, ${countryName(engagement.place, locale)}`];
-}
-
-/**
- * Period · place · agency, for the CV. `/client-work` composes the same pieces itself: it sets the
- * period beside the title and leaves the agency out, so only the place reaches its facts line.
- */
-export function engagementFacts(engagement: Engagement, locale: Locale): string[] {
-  const facts = [formatPeriod(engagement.start, engagement.end, locale), ...placeLabel(engagement, locale)];
-  if (engagement.via) facts.push(engagement.via);
-  return facts;
 }
 
 /** A ruled heading and the block it introduces — the shape every section on the site takes. */

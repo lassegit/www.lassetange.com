@@ -25,7 +25,7 @@ Kurzes, klar umrissenes Entwicklungsprojekt für ein Berliner Unternehmen, zu fe
 
 Entwickler der nativen Mobile-App einer Berliner Krypto-Bank, mit Fokus auf sicheren und verständlichen Zugang zu digitalem Banking und Kryptowährungen.
 
-Die Arbeit fand in einem regulierten Fintech-Umfeld statt, in dem die Anforderungen an Sicherheit, Korrektheit und Release-Qualität hoch sind. TypeScript und React Native gegen GraphQL-APIs, in einem interdisziplinären Produktteam. Beauftragt über die UPPER Technologies GmbH.
+Die Arbeit fand in einem regulierten Fintech-Umfeld statt, in dem die Anforderungen an Sicherheit, Korrektheit und Release-Qualität hoch sind. TypeScript und React Native gegen GraphQL-APIs, in einem interdisziplinären Produktteam.
 
 ## hey.car {#heycar}
 
@@ -33,7 +33,7 @@ Die Arbeit fand in einem regulierten Fintech-Umfeld statt, in dem die Anforderun
 
 Langjähriges Projekt an Deutschlands erster vollständiger Plattform für den durchgehend digitalen Autokauf, getragen von Volkswagen Financial Services und Daimler Mobility.
 
-Ich begann als Frontend-Entwickler am Kern-Marktplatz und wuchs in eine technische Führungsrolle hinein: Verantwortung für Architekturentscheidungen, Code-Reviews und Mentoring sowie Frontend-Standards über Teams hinweg. Die Codebasis war serverseitig gerenderter React im großen Maßstab, in dem Performance, SEO und Conversion erstrangige Themen waren, gestützt auf A/B-Tests und Feature Flags. Ende 2020 wechselte ich in den neuen Direct-to-Consumer-Bereich, um den Online-Autoverkauf mit an den Start zu bringen. Beauftragt über die MVPF Global Talent Solutions GmbH.
+Ich begann als Frontend-Entwickler am Kern-Marktplatz und wuchs in eine technische Führungsrolle hinein: Verantwortung für Architekturentscheidungen, Code-Reviews und Mentoring sowie Frontend-Standards über Teams hinweg. Die Codebasis war serverseitig gerenderter React im großen Maßstab, in dem Performance, SEO und Conversion erstrangige Themen waren, gestützt auf A/B-Tests und Feature Flags. Ende 2020 wechselte ich in den neuen Direct-to-Consumer-Bereich, um den Online-Autoverkauf mit an den Start zu bringen.
 
 ## Wonderwerk {#wonderwerk}
 
@@ -47,13 +47,13 @@ Das Projekt lief in Vollzeit vor Ort und umfasste Feature-Entwicklung, Komponent
 
 ### Vertragsentwickler, Full Stack
 
-Intensiver Entwicklungssprint an einer Webanwendung, zu einer kurzen, festen Deadline. Beauftragt über das Stuttgarter Entwicklernetzwerk Coder Society.
+Intensiver Entwicklungssprint an einer Webanwendung, zu einer kurzen, festen Deadline.
 
 ## Dänisches Ministerium für Hochschulbildung und Wissenschaft {#ufm}
 
 ### Freiberuflicher Full-Stack-Entwickler
 
-Das längste meiner Projekte für die dänische öffentliche Hand, geliefert über Headnet ApS. Ich habe ufm.dk als Festpreisprojekt neu aufgebaut und gestaltet und anschließend 2017–2018 das neue Intranet des Ministeriums entworfen und umgesetzt.
+Das längste meiner Projekte für die dänische öffentliche Hand. Ich habe ufm.dk als Festpreisprojekt neu aufgebaut und gestaltet und anschließend 2017–2018 das neue Intranet des Ministeriums entworfen und umgesetzt.
 
 Laufende Verantwortung für Frontend-Architektur, Portlet- und Template-Entwicklung, Unterstützung des EU-Portals des Ministeriums, Barrierefreiheit und Browser-Kompatibilität auf einer stark frequentierten Behördenseite — dazu zwei Jahre ticketbasierte Wartung.
 
@@ -67,7 +67,7 @@ Mitgliederportal eines dänischen Branchenverbands der Automobilwirtschaft: Mitg
 
 ### Freiberuflicher Frontend-Entwickler
 
-Vollständiges Theming und Frontend-Aufbau eines dänischen Wissensportals zur Integrationsforschung, als Festpreisprojekt über Headnet ApS geliefert.
+Vollständiges Theming und Frontend-Aufbau eines dänischen Wissensportals zur Integrationsforschung, als Festpreisprojekt geliefert.
 
 ## Dänisches Evaluierungsinstitut (NB-ECEC) {#eva}
 
@@ -85,7 +85,7 @@ Das Frontend für das Intranet der Behörde als Festpreisprojekt, dazu anschlie�
 
 ### Leitender Entwickler
 
-Alleiniger Entwickler des Webshops forsk.dk — Architektur, Umsetzung und Launch vollständig als Festpreisprojekt über Headnet ApS geliefert.
+Alleiniger Entwickler des Webshops forsk.dk — Architektur, Umsetzung und Launch vollständig als Festpreisprojekt geliefert.
 
 ## Fritz Schur Group {#fritzschur}
 
@@ -103,9 +103,9 @@ Alleiniger Entwickler von nmknafgoerelser.dk, der öffentlichen Entscheidungsdat
 
 ### Leitender Frontend-Entwickler
 
-Leitender Frontend-Entwickler einer interaktiven öffentlichen Kartenplattform für die Naturschutzgebiete Dänemarks, geliefert über Headnet ApS.
+Leitender Frontend-Entwickler einer interaktiven öffentlichen Kartenplattform für die Naturschutzgebiete Dänemarks.
 
-Ich habe die Karten- und Geodaten-Integration auf CartoDB und SQL gebaut, Geosuche mit Typeahead, Standortanzeige und Routendarstellung, die Kartenbedienung für Mobilgeräte und Touch, einbettbare Karten-Widgets für Drittseiten sowie Druckausgabe und Teilen. Es war das größte Einzelprojekt der Headnet-Zeit — vom Theme-Gerüst über den Launch bis zu Optimierung und Browser-Härtung.
+Ich habe die Karten- und Geodaten-Integration auf CartoDB und SQL gebaut, Geosuche mit Typeahead, Standortanzeige und Routendarstellung, die Kartenbedienung für Mobilgeräte und Touch, einbettbare Karten-Widgets für Drittseiten sowie Druckausgabe und Teilen. Es war das größte Einzelprojekt meiner Kopenhagener Jahre — vom Theme-Gerüst über den Launch bis zu Optimierung und Browser-Härtung.
 
 ## Bolighed.dk {#bolighed}
 
@@ -149,7 +149,7 @@ Eine dänische Community-Plattform für Sport in Gruppen. Team- und Gruppensyste
 
 Frontend- und Integrationsarbeit an der Routenplattform des Radschnellwegenetzes im Großraum Kopenhagen: ibikecph-Routenkarten und Servicestationsdaten an das Drupal-Backend angebunden, Darstellung der Routenbeschreibungen und Optimierung für Mobilgeräte und Tablets.
 
-## Weitere Kunden über Headnet ApS {#headnet-other}
+## Weitere Kunden {#headnet-other}
 
 ### Freiberuflicher Entwickler
 

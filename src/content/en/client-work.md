@@ -25,7 +25,7 @@ A short, focused development engagement for a Berlin-based company, delivered to
 
 Developer on the native mobile app for a Berlin crypto bank, focused on secure and comprehensible access to digital banking and cryptocurrency services.
 
-The work took place in a regulated fintech environment with high standards for security, correctness and release quality. TypeScript and React Native against GraphQL APIs, in a cross-functional product team. Engaged via UPPER Technologies GmbH.
+The work took place in a regulated fintech environment with high standards for security, correctness and release quality. TypeScript and React Native against GraphQL APIs, in a cross-functional product team.
 
 ## hey.car {#heycar}
 
@@ -33,7 +33,7 @@ The work took place in a regulated fintech environment with high standards for s
 
 A long-running engagement on Germany's first complete platform for end-to-end digital car purchases, backed by Volkswagen Financial Services and Daimler Mobility.
 
-I started as a front-end developer on the core marketplace and grew into a technical leadership role: owning architecture decisions, reviewing code and mentoring, and driving front-end standards across teams. The codebase was server-side-rendered React at scale, where performance, SEO and conversion were first-class concerns supported by A/B testing and feature flags. In late 2020 I moved onto the new direct-to-consumer stream to help launch online car sales. Engaged via MVPF Global Talent Solutions GmbH.
+I started as a front-end developer on the core marketplace and grew into a technical leadership role: owning architecture decisions, reviewing code and mentoring, and driving front-end standards across teams. The codebase was server-side-rendered React at scale, where performance, SEO and conversion were first-class concerns supported by A/B testing and feature flags. In late 2020 I moved onto the new direct-to-consumer stream to help launch online car sales.
 
 ## Wonderwerk {#wonderwerk}
 
@@ -47,13 +47,13 @@ The engagement was full-time on-site and covered feature development, component 
 
 ### Contract full-stack developer
 
-An intensive delivery sprint on a web application, worked to a short, fixed deadline. Engaged through the Stuttgart-based developer network Coder Society.
+An intensive delivery sprint on a web application, worked to a short, fixed deadline.
 
 ## Danish Ministry of Higher Education and Science {#ufm}
 
 ### Freelance full-stack developer
 
-The longest-running of my Danish public-sector engagements, delivered via Headnet ApS. I rebuilt and redesigned ufm.dk as a fixed-price project, then designed and built the ministry's new intranet across 2017–2018.
+The longest-running of my Danish public-sector engagements. I rebuilt and redesigned ufm.dk as a fixed-price project, then designed and built the ministry's new intranet across 2017–2018.
 
 Ongoing responsibility for front-end architecture, portlet and template development, support for the ministry's EU portal, accessibility and cross-browser compatibility on a high-traffic government site — plus two years of ticket-based maintenance.
 
@@ -67,7 +67,7 @@ The member portal for a Danish automotive trade association: member profiles and
 
 ### Freelance front-end developer
 
-Full theming and the front-end build of a Danish knowledge portal on integration research, delivered as a fixed-price project via Headnet ApS.
+Full theming and the front-end build of a Danish knowledge portal on integration research, delivered as a fixed-price project.
 
 ## Danish Evaluation Institute (NB-ECEC) {#eva}
 
@@ -85,7 +85,7 @@ The front end for the agency's intranet as a fixed-price project, plus follow-up
 
 ### Lead developer
 
-Sole developer on the forsk.dk web shop — architecture, implementation and launch delivered end to end as a fixed-price project via Headnet ApS.
+Sole developer on the forsk.dk web shop — architecture, implementation and launch delivered end to end as a fixed-price project.
 
 ## Fritz Schur Group {#fritzschur}
 
@@ -103,9 +103,9 @@ Sole developer on nmknafgoerelser.dk, the board's public database of appeal deci
 
 ### Principal front-end developer
 
-Principal front-end developer on an interactive public map platform for Denmark's protected nature areas, delivered via Headnet ApS.
+Principal front-end developer on an interactive public map platform for Denmark's protected nature areas.
 
-I built the map and geodata integration on CartoDB and SQL, geospatial search with typeahead, show-my-location and route display, the map experience for mobile and touch, embeddable map widgets for third-party sites, and print output and sharing. It was the single largest engagement of the Headnet period — from theme skeleton through launch, optimisation and cross-browser hardening.
+I built the map and geodata integration on CartoDB and SQL, geospatial search with typeahead, show-my-location and route display, the map experience for mobile and touch, embeddable map widgets for third-party sites, and print output and sharing. It was the single largest engagement of my Copenhagen years — from theme skeleton through launch, optimisation and cross-browser hardening.
 
 ## Bolighed.dk {#bolighed}
 
@@ -149,7 +149,7 @@ A Danish community platform for group exercise. Team and group system with role-
 
 Front-end and integration work on the route platform for the Greater Copenhagen cycle superhighway network: ibikecph route maps and service-station data wired into the Drupal backend, route description display, and optimisation for mobile and tablet.
 
-## Additional clients via Headnet ApS {#headnet-other}
+## Additional clients {#headnet-other}
 
 ### Freelance developer
 

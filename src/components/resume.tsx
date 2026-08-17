@@ -5,7 +5,7 @@ import { dictionary, formatPeriod, localeFromPath } from '../lib/i18n';
 import { firstParagraph, section } from '../lib/markdown';
 import { Layout } from './layout';
 import { PrintButton } from './print-button';
-import { CompactEntry, LINK, Prose, Section, TechList, engagementFacts } from './ui';
+import { CompactEntry, LINK, Prose, Section, TechList, placeLabel } from './ui';
 
 /**
  * The whole CV on one page, in the order a recruiter reads: who, then what I have built, then who I
@@ -113,9 +113,9 @@ export default function Resume({ url }: PageProps) {
                 href={engagement.url}
                 printUrl
                 period={formatPeriod(engagement.start, engagement.end, locale)}
-                // Role first — it is what a reader scans for. The period is already on the line
-                // above, so `slice(1)` drops it and leaves place and agency.
-                role={[entry.subtitle ?? [], engagementFacts(engagement, locale).slice(1)].flat().join(' · ')}
+                // Role first — it is what a reader scans for — then the place. The period is
+                // already set on the line above.
+                role={[entry.subtitle ?? [], placeLabel(engagement, locale)].flat().join(' · ')}
                 html={firstParagraph(entry.html)}
                 stack={engagement.stack}
               />
