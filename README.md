@@ -22,7 +22,7 @@ src/
   components/      pages and components
   content/         da|en|de — all prose, in markdown
   lib/             i18n, markdown parsing, and the CV's structured data
-  styles.css       imported by the layout, so it loads with the page
+  styles.css       the Tailwind @theme — imported by the layout, so it loads with the page
 ```
 
 Pages are **server components**: they render the whole document, may be `async`, and await data directly.
@@ -55,6 +55,14 @@ a fourth `Dictionary`, a fourth folder under `content/`, and seven more routes.
 
 `src/lib/resume.en.json` is the compiled JSON Resume the content was written from. Nothing imports it;
 it is kept as the source of record.
+
+## Styling
+
+Tailwind utilities in the markup; `src/styles.css` is only the `@theme` block they resolve against.
+The palette is semantic — `bg-canvas`, `text-ink`, `text-muted`, `border-line`, `text-accent` — and
+dark mode and print are the same variables redefined, so nothing carries a `dark:` variant. Repeated
+strings (`LINK`, `PROSE`, `PAGE_TITLE`) are constants in `src/components/ui.tsx`; compose them rather
+than assembling class names, which Tailwind's scanner would not see.
 
 ## Environment
 

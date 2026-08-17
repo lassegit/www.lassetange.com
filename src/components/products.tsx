@@ -4,7 +4,7 @@ import { PRODUCTS, PROFILE } from '../lib/data';
 import { dictionary, formatPeriod, localeFromPath } from '../lib/i18n';
 import { section } from '../lib/markdown';
 import { Layout } from './layout';
-import { Chips, Prose } from './ui';
+import { Chips, Facts, LEAD, LINK, Prose, QUIET_LINK } from './ui';
 
 /** The four products I built and run myself — structure from `data.ts`, prose from the locale's markdown. */
 export default function Products({ url }: PageProps) {
@@ -14,36 +14,39 @@ export default function Products({ url }: PageProps) {
 
   return (
     <Layout locale={locale} path="/products" title={`${doc.title} — ${PROFILE.name}`} description={doc.description}>
-      <h1 className="page-title">{doc.title}</h1>
-      <Prose html={doc.lead} className="lead prose" />
+      <h1 className="mb-3 text-display font-semibold text-balance">{doc.title}</h1>
+      <Prose html={doc.lead} className={LEAD} />
 
-      <ul className="entries section">
+      <ul className="mt-11">
         {PRODUCTS.map((product) => {
           const entry = section(doc, product.id);
           if (!entry) return null;
 
           return (
-            <li className="entry" key={product.id}>
-              <h2 className="entry-title">
-                <a href={product.url}>{entry.title}</a>
+            <li className="border-t border-line py-7 first:border-t-0 first:pt-1" key={product.id}>
+              <h2 className="mb-0.5 text-heading font-semibold text-balance">
+                <a className={QUIET_LINK} href={product.url}>
+                  {entry.title}
+                </a>
               </h2>
-              {entry.subtitle && <p className="entry-role">{entry.subtitle}</p>}
+              {entry.subtitle && <p className="mb-2 text-muted">{entry.subtitle}</p>}
 
-              <p className="entry-meta">
-                <span>{formatPeriod(product.start, undefined, locale)}</span>
-                {product.profitable && <span className="badge">{t.profitable}</span>}
-              </p>
+              <Facts items={[formatPeriod(product.start, undefined, locale)]}>
+                {product.profitable && (
+                  <span className="inline-block rounded-full border border-accent px-1.5 py-px text-xs leading-snug font-semibold text-accent">
+                    {t.profitable}
+                  </span>
+                )}
+              </Facts>
 
-              <Prose html={entry.html} className="prose entry-body" />
+              <Prose html={entry.html} className="mb-4" />
               <Chips items={product.stack} />
 
-              <ul className="entry-links">
-                <li>
-                  <a href={product.url}>
-                    {t.visitSite} <span aria-hidden="true">→</span>
-                  </a>
-                </li>
-              </ul>
+              <p className="mt-3.5 text-sm">
+                <a className={LINK} href={product.url}>
+                  {t.visitSite} <span aria-hidden="true">→</span>
+                </a>
+              </p>
             </li>
           );
         })}

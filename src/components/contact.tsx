@@ -3,7 +3,7 @@ import { content } from '../lib/content';
 import { PROFILE, countryName } from '../lib/data';
 import { dictionary, localeFromPath } from '../lib/i18n';
 import { Layout } from './layout';
-import { Prose } from './ui';
+import { LEAD, LINK, PAGE_TITLE, Prose, Section } from './ui';
 
 /**
  * No contact form. A form on a personal site adds a failure mode, a spam surface and a privacy
@@ -22,18 +22,20 @@ export default function Contact({ url }: PageProps) {
 
   return (
     <Layout locale={locale} path="/contact" title={`${doc.title} — ${PROFILE.name}`} description={doc.description}>
-      <h1 className="page-title">{doc.title}</h1>
-      <Prose html={doc.lead} className="lead prose" />
+      <h1 className={PAGE_TITLE}>{doc.title}</h1>
+      <Prose html={doc.lead} className={LEAD} />
 
-      <ul className="contact-methods">
+      <ul className="mt-6 grid gap-3">
         {methods.map((method) => (
-          <li className="contact-method" key={method.label}>
-            <span className="contact-label">{method.label}</span>
-            <a href={method.href}>{method.text}</a>
+          <li className="flex items-baseline gap-3" key={method.label}>
+            <span className="w-22 flex-none text-sm text-muted">{method.label}</span>
+            <a className={LINK} href={method.href}>
+              {method.text}
+            </a>
           </li>
         ))}
-        <li className="contact-method">
-          <span className="contact-label">{t.basedIn}</span>
+        <li className="flex items-baseline gap-3">
+          <span className="w-22 flex-none text-sm text-muted">{t.basedIn}</span>
           <span>
             {t.city}, {countryName('copenhagen', locale)}
           </span>
@@ -41,12 +43,9 @@ export default function Contact({ url }: PageProps) {
       </ul>
 
       {doc.sections.map((entry) => (
-        <section className="section" key={entry.id} aria-labelledby={`${entry.id}-title`}>
-          <h2 className="section-title" id={`${entry.id}-title`}>
-            {entry.title}
-          </h2>
+        <Section title={entry.title} id={entry.id} key={entry.id}>
           <Prose html={entry.html} />
-        </section>
+        </Section>
       ))}
     </Layout>
   );

@@ -3,7 +3,7 @@ import { content } from '../lib/content';
 import { PROFILE } from '../lib/data';
 import { localeFromPath } from '../lib/i18n';
 import { Layout } from './layout';
-import { Prose } from './ui';
+import { LEAD, PAGE_TITLE, Prose, TechList } from './ui';
 
 /**
  * Seven groups, each a markdown list. There is no structured data behind this page: the group names
@@ -16,14 +16,14 @@ export default function Technologies({ url }: PageProps) {
 
   return (
     <Layout locale={locale} path="/technologies" title={`${doc.title} — ${PROFILE.name}`} description={doc.description}>
-      <h1 className="page-title">{doc.title}</h1>
-      <Prose html={doc.lead} className="lead prose" />
+      <h1 className={PAGE_TITLE}>{doc.title}</h1>
+      <Prose html={doc.lead} className={LEAD} />
 
-      <ul className="groups section">
+      <ul className="mt-11 grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-x-8 gap-y-7">
         {doc.sections.map((group) => (
-          <li className="group" key={group.id}>
-            <h2 className="group-title">{group.title}</h2>
-            <Prose html={group.html} className="group-list" />
+          <li className="break-inside-avoid" key={group.id}>
+            <h2 className="mb-2.5 border-b border-line pb-1.5 text-base font-semibold">{group.title}</h2>
+            <TechList html={group.html} />
           </li>
         ))}
       </ul>

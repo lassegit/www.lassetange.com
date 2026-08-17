@@ -3,7 +3,7 @@ import { content } from '../lib/content';
 import { CLIENT_WORK, OPEN_SOURCE, PRODUCTS, PROFILE, countryName } from '../lib/data';
 import { dictionary, localeFromPath, localePath } from '../lib/i18n';
 import { Layout } from './layout';
-import { Prose } from './ui';
+import { LEAD, Prose, Section } from './ui';
 
 /**
  * The front page answers “who is this and should I keep reading?” before anything else: a photo, a
@@ -41,42 +41,42 @@ export default function Home({ url }: PageProps) {
     <Layout locale={locale} path="/" title={`${doc.title} — ${tagline}`} description={doc.description} jsonLd={jsonLd}>
       {/* `alt=""`: the name is in the `<h1>` right beside it, so describing the portrait would only
           make a screen reader say it twice. */}
-      <div className="hero">
+      <div className="mb-8 flex flex-wrap items-start gap-6">
         <img
-          className="hero-photo"
+          className="size-30 flex-none rounded-full bg-surface object-cover object-[50%_5%]"
           src={PROFILE.photo}
           width={PROFILE.photoWidth}
           height={PROFILE.photoHeight}
           alt=""
           fetchPriority="high"
         />
-        <div className="hero-body">
-          <h1>{PROFILE.name}</h1>
-          <p className="hero-tagline">{tagline}</p>
-          <p className="hero-place">
+        <div className="flex-1 basis-64">
+          <h1 className="text-display font-semibold text-balance">{PROFILE.name}</h1>
+          <p className="mt-1 text-lg text-muted">{tagline}</p>
+          <p className="mt-2 text-sm text-muted">
             {t.basedIn} {t.city}, {countryName('copenhagen', locale)}
           </p>
         </div>
       </div>
 
-      <Prose html={doc.lead} className="lead prose" />
+      <Prose html={doc.lead} className={LEAD} />
 
       {doc.sections.map((entry) => (
-        <section className="section" key={entry.id} aria-labelledby={`${entry.id}-title`}>
-          <h2 className="section-title" id={`${entry.id}-title`}>
-            {entry.title}
-          </h2>
+        <Section title={entry.title} id={entry.id} key={entry.id}>
           <Prose html={entry.html} />
-        </section>
+        </Section>
       ))}
 
-      <nav className="section" aria-label={t.sections}>
-        <ul className="cards">
+      <nav className="mt-11" aria-label={t.sections}>
+        <ul className="grid grid-cols-[repeat(auto-fit,minmax(13rem,1fr))] gap-3">
           {destinations.map((destination) => (
             <li key={destination.path}>
-              <a className="card" href={localePath(destination.path, locale)}>
-                <span className="card-title">{destination.label}</span>
-                <span className="card-note">{destination.note}</span>
+              <a
+                className="block h-full rounded-md border border-line px-4 py-3.5 no-underline hover:border-line-strong hover:bg-surface"
+                href={localePath(destination.path, locale)}
+              >
+                <span className="font-semibold text-accent">{destination.label}</span>
+                <span className="mt-0.5 block text-sm text-muted">{destination.note}</span>
               </a>
             </li>
           ))}

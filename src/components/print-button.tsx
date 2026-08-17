@@ -23,7 +23,11 @@ export function PrintButton({ label }: { label: string }) {
   if (!hydrated) return null;
 
   return (
-    <button type="button" className="button" onClick={() => window.print()}>
+    <button
+      type="button"
+      className="cursor-pointer rounded border border-accent bg-accent px-3.5 py-1.5 text-sm font-semibold text-canvas hover:border-accent-hover hover:bg-accent-hover"
+      onClick={() => window.print()}
+    >
       {label}
     </button>
   );

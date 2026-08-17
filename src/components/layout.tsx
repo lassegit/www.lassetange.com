@@ -4,6 +4,7 @@ import { PROFILE } from '../lib/data';
 import { LOCALES, LOCALE_TAGS, dictionary, localePath, type Locale } from '../lib/i18n';
 import { Footer } from './footer';
 import { Header } from './header';
+import { Shell } from './ui';
 
 export interface LayoutProps {
   locale: Locale;
@@ -71,13 +72,16 @@ export function Layout({ locale, path, title, description, noIndex, jsonLd, chil
 
         {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
       </head>
-      <body>
-        <a className="skip-link" href="#main">
+      <body className="flex min-h-screen flex-col bg-canvas font-sans text-base text-ink antialiased selection:bg-accent-soft">
+        <a
+          className="absolute top-2 left-5 z-10 -translate-y-[200%] rounded border border-line-strong bg-canvas px-3 py-2 text-ink no-underline focus:translate-y-0"
+          href="#main"
+        >
           {t.skipToContent}
         </a>
         <Header locale={locale} path={path} />
-        <main className="site-main" id="main">
-          <div className="shell">{children}</div>
+        <main className="flex-1 pt-10 pb-16 print:py-0" id="main">
+          <Shell>{children}</Shell>
         </main>
         <Footer locale={locale} path={path} />
       </body>
