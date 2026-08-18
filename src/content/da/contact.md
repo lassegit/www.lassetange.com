@@ -10,7 +10,8 @@ Skriv endelig, hvis I har et projekt, en rolle eller bare et spørgsmål. Jeg sv
 Jeg driver mine egne produkter fra København og tager imod udvalgte freelance- og rådgivningsopgaver ved siden af. Det plejer at være ét af disse:
 
 - **Teknisk ledelse og arkitektur** — retning, beslutninger og standarder for et frontend- eller full-stack-team.
-- **Anvendt AI** — LLM-funktioner, RAG og vektorsøgning bygget til at løse et forretningsproblem frem for at demonstrere teknologien.
+- **Anvendt AI** — agentisk AI, LLM-funktioner, RAG og vektorsøgning bygget til at løse virkelige problemer.
 - **Produktudvikling fra nul** — fra idé til lanceret produkt, alene eller sammen med et lille team.
+- **Startup-idé** — har I et spændende nyt projekt? Så skriv endelig.
 
 Jeg arbejder på dansk, engelsk og tysk, remote eller på stedet i København.

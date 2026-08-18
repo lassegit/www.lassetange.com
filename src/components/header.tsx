@@ -3,15 +3,17 @@ import { PAGES, dictionary, localePath, type Locale } from '../lib/i18n';
 import { CloseIcon, GitHubIcon, LinkedInIcon, MenuIcon } from './icons';
 import { Shell } from './ui';
 
-/** A tab in the desktop strip. */
-const TAB = 'block border-b-2 px-2.5 pt-2 pb-2.5 text-[0.9375rem] whitespace-nowrap no-underline';
-const TAB_IDLE = 'border-transparent text-muted hover:border-line-strong hover:text-ink';
-const TAB_CURRENT = 'border-accent font-semibold text-ink';
+/** A tab in the desktop strip. Accent throughout, so the strip reads as links rather than as labels,
+    and a rule heavy enough to be seen at a glance next to its neighbours. */
+const TAB = 'block font-medium border-b-4 px-2.5 pt-2 pb-2.5 text-[0.9375rem] whitespace-nowrap no-underline';
+const TAB_IDLE = 'border-transparent text-accent hover:border-accent/40 hover:text-accent-hover';
+const TAB_CURRENT = 'border-accent text-accent';
 
-/** A row in the mobile menu — the same rules as a tab, turned on their side. */
-const ROW = 'flex items-center gap-1.5 border-l-2 py-2.5 pl-3 no-underline';
-const ROW_IDLE = 'border-transparent text-muted hover:text-ink';
-const ROW_CURRENT = 'border-accent font-semibold text-ink';
+/** A row in the mobile menu — the same rules as a tab, turned on their side. The border stays at 2px
+    so a row's text keeps lining up with the name above it (see `LIST_INDENT`). */
+const ROW = 'flex font-medium items-center gap-1.5 border-l-4 py-2.5 pl-3 no-underline';
+const ROW_IDLE = 'border-transparent text-accent hover:text-accent-hover';
+const ROW_CURRENT = 'border-accent text-accent';
 
 /** The lists pull left by their own indent, so a row's text aligns with the name above it. */
 const LIST_INDENT = '-ml-3.5';
