@@ -46,10 +46,26 @@ export function canonicalPath(pathname: string): string {
   return rest.length ? `/${rest.join('/')}` : '/';
 }
 
+/** A canonical path under a locale's prefix, Danish included — `('/products', 'da')` → `/da/products`. */
+function prefixedPath(path: string, locale: Locale): string {
+  return path === '/' ? `/${locale}` : `/${locale}${path}`;
+}
+
 /** A canonical path rendered in `locale`, e.g. `('/products', 'de')` → `/de/products`. */
 export function localePath(path: string, locale: Locale): string {
-  if (locale === DEFAULT_LOCALE) return path;
-  return path === '/' ? `/${locale}` : `/${locale}${path}`;
+  return locale === DEFAULT_LOCALE ? path : prefixedPath(path, locale);
+}
+
+/**
+ * Where the footer's language links point — the same page, prefixed in every language including Danish.
+ *
+ * For English and German that is the page itself. For Danish it is `/da/…`, which is not a page: the
+ * unprefixed tree is the one place a URL cannot say “I chose Danish”, so `src/server.ts` takes the prefix
+ * as the statement, records it, and redirects to the real path. Without it, clicking “Dansk” from the
+ * German tree would land on `/products` and be negotiated straight back to `/de/products`.
+ */
+export function localeSwitchPath(path: string, locale: Locale): string {
+  return prefixedPath(path, locale);
 }
 
 /* -------------------------------------------------------------------------------------------------
@@ -65,6 +81,54 @@ export const PAGES = [
   { path: '/open-source', key: 'navOpenSource' },
   { path: '/resume', key: 'navResume' },
 ] as const satisfies ReadonlyArray<{ path: string; key: keyof Dictionary }>;
+
+/**
+ * Every canonical page path — the tabs, plus the `/contact` the tabs leave out. The sitemap enumerates
+ * it, and so does the language negotiation in `src/server.ts`: a path that is not here is not a page,
+ * which is what keeps `/sitemap.xml` and `/robots.txt` from being redirected into a language.
+ */
+export const PAGE_PATHS: readonly string[] = [...PAGES.map((page) => page.path), '/contact'];
+
+/* -------------------------------------------------------------------------------------------------
+ * Preference
+ *
+ * Which language a reader gets when the URL has not said — that is, anywhere in the unprefixed tree,
+ * which is simultaneously the Danish site and the site's `x-default`. A choice made in the footer wins,
+ * then the browser's own `Accept-Language`, then Danish. `src/server.ts` acts on the answer.
+ * ---------------------------------------------------------------------------------------------- */
+
+/** The reader's own choice. Written by the prefixed switch paths, read before `Accept-Language` is consulted. */
+export const LOCALE_COOKIE = 'lang';
+
+/**
+ * The best supported locale an `Accept-Language` header names, or `null` when it names none of them.
+ *
+ * Quality values decide the order — `sort` is stable, so equal weights keep the order the browser sent —
+ * and only the primary subtag is compared, so `de-AT` is German without a reader having to also list
+ * `de`. `q=0` is a refusal and `*` matches no locale, so both fall out on their own.
+ *
+ * `null` rather than {@link DEFAULT_LOCALE}: the caller has to tell “asked for Danish” from “expressed no
+ * opinion”, because only one of them is worth a redirect. A crawler sends no header at all and lands there.
+ */
+export function preferredLocale(acceptLanguage: string | undefined): Locale | null {
+  if (!acceptLanguage) return null;
+
+  const ranked = acceptLanguage
+    .split(',')
+    .map((entry) => {
+      const [tag = '', ...parameters] = entry.split(';');
+      const quality = parameters.find((parameter) => parameter.trimStart().startsWith('q='));
+      const weight = quality === undefined ? 1 : Number.parseFloat(quality.trim().slice(2));
+      return { language: tag.trim().toLowerCase().split('-')[0] ?? '', weight: Number.isFinite(weight) ? weight : 0 };
+    })
+    .filter((entry) => entry.weight > 0)
+    .sort((a, b) => b.weight - a.weight);
+
+  for (const { language } of ranked) {
+    if (isLocale(language)) return language;
+  }
+  return null;
+}
 
 /* -------------------------------------------------------------------------------------------------
  * Interface labels
