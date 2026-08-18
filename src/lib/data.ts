@@ -101,7 +101,7 @@ export const PRODUCTS: readonly Product[] = [
     id: 'sqlai',
     name: 'SQLAI.ai',
     url: 'https://www.sqlai.ai',
-    start: '2023',
+    start: '2022',
     profitable: true,
     stack: ['TypeScript', 'React', 'Next.js', 'Astro', 'Node.js', 'PostgreSQL', 'LLM APIs', 'RAG', 'Stripe', 'Cloudflare'],
   },
