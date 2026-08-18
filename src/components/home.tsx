@@ -54,6 +54,9 @@ export default function Home({ url }: PageProps) {
           <h1 className="text-display font-semibold text-balance">{PROFILE.name}</h1>
           <p className="mt-1 text-lg text-muted">{tagline}</p>
           <p className="mt-2 text-sm text-muted">
+            <span role="img" aria-label="Location pin">
+              📍
+            </span>
             {t.basedIn} {t.city}, {countryName('copenhagen', locale)}
           </p>
         </div>

@@ -18,6 +18,13 @@ export const DEFAULT_LOCALE: Locale = 'da';
 /** Endonyms — a language is always offered in its own language, never translated. */
 export const LOCALE_NAMES: Record<Locale, string> = { da: 'Dansk', en: 'English', de: 'Deutsch' };
 
+/**
+ * Flags for the language selector, and only there. A flag names a country rather than a language —
+ * the Union Jack stands in for English by convention, not by right — so they sit beside the endonym
+ * as decoration, hidden from screen readers, and never carry the label on their own.
+ */
+export const LOCALE_FLAGS: Record<Locale, string> = { da: '🇩🇰', en: '🇬🇧', de: '🇩🇪' };
+
 /** BCP 47 tags, for `<html lang>`, `hreflang` and `Intl`. */
 export const LOCALE_TAGS: Record<Locale, string> = { da: 'da-DK', en: 'en-GB', de: 'de-DE' };
 
