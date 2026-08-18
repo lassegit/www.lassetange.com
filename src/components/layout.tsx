@@ -1,10 +1,16 @@
 import type { ReactNode } from 'react';
 import '../styles.css';
-import { PROFILE } from '../lib/data';
+import { content } from '../lib/content';
+import { PROFILE, SOCIAL_CARD, socialCardPath } from '../lib/data';
 import { LOCALES, LOCALE_TAGS, dictionary, localePath, type Locale } from '../lib/i18n';
 import { Footer } from './footer';
 import { Header } from './header';
 import { Shell } from './ui';
+
+/** Open Graph writes a locale as `da_DK`, where the rest of the web writes `da-DK`. */
+function ogLocale(locale: Locale): string {
+  return LOCALE_TAGS[locale].replace('-', '_');
+}
 
 export interface LayoutProps {
   locale: Locale;
@@ -24,12 +30,18 @@ export interface LayoutProps {
  * The document every page renders through: head, skip link, header, main, footer.
  *
  * The head is where the multilingual part of the site becomes visible to machines — a canonical URL
- * per language, `hreflang` alternates in all three plus `x-default`, and `og:locale` — so the Danish,
- * English and German versions of a page are understood as the same page rather than as duplicates.
+ * per language, `hreflang` alternates in all three plus `x-default`, `og:locale` and a share card in
+ * the reader's own language — so the Danish, English and German versions of a page are understood as
+ * the same page rather than as duplicates.
  */
 export function Layout({ locale, path, title, description, noIndex, jsonLd, children }: LayoutProps) {
   const t = dictionary(locale);
   const canonical = new URL(localePath(path, locale), PROFILE.siteUrl).href;
+  const card = new URL(socialCardPath(locale), PROFILE.siteUrl).href;
+
+  /** What the card actually shows. Taking the tagline from the same place the generator takes it
+   *  keeps the description of the image and the image itself from drifting apart. */
+  const cardAlt = [PROFILE.name, content(locale, 'home').meta.tagline].filter(Boolean).join(' — ');
 
   return (
     <html lang={locale}>
@@ -62,9 +74,26 @@ export function Layout({ locale, path, title, description, noIndex, jsonLd, chil
         <meta property="og:title" content={title} />
         {description && <meta property="og:description" content={description} />}
         <meta property="og:url" content={canonical} />
-        <meta property="og:locale" content={LOCALE_TAGS[locale].replace('-', '_')} />
-        <meta property="og:image" content={new URL(PROFILE.socialImage, PROFILE.siteUrl).href} />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:locale" content={ogLocale(locale)} />
+        {LOCALES.filter((alternate) => alternate !== locale).map((alternate) => (
+          <meta key={alternate} property="og:locale:alternate" content={ogLocale(alternate)} />
+        ))}
+
+        {/* The card rather than the portrait, and its size spelled out — see {@link SOCIAL_CARD}.
+            `secure_url` says nothing new on a site that is https-only, but LinkedIn's parser is old
+            enough to look for it, and a duplicated URL is a cheap way to be legible to it. */}
+        <meta property="og:image" content={card} />
+        <meta property="og:image:secure_url" content={card} />
+        <meta property="og:image:type" content={SOCIAL_CARD.type} />
+        <meta property="og:image:width" content={String(SOCIAL_CARD.width)} />
+        <meta property="og:image:height" content={String(SOCIAL_CARD.height)} />
+        <meta property="og:image:alt" content={cardAlt} />
+
+        {/* `summary_large_image` is the 1.91:1 card; plain `summary` would ask for a square one and
+            get the middle of this cropped out. Slack and the rest read these as a fallback too. */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={card} />
+        <meta name="twitter:image:alt" content={cardAlt} />
 
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131315" />

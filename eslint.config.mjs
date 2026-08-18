@@ -28,4 +28,12 @@ export default tseslint.config(
     },
   },
   { files: ['**/*.{js,mjs,cjs}'], extends: [tseslint.configs.disableTypeChecked] },
+
+  // `scripts/` runs in Node rather than in the app, so it needs Node's globals declared. Spelled out
+  // by hand instead of pulling in `globals` for two names — the day that list gets long is the day to
+  // add the package.
+  {
+    files: ['scripts/**/*.mjs'],
+    languageOptions: { globals: { URL: 'readonly', console: 'readonly' } },
+  },
 );

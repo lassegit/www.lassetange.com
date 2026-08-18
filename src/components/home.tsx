@@ -30,7 +30,7 @@ export default function Home({ url }: PageProps) {
     name: PROFILE.name,
     jobTitle: tagline,
     url: PROFILE.siteUrl,
-    image: new URL(PROFILE.socialImage, PROFILE.siteUrl).href,
+    image: new URL(PROFILE.portrait, PROFILE.siteUrl).href,
     email: `mailto:${PROFILE.email}`,
     address: { '@type': 'PostalAddress', addressLocality: t.city, addressCountry: 'DK' },
     sameAs: [PROFILE.github, PROFILE.linkedin, ...PRODUCTS.map((product) => product.url)],

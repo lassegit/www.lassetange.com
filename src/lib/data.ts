@@ -18,16 +18,42 @@ export const PROFILE = {
   name: 'Lasse Tange',
   email: 'contact@lassetange.com',
   siteUrl: 'https://www.lassetange.com',
-  /** Shown at 120px on the front page and 88px on the CV, so a 480px derivative is plenty — the
-   *  full-size original is kept for `og:image`, where the crawler wants the larger file. */
+  /** Shown at 120px on the front page and 88px on the CV, so a 480px derivative is plenty. */
   photo: '/profile-picture-480.jpg',
   photoWidth: 319,
   photoHeight: 480,
-  socialImage: '/profile-picture.jpg',
+  /** The full-size original. Used for the `image` of the front page's `Person` JSON-LD, where a
+   *  crawler wants the photograph itself rather than the composed {@link SOCIAL_CARD}. */
+  portrait: '/profile-picture.jpg',
   github: 'https://github.com/lassegit',
   linkedin: 'https://www.linkedin.com/in/lassetange',
   blog: 'https://sometechblog.com',
 } as const;
+
+/* -------------------------------------------------------------------------------------------------
+ * Social card
+ *
+ * What a link preview shows, built by `pnpm social-cards` — see `scripts/social-cards.mjs` for how.
+ *
+ * The portrait cannot do this job. Facebook and LinkedIn lay a preview out at 1.91:1 and want at least
+ * 1200px across; a 797×1200 greyscale JPEG is neither, and LinkedIn answers that by shrinking it to a
+ * thumbnail or dropping it entirely. Hence a landscape card, one per language, with the name and
+ * tagline set large enough to read at the size a feed actually renders it.
+ * ---------------------------------------------------------------------------------------------- */
+
+/**
+ * The card's dimensions, declared to crawlers as well as baked into the file.
+ *
+ * Not redundant: a crawler that has not yet fetched the image builds the preview from these numbers
+ * alone, so leaving them out is what makes the *first* share of a URL go out without a picture.
+ * They are the same two numbers as in `scripts/social-cards.mjs`; change one and change both.
+ */
+export const SOCIAL_CARD = { width: 1200, height: 630, type: 'image/jpeg' } as const;
+
+/** The card for a language, named as the generator writes it. */
+export function socialCardPath(locale: Locale): string {
+  return `/social-card-${locale}.jpg`;
+}
 
 /* -------------------------------------------------------------------------------------------------
  * Places

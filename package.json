@@ -13,6 +13,7 @@
     "typecheck": "tsc --noEmit",
     "preview": "rshono build && wrangler dev",
     "deploy": "rshono build && wrangler deploy",
+    "social-cards": "node scripts/social-cards.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint ."
