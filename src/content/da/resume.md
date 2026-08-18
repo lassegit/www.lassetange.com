@@ -5,8 +5,8 @@ description: Fuldt CV for Lasse Tange — tech lead og full-stack-udvikler med 1
 
 ## Profil {#profile}
 
-Full-stack-udvikler og tech lead med 15+ års erfaring i at planlægge, arkitekte og bygge web- og mobilprodukter. Det meste af min karriere er gået med internationale startups og scale-ups i Berlin og København — som teamleder, som ansvarlig for arkitekturbeslutninger og som den, der har hjulpet tidlige virksomheder med at vokse til fungerende forretninger.
+Jeg har brugt 15 år på at bygge [web- og mobilapplikationer](/client-work), det meste af tiden i internationale startups og offentlige institutioner i Berlin og København. Siden 2023 har jeg bygget og lanceret fire af mine egne AI-produkter.
 
-Siden 2023 har jeg bygget og lanceret fire AI-produkter af mine egne, heriblandt profitable SQLAI.ai med over 150.000 brugere og 25 millioner genererede forespørgsler. Før det kom et årti med kundeopgaver på tværs af bilmarkedspladser, kryptobank, e-læring, leveringsapps og danske offentlige platforme — fra frontend-arkitektur og designsystemer til API'er, søgning og geodata.
+Jeg er full-stack-udvikler og planlægger, arkitekterer og bygger web- og mobilapplikationer fra ende til anden med et solidt fundament i TypeScript. Jeg er lige hjemme i frontend og backend og arbejder med en bred vifte af [teknologier](/technologies) — alt fra React til PostgreSQL til cloud.
 
-Jeg lægger vægt på stærk produktforståelse, blik for UX og kode, der forbliver enkel, testbar og til at vedligeholde. Som leder går jeg efter resultater frem for processer og personligt ansvar frem for mikrostyring.
+Jeg har arbejdet med AI siden OpenAI udgav GPT-3, og jeg har bygget og lanceret fire af mine egne AI-produkter — heriblandt [SQLAI.ai](https://www.sqlai.ai), som er profitabel og har over 150.000 brugere. Det arbejde dækker den praktiske side af anvendt AI: RAG, embeddings og vektorsøgning, promptdesign og agentiske workflows.

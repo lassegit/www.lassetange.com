@@ -5,8 +5,8 @@ description: Vollständiger Lebenslauf von Lasse Tange — Tech Lead und Full-St
 
 ## Profil {#profile}
 
-Full-Stack-Entwickler und Tech Lead mit über 15 Jahren Erfahrung in Planung, Architektur und Entwicklung von Web- und Mobile-Produkten. Den größten Teil meiner Laufbahn habe ich in internationalen Startups und Scale-ups in Berlin und Kopenhagen verbracht — Teams geführt, Architekturentscheidungen verantwortet und jungen Unternehmen geholfen, zu erfolgreichen Geschäften zu werden.
+Seit 15 Jahren baue ich [Web- und Mobile-Anwendungen](/de/client-work), überwiegend in internationalen Startups und öffentlichen Einrichtungen in Berlin und Kopenhagen. Seit 2023 habe ich vier eigene KI-Produkte entwickelt und veröffentlicht.
 
-Seit 2023 habe ich vier eigene KI-Produkte entwickelt und veröffentlicht, darunter das profitable SQLAI.ai mit über 150.000 Nutzerinnen und Nutzern und 25 Millionen erzeugten Abfragen. Davor lag ein Jahrzehnt Kundenarbeit über Automobil-Marktplätze, Krypto-Banking, E-Learning, Lieferdienst-Apps und Plattformen der dänischen öffentlichen Hand — von Frontend-Architektur und Designsystemen bis zu APIs, Suche und Geodaten.
+Ich bin Full-Stack-Entwickler und plane, konzipiere und entwickle Web- und Mobile-Anwendungen von Anfang bis Ende — mit einem soliden Fundament in TypeScript. Im Frontend bin ich genauso zu Hause wie im Backend und arbeite mit einer breiten Palette von [Technologien](/de/technologies): von React über PostgreSQL bis in die Cloud.
 
-Mir sind ausgeprägtes Produktdenken, ein Blick für UX und Code wichtig, der einfach, testbar und wartbar bleibt. Ich führe über Ergebnisse statt Prozesse und über persönliche Verantwortung statt Mikromanagement.
+Mit KI arbeite ich, seit OpenAI GPT-3 veröffentlicht hat. Vier eigene KI-Produkte habe ich seither gebaut und an den Start gebracht — darunter [SQLAI.ai](https://www.sqlai.ai), das profitabel ist und über 150.000 Nutzerinnen und Nutzer hat. Diese Arbeit deckt die praktische Seite angewandter KI ab: RAG, Embeddings und Vektorsuche, Prompt-Design und agentische Workflows.

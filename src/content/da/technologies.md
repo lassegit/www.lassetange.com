@@ -3,7 +3,7 @@ title: Teknologier
 description: Den moderne TypeScript-stak med React i centrum — frontend-arkitektur, API'er, datamodellering, test og drift, samt anvendt AI som en fast del af værktøjskassen.
 ---
 
-Jeg arbejder på tværs af den moderne TypeScript-stak med React i centrum — fra frontend-arkitektur og API'er til datamodellering, test og drift. AI er en fast del af værktøjskassen, både i de produkter jeg bygger, og i måden jeg bygger dem på. Listerne herunder er repræsentative, ikke udtømmende.
+Jeg arbejder på tværs af den moderne TypeScript-stack med React i centrum — fra frontend-arkitektur og API'er til datamodellering, test og drift. AI er en fast del af værktøjskassen, både i de produkter jeg bygger, og i måden jeg bygger dem på. Listerne herunder er repræsentative, ikke udtømmende.
 
 ## AI
 
