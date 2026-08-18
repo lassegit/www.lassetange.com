@@ -12,6 +12,8 @@ Ich bin Full-Stack-Entwickler und plane, konzipiere und entwickle Web- und Mobil
 
 Mit KI arbeite ich, seit OpenAI GPT-3 veröffentlicht hat. Vier eigene KI-Produkte habe ich seither gebaut und an den Start gebracht — darunter [SQLAI.ai](https://www.sqlai.ai), das profitabel ist und über 150.000 Nutzerinnen und Nutzer hat. Diese Arbeit deckt die praktische Seite angewandter KI ab: RAG, Embeddings und Vektorsuche, Prompt-Design und agentische Workflows.
 
+Ich spreche Dänisch, Deutsch und Englisch. Ich habe Betriebswirtschaftslehre und Informatik an der Copenhagen Business School studiert.
+
 ## Wie ich arbeite {#approach}
 
 - **Analytisch:** Ich dringe in das Problem und die Möglichkeiten ein, bevor ich mich auf eine konkrete Lösung festlege.

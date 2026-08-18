@@ -12,6 +12,8 @@ I am a full-stack developer who plans, architects and builds web and mobile appl
 
 I have worked with AI since OpenAI released GPT-3, and I have built and launched four AI products of my own — including [SQLAI.ai](https://www.sqlai.ai), which is profitable and has over 150,000 users. That work covers the practical side of applied AI: RAG, embeddings and vector search, prompt design and agentic workflows.
 
+I speak Danish, German and English. I studied Business Administration and Computer Science at Copenhagen Business School.
+
 ## How I work {#approach}
 
 - **Analytical:** I dig into the problem and the options before committing to a concrete solution.

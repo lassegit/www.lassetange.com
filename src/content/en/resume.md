@@ -10,3 +10,5 @@ I have spent 15 years building [web and mobile applications](/en/client-work), m
 I am a full-stack developer who plans, architects and builds web and mobile applications end to end, with a strong grounding in TypeScript. I am equally comfortable on the frontend and the backend, working with a wide range of [technologies](/en/technologies) — everything from React to PostgreSQL to the cloud.
 
 I have worked with AI since OpenAI released GPT-3, and I have built and launched four AI products of my own — including [SQLAI.ai](https://www.sqlai.ai), which is profitable and has over 150,000 users. That work covers the practical side of applied AI: RAG, embeddings and vector search, prompt design and agentic workflows.
+
+I speak Danish, German and English. I studied Business Administration and Computer Science at Copenhagen Business School.
