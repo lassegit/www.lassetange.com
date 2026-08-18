@@ -1,4 +1,4 @@
-/** The marks the header needs, inlined so no request and no icon font is involved. */
+/** The marks the header and footer need, inlined so no request and no icon font is involved. */
 
 const MARK = 'size-4 shrink-0 fill-current';
 
@@ -45,6 +45,16 @@ export function CloseIcon({ className = '' }: { className?: string }) {
       focusable="false"
     >
       <path d="M6 6l12 12M18 6L6 18" />
+    </svg>
+  );
+}
+
+/** The envelope beside the footer's mail link, drawn solid so it carries the weight of the two marks
+    it sits under rather than looking like an outline among logos. */
+export function MailIcon() {
+  return (
+    <svg className={MARK} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M2 6.2A2.2 2.2 0 0 1 4.2 4h15.6A2.2 2.2 0 0 1 22 6.2v.5l-10 5.6L2 6.7v-.5Zm0 2.8v8.8A2.2 2.2 0 0 0 4.2 20h15.6a2.2 2.2 0 0 0 2.2-2.2V9l-9.51 5.33a1 1 0 0 1-.98 0L2 9Z" />
     </svg>
   );
 }

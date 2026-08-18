@@ -15,8 +15,7 @@
     "deploy": "rshono build && wrangler deploy",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@rshono/core": "^1.0.0-rc.15",

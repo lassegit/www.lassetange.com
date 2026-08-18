@@ -4,10 +4,12 @@ import { CloseIcon, GitHubIcon, LinkedInIcon, MenuIcon } from './icons';
 import { Shell } from './ui';
 
 /** A tab in the desktop strip. Accent throughout, so the strip reads as links rather than as labels,
-    and a rule heavy enough to be seen at a glance next to its neighbours. */
-const TAB = 'block font-medium border-b-4 px-2.5 pt-2 pb-2.5 text-[0.9375rem] whitespace-nowrap no-underline';
-const TAB_IDLE = 'border-transparent text-accent hover:border-accent/40 hover:text-accent-hover';
-const TAB_CURRENT = 'border-accent text-accent';
+    and a rule heavy enough to be seen at a glance next to its neighbours. The weight sits on the two
+    states rather than on `TAB`, so the current tab is marked twice — by its rule and by its weight —
+    without one class having to beat another in the stylesheet. */
+const TAB = 'block border-b-4 px-2.5 pt-2 pb-2.5 text-[0.9375rem] whitespace-nowrap no-underline';
+const TAB_IDLE = 'border-transparent font-medium text-accent hover:border-accent/40 hover:text-accent-hover';
+const TAB_CURRENT = 'border-accent font-medium text-accent';
 
 /** A row in the mobile menu — the same rules as a tab, turned on their side. The border stays at 2px
     so a row's text keeps lining up with the name above it (see `LIST_INDENT`). */
@@ -18,8 +20,13 @@ const ROW_CURRENT = 'border-accent text-accent';
 /** The lists pull left by their own indent, so a row's text aligns with the name above it. */
 const LIST_INDENT = '-ml-3.5';
 
-/** Contact and the two profiles, in the top row. */
+/** Contact, in words, in the top row. */
 const META = 'inline-flex items-center gap-1.5 text-muted no-underline hover:text-accent hover:underline';
+
+/** A profile in the top row, where it is its mark alone. The padding is a target a thumb can hit and
+    the negative margin takes it back out of the layout, so the marks neither space the row apart nor
+    add to its height. */
+const ICON = '-m-1.5 flex p-1.5 text-muted no-underline hover:text-accent';
 
 /**
  * Two rows, deliberately: the top one is who I am and how to reach me, the bottom one is where you
@@ -92,7 +99,7 @@ function PageLinks({ locale, path, as }: { locale: Locale; path: string; as: 'ta
   const tabs = as === 'tabs';
 
   return (
-    <ul className={tabs ? '-mb-px flex gap-0.5' : LIST_INDENT}>
+    <ul className={tabs ? '-mb-px flex' : LIST_INDENT}>
       {PAGES.map((page) => {
         const current = page.path === path;
         return (
@@ -111,7 +118,15 @@ function PageLinks({ locale, path, as }: { locale: Locale; path: string; as: 'ta
   );
 }
 
-/** Contact, GitHub and LinkedIn — the top row on desktop, the foot of the menu on mobile. */
+/**
+ * Contact, GitHub and LinkedIn — the top row on desktop, the foot of the menu on mobile.
+ *
+ * In the top row the two profiles are their marks alone. That row shares a line with the name and sits
+ * above six tabs, and spelling out “GitHub” beside a mark that already says it is what makes the line
+ * crowded. A mark carries no accessible name of its own — the SVGs are `aria-hidden` — so the link has
+ * to say what it is: `aria-label` for a screen reader, `title` for a mouse. The menu is a column with
+ * room to spare and keeps the words.
+ */
 function MetaLinks({ locale, as }: { locale: Locale; as: 'row' | 'menu' }) {
   const t = dictionary(locale);
   const row = as === 'row';
@@ -123,15 +138,24 @@ function MetaLinks({ locale, as }: { locale: Locale; as: 'row' | 'menu' }) {
   ];
 
   return (
-    <ul className={row ? 'flex items-center gap-4 text-sm' : LIST_INDENT}>
-      {links.map((link) => (
-        <li key={link.href}>
-          <a className={row ? META : `${ROW} ${ROW_IDLE}`} href={link.href} rel={link.rel}>
-            {link.icon}
-            {link.label}
-          </a>
-        </li>
-      ))}
+    <ul className={row ? 'flex items-center gap-3 text-sm' : LIST_INDENT}>
+      {links.map((link) => {
+        const mark = row && link.icon !== undefined;
+        return (
+          <li key={link.href}>
+            <a
+              className={row ? (mark ? ICON : META) : `${ROW} ${ROW_IDLE}`}
+              href={link.href}
+              rel={link.rel}
+              aria-label={mark ? link.label : undefined}
+              title={mark ? link.label : undefined}
+            >
+              {link.icon}
+              {!mark && link.label}
+            </a>
+          </li>
+        );
+      })}
     </ul>
   );
 }

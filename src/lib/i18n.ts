@@ -155,6 +155,9 @@ export interface Dictionary {
   menu: string;
   contact: string;
   homeLabel: string;
+  /** The footer's two columns: the site's own pages, and everywhere else I am. */
+  pages: string;
+  elsewhere: string;
 
   language: string;
   currentLanguage: string;
@@ -204,6 +207,8 @@ const da: Dictionary = {
   menu: 'Menu',
   contact: 'Kontakt',
   homeLabel: 'Forside',
+  pages: 'Sider',
+  elsewhere: 'Andre steder',
 
   language: 'Sprog',
   currentLanguage: 'Nuværende sprog',
@@ -256,6 +261,8 @@ const en: Dictionary = {
   menu: 'Menu',
   contact: 'Contact',
   homeLabel: 'Home',
+  pages: 'Pages',
+  elsewhere: 'Elsewhere',
 
   language: 'Language',
   currentLanguage: 'Current language',
@@ -308,6 +315,8 @@ const de: Dictionary = {
   menu: 'Menü',
   contact: 'Kontakt',
   homeLabel: 'Startseite',
+  pages: 'Seiten',
+  elsewhere: 'Anderswo',
 
   language: 'Sprache',
   currentLanguage: 'Aktuelle Sprache',
