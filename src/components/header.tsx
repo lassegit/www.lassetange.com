@@ -1,6 +1,7 @@
 import { PROFILE } from '../lib/data';
 import { PAGES, dictionary, localePath, type Locale } from '../lib/i18n';
 import { CloseIcon, GitHubIcon, LinkedInIcon, MenuIcon } from './icons';
+import { MobileMenu } from './mobile-menu';
 import { Shell } from './ui';
 
 /** A tab in the desktop strip. Accent throughout, so the strip reads as links rather than as labels,
@@ -35,8 +36,10 @@ const ICON = '-m-1.5 flex p-1.5 text-muted no-underline hover:text-accent';
  *
  * Below `sm` there is no room for six tabs, so both rows collapse into a burger menu. It is a native
  * `<details>` disclosure rather than a script: the browser owns the open state and announces it as a
- * button, it works before (and without) hydration, and every link is a new document so the menu is
- * closed again on arrival. The trade-off is that only the burger closes it — a tap outside will not.
+ * button, and it works before (and without) hydration. Following a link out of it is the one point where
+ * the browser needs help — a same-origin link is soft-navigated, so the document, and the open panel with
+ * it, survives the click — and {@link MobileMenu} adds that and nothing else. The trade-off left standing
+ * is that only the burger closes it — a tap outside will not.
  */
 export function Header({ locale, path }: { locale: Locale; path: string }) {
   const t = dictionary(locale);
@@ -56,7 +59,7 @@ export function Header({ locale, path }: { locale: Locale; path: string }) {
             <MetaLinks locale={locale} as="row" />
           </div>
 
-          <details className="group sm:hidden">
+          <MobileMenu className="group sm:hidden">
             <summary
               className="-mr-2 flex cursor-pointer list-none items-center p-2 text-ink [&::-webkit-details-marker]:hidden"
               aria-label={t.menu}
@@ -77,7 +80,7 @@ export function Header({ locale, path }: { locale: Locale; path: string }) {
                 </div>
               </Shell>
             </div>
-          </details>
+          </MobileMenu>
         </div>
       </Shell>
 
