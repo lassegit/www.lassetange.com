@@ -36,10 +36,10 @@ const ICON = '-m-1.5 flex p-1.5 text-muted no-underline hover:text-accent';
  *
  * Below `sm` there is no room for six tabs, so both rows collapse into a burger menu. It is a native
  * `<details>` disclosure rather than a script: the browser owns the open state and announces it as a
- * button, and it works before (and without) hydration. Following a link out of it is the one point where
- * the browser needs help — a same-origin link is soft-navigated, so the document, and the open panel with
- * it, survives the click — and {@link MobileMenu} adds that and nothing else. The trade-off left standing
- * is that only the burger closes it — a tap outside will not.
+ * button, and it works before (and without) hydration. Closing it is where the browser needs help: a
+ * same-origin link is soft-navigated, so the document — and the open panel with it — survives the click,
+ * and a `<details>` has no notion of a tap that landed elsewhere. {@link MobileMenu} adds those two and
+ * nothing else, so the open state stays the browser's.
  */
 export function Header({ locale, path }: { locale: Locale; path: string }) {
   const t = dictionary(locale);
