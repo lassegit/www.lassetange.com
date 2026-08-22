@@ -9,7 +9,8 @@ import { CompactEntry, LINK, Prose, Section, TechList, placeLabel } from './ui';
 
 /**
  * The whole CV on one page, in the order a recruiter reads: who, then what I have built, then who I
- * have built it for, then the tools, then the languages.
+ * have built it for, then the tools. The languages and the degree close it out — background rather
+ * than evidence, so they sit last.
  *
  * This page is designed to leave the browser as a PDF. `print:` variants drop the header, tabs,
  * footer and the print bar itself, the theme's colour variables swap to black on white, and entries
@@ -27,6 +28,7 @@ export default function Resume({ url }: PageProps) {
   const openSource = content(locale, 'open-source');
   const tagline = content(locale, 'home').meta.tagline ?? '';
   const profile = section(doc, 'profile');
+  const education = section(doc, 'education');
 
   return (
     <Layout locale={locale} path="/resume" title={`${doc.title} — ${PROFILE.name}`} description={doc.description}>
@@ -135,16 +137,6 @@ export default function Resume({ url }: PageProps) {
         </ul>
       </Section>
 
-      <Section title={t.spokenLanguages} id="cv-languages">
-        <ul className="grid grid-cols-[repeat(auto-fit,minmax(12rem,1fr))] gap-x-6 gap-y-2 text-sm">
-          {t.fluencies.map((fluency) => (
-            <li key={fluency.name}>
-              <span className="font-semibold">{fluency.name}</span> — {fluency.level}
-            </li>
-          ))}
-        </ul>
-      </Section>
-
       <Section title={t.navOpenSource} id="cv-open-source">
         <ul>
           {OPEN_SOURCE.map((project) => {
@@ -155,6 +147,22 @@ export default function Resume({ url }: PageProps) {
           })}
         </ul>
       </Section>
+
+      <Section title={t.spokenLanguages} id="cv-languages">
+        <ul className="grid grid-cols-[repeat(auto-fit,minmax(12rem,1fr))] gap-x-6 gap-y-2 text-sm">
+          {t.fluencies.map((fluency) => (
+            <li key={fluency.name}>
+              <span className="font-semibold">{fluency.name}</span> — {fluency.level}
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {education && (
+        <Section title={education.title} id="cv-education">
+          <Prose html={education.html} className="text-sm" />
+        </Section>
+      )}
     </Layout>
   );
 }
