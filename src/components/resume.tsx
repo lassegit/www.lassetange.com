@@ -2,7 +2,7 @@ import type { PageProps } from '@rshono/core';
 import { content } from '../lib/content';
 import { CLIENT_WORK, OPEN_SOURCE, PRODUCTS, PROFILE, countryName } from '../lib/data';
 import { dictionary, formatPeriod, localeFromPath } from '../lib/i18n';
-import { firstParagraph, section } from '../lib/markdown';
+import { firstParagraph, section, slug } from '../lib/markdown';
 import { Layout } from './layout';
 import { PrintButton } from './print-button';
 import { CompactEntry, LINK, Prose, Section, TechList, placeLabel } from './ui';
@@ -29,11 +29,14 @@ export default function Resume({ url }: PageProps) {
   const tagline = content(locale, 'home').meta.tagline ?? '';
   const profile = section(doc, 'profile');
   const education = section(doc, 'education');
+  /** What “Save as PDF” suggests as the filename, in place of the page title — `lasse-tange-cv`,
+   *  `lasse-tange-resume`, `lasse-tange-lebenslauf`. The browser appends the extension. */
+  const fileName = slug(`${PROFILE.name} ${doc.title}`);
 
   return (
     <Layout locale={locale} path="/resume" title={`${doc.title} — ${PROFILE.name}`} description={doc.description}>
       <div className="mb-9 flex flex-wrap items-baseline gap-x-4 gap-y-2 rounded-md border border-line bg-surface px-4 py-3.5 print:hidden">
-        <PrintButton label={t.printResume} />
+        <PrintButton label={t.printResume} fileName={fileName} />
         <p className="flex-1 basis-56 text-sm text-muted">{t.printHint}</p>
       </div>
 

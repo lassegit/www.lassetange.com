@@ -162,7 +162,12 @@ function splitHeading(raw: string): { title: string; id: string } {
   return { title: raw, id: slug(raw) };
 }
 
-function slug(value: string): string {
+/**
+ * A heading reduced to an anchor id: lowercased, diacritics dropped, and every run of anything else
+ * collapsed to a single hyphen. Exported because a filename wants exactly the same treatment — the
+ * CV page builds the name its PDF is saved under from it.
+ */
+export function slug(value: string): string {
   return value
     .toLowerCase()
     .normalize('NFD')
