@@ -31,7 +31,7 @@ export default function Products({ url }: PageProps) {
               </h2>
               {entry.subtitle && <p className="mb-2 text-muted">{entry.subtitle}</p>}
 
-              <Facts items={[formatPeriod(product.start, undefined, locale)]}>
+              <Facts items={[formatPeriod(product.start, product.end, locale)]}>
                 {product.profitable && (
                   <span className="inline-block rounded-full border border-accent px-1.5 py-px text-xs leading-snug font-semibold text-accent">
                     {t.profitable}

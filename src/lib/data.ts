@@ -89,8 +89,10 @@ export interface Product {
   id: string;
   name: string;
   url: string;
-  /** `YYYY` or `YYYY-MM`. All four are still running, so none has an end. */
+  /** `YYYY` or `YYYY-MM`. */
   start: string;
+  /** `YYYY-MM`. Absent means ongoing. */
+  end?: string;
   /** Shown as a badge next to the period. */
   profitable?: true;
   stack: readonly string[];
@@ -102,6 +104,7 @@ export const PRODUCTS: readonly Product[] = [
     name: 'SQLAI.ai',
     url: 'https://www.sqlai.ai',
     start: '2022',
+    end: '2026-09',
     profitable: true,
     stack: ['TypeScript', 'React', 'Next.js', 'Astro', 'Node.js', 'PostgreSQL', 'LLM APIs', 'RAG', 'Stripe', 'Cloudflare'],
   },
@@ -110,6 +113,7 @@ export const PRODUCTS: readonly Product[] = [
     name: 'Chartmaker.io',
     url: 'https://www.chartmaker.io',
     start: '2024',
+    end: '2026-05',
     stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Stripe'],
   },
   {
@@ -117,6 +121,7 @@ export const PRODUCTS: readonly Product[] = [
     name: 'WebsiteFeedback.ai',
     url: 'https://www.websitefeedback.ai',
     start: '2024',
+    end: '2026-05',
     stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Stripe'],
   },
   {
@@ -124,6 +129,7 @@ export const PRODUCTS: readonly Product[] = [
     name: 'ViewDiff.ai',
     url: 'https://www.viewdiff.ai',
     start: '2025',
+    end: '2026-05',
     stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Stripe'],
   },
 ];

@@ -180,6 +180,10 @@ export interface Dictionary {
   spokenLanguages: string;
   fullHistory: string;
 
+  /** One-line introductions above the product and client-work lists on the CV. */
+  productsIntro: string;
+  clientWorkIntro: string;
+
   moreOnGithub: string;
   emailMe: string;
   basedIn: string;
@@ -230,6 +234,11 @@ const da: Dictionary = {
   profile: 'Profil',
   spokenLanguages: 'Sprog',
   fullHistory: 'Fuld arbejdshistorik',
+
+  productsIntro:
+    'Fire produkter jeg har taget hele vejen selv: idé, arkitektur, UX, drift, markedsføring og omsætning.',
+  clientWorkIntro:
+    'Et årti med kundeopgaver, først som freelancer i København og siden i det tyske startup-miljø.',
 
   moreOnGithub: 'Se flere projekter på GitHub',
   emailMe: 'Skriv til mig',
@@ -285,6 +294,10 @@ const en: Dictionary = {
   spokenLanguages: 'Languages',
   fullHistory: 'Full work history',
 
+  productsIntro:
+    'Four products I have taken all the way myself: idea, architecture, UX, operations, marketing and revenue.',
+  clientWorkIntro: 'A decade of client work, first freelancing in Copenhagen and later inside the German startup scene.',
+
   moreOnGithub: 'More projects on GitHub',
   emailMe: 'Send me an email',
   basedIn: 'Based in',
@@ -338,6 +351,11 @@ const de: Dictionary = {
   profile: 'Profil',
   spokenLanguages: 'Sprachen',
   fullHistory: 'Vollständiger Werdegang',
+
+  productsIntro:
+    'Vier Produkte, die ich vollständig selbst verantwortet habe: Idee, Architektur, UX, Betrieb, Marketing und Umsatz.',
+  clientWorkIntro:
+    'Ein Jahrzehnt Kundenarbeit, zunächst freiberuflich in Kopenhagen, später in der Berliner Startup-Szene.',
 
   moreOnGithub: 'Weitere Projekte auf GitHub',
   emailMe: 'Schreiben Sie mir',

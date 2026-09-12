@@ -84,6 +84,7 @@ export default function Resume({ url }: PageProps) {
       )}
 
       <Section title={t.navProducts} id="cv-products">
+        <p className="mb-4 text-sm text-muted">{t.productsIntro}</p>
         <ul>
           {PRODUCTS.map((product) => {
             const entry = section(products, product.id);
@@ -95,7 +96,7 @@ export default function Resume({ url }: PageProps) {
                 title={entry.title}
                 href={product.url}
                 printUrl
-                period={formatPeriod(product.start, undefined, locale)}
+                period={formatPeriod(product.start, product.end, locale)}
                 role={[entry.subtitle ?? [], product.profitable ? t.profitable : []].flat().join(' · ')}
                 html={firstParagraph(entry.html)}
                 stack={product.stack}
@@ -106,6 +107,7 @@ export default function Resume({ url }: PageProps) {
       </Section>
 
       <Section title={t.navClientWork} id="cv-work">
+        <p className="mb-4 text-sm text-muted">{t.clientWorkIntro}</p>
         <ul>
           {CLIENT_WORK.map((engagement) => {
             const entry = section(clientWork, engagement.id);
