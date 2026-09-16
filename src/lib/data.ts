@@ -106,7 +106,7 @@ export const PRODUCTS: readonly Product[] = [
     start: '2022',
     end: '2026-09',
     profitable: true,
-    stack: ['TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'LLM APIs', 'RAG', 'Payment Integration', 'Cloudflare', 'IaC'],
+    stack: ['TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'LLM APIs', 'RAG', 'Payments', 'Cloudflare', 'IaC'],
   },
   {
     id: 'chartmaker',
@@ -114,7 +114,7 @@ export const PRODUCTS: readonly Product[] = [
     url: 'https://www.chartmaker.io',
     start: '2024',
     end: '2026-05',
-    stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Payment Integration', 'Cloudflare', 'IaC'],
+    stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Payments', 'Cloudflare', 'IaC'],
   },
   {
     id: 'websitefeedback',
@@ -122,7 +122,7 @@ export const PRODUCTS: readonly Product[] = [
     url: 'https://www.websitefeedback.ai',
     start: '2024',
     end: '2026-05',
-    stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Payment Integration', 'Cloudflare', 'IaC'],
+    stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Payments', 'Cloudflare', 'IaC'],
   },
   {
     id: 'viewdiff',
@@ -130,7 +130,7 @@ export const PRODUCTS: readonly Product[] = [
     url: 'https://www.viewdiff.ai',
     start: '2025',
     end: '2026-05',
-    stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Payment Integration', 'Cloudflare', 'IaC'],
+    stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Payments', 'Cloudflare', 'IaC'],
   },
 ];
 
@@ -159,7 +159,7 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2022-02',
     end: '2022-05',
     place: 'berlin',
-    stack: ['React Native', 'React', 'UX/UI', 'TypeScript', 'GraphQL', 'Node.js', 'AWS', 'IaC', 'Payment Integration'],
+    stack: ['React Native', 'React', 'UI/UX', 'TypeScript', 'GraphQL', 'Node.js', 'AWS', 'IaC', 'Payments'],
   },
   {
     id: 'brandturbo',
@@ -176,7 +176,7 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2021-01',
     end: '2021-07',
     place: 'berlin',
-    stack: ['React Native', 'TypeScript', 'UX/UI', 'GraphQL', 'Node.js', 'AWS', 'IaC', 'SolarisBank'],
+    stack: ['React Native', 'TypeScript', 'UI/UX', 'GraphQL', 'Node.js', 'AWS', 'IaC', 'Solarisbank'],
   },
   {
     id: 'heycar',
@@ -185,7 +185,7 @@ export const CLIENT_WORK: readonly Engagement[] = [
     start: '2019-05',
     end: '2020-11',
     place: 'berlin',
-    stack: ['React', 'Redux', 'UX/UI', 'TypeScript', 'Kotlin', 'Node.js', 'IaC', 'AWS'],
+    stack: ['React', 'Redux', 'UI/UX', 'TypeScript', 'Kotlin', 'Node.js', 'IaC', 'AWS'],
   },
   {
     id: 'wonderwerk',
