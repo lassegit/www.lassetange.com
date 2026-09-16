@@ -5,13 +5,15 @@ description: Full CV for Lasse Tange — tech lead and full-stack developer with
 
 ## Profile {#profile}
 
-I have spent 15 years building [web and mobile applications](/en/client-work), most of that time inside international startups and public institutions in Berlin and Copenhagen. Since 2023 I have built and launched four AI products of my own.
+I have spent 15 years building [web and mobile applications](/en/client-work), most of that time inside international startups and public institutions in Berlin and Copenhagen.
 
-I am a full-stack developer who plans, architects and builds web and mobile applications end to end, with a strong grounding in TypeScript. I am equally comfortable on the frontend and the backend, working with a wide range of [technologies](/en/technologies) — everything from React to PostgreSQL to the cloud.
+I am a full-stack developer who plans, architects and builds web and mobile applications end to end, primarily in TypeScript/Node.js. I am equally at home on the frontend and the backend, working with a wide range of [technologies](/en/technologies).
 
-I have worked with AI since OpenAI released GPT-3, and I have built and launched four AI products of my own — including [SQLAI.ai](https://www.sqlai.ai), which is profitable and has over 150,000 users. That work covers the practical side of applied AI: RAG, embeddings and vector search, prompt design and agentic workflows.
+Beyond development, I am also experienced in setting up, scaling and operating web applications: cloud infrastructure, Infrastructure as Code (IaC), CI/CD pipelines and testing.
 
-I speak Danish, German and English.
+I have also worked with AI since OpenAI released GPT-3, and I have built and launched several AI products of my own. In that work I use a range of AI technologies: RAG, embeddings and vector search, prompt design and agentic workflows.
+
+In recent years I have used the TypeScript/Node.js ecosystem a lot, because the developer experience and the integration between server and client are unrivalled, but I am open to other languages and technologies.
 
 ## Education {#education}
 

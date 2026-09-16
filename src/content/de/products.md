@@ -9,7 +9,7 @@ Vier Produkte, die ich vollständig selbst verantwortet habe: Idee, Architektur,
 
 ### KI-gestütztes SQL-Multitool
 
-Ein KI-gestütztes SQL-Multitool, um SQL zu erzeugen, zu erklären, zu optimieren und zu prüfen, ohne die Kontrolle abzugeben. Vom ersten zahlenden Kunden auf über **150.000 Nutzerinnen und Nutzer** und **25 Millionen erzeugte Abfragen** über **mehr als 30 Datenbank-Engines** gewachsen, darunter PostgreSQL, MySQL, Snowflake, BigQuery und MongoDB.
+Ein KI-gestütztes SQL-Multitool, um SQL zu erzeugen, zu erklären, zu optimieren und zu prüfen, ohne die Kontrolle abzugeben. Vom ersten zahlenden Kunden auf über 150.000 Nutzerinnen und Nutzer über mehr als 30 Datenbank-Engines gewachsen.
 
 Die angewandte KI umfasst RAG, Embeddings, Vektorsuche und Prompt-Design. Auch die kommerzielle Seite gehört dazu: Abrechnung über Stripe und Lemon Squeezy, Abo-Verwaltung, Preisgestaltung, SEO und bezahlte Akquise.
 

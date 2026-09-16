@@ -1,9 +1,9 @@
 ---
 title: Technologien
-description: Der moderne TypeScript-Stack mit React im Zentrum — Frontend-Architektur, APIs, Datenmodellierung, Tests und Betrieb, mit angewandter KI als festem Bestandteil des Werkzeugkastens.
+description: Full-Stack-Entwickler mit TypeScript und React im Zentrum — starke Kompetenzen in Cloud, IaC, CI/CD, Backend und angewandter KI.
 ---
 
-Ich arbeite über den modernen TypeScript-Stack hinweg, mit React im Zentrum — von Frontend-Architektur und APIs bis zu Datenmodellierung, Tests und Betrieb. KI gehört fest zum Werkzeugkasten, sowohl in den Produkten, die ich baue, als auch in der Art, wie ich sie baue. Die Listen unten sind repräsentativ, nicht vollständig.
+Ich arbeite überwiegend über den modernen TypeScript-Stack hinweg, mit React im Zentrum. Darüber hinaus habe ich starke Kompetenzen im Aufsetzen, Skalieren und Betreiben von Web-Anwendungen — Cloud-Infrastruktur, IaC und CI/CD-Pipelines. Angewandte KI gehört fest zum Werkzeugkasten. Unten ein Überblick:
 
 ## KI
 
@@ -53,11 +53,12 @@ Ich arbeite über den modernen TypeScript-Stack hinweg, mit React im Zentrum —
 
 ## Plattform und Betrieb
 
-- CI/CD (GitHub Actions)
+- CI/CD (z. B. GitHub Actions)
 - Docker
 - Cloudflare, AWS und Vercel
 - Linux, Nginx und VPS
 - Git
+- Infrastructure as Code (IaC)
 
 ## Produkt und Führung
 

@@ -9,7 +9,7 @@ Fire produkter jeg har taget hele vejen selv: idé, arkitektur, UX, drift, marke
 
 ### AI-drevet SQL-multiværktøj
 
-Et AI-drevet SQL-multiværktøj til at generere, forklare, optimere og validere SQL uden at give slip på kontrollen. Produktet er vokset fra den første betalende kunde til over **150.000 brugere** og **25 millioner genererede forespørgsler** på tværs af **30+ databasemotorer**, heriblandt PostgreSQL, MySQL, Snowflake, BigQuery og MongoDB.
+Et AI-drevet SQL-multiværktøj til at generere, forklare, optimere og validere SQL uden at give slip på kontrollen. Produktet er vokset fra den første betalende kunde til over 150.000 brugere på tværs af 30+ databasemotorer.
 
 Den anvendte AI dækker RAG, embeddings, vektorsøgning og promptdesign. Jeg ejer også den kommercielle side: abonnementer via Stripe og Lemon Squeezy, prissætning, SEO og betalt annoncering.
 
