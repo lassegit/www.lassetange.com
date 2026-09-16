@@ -1,9 +1,9 @@
 ---
 title: Teknologier
-description: Den moderne TypeScript-stak med React i centrum — frontend-arkitektur, API'er, datamodellering, test og drift, samt anvendt AI som en fast del af værktøjskassen.
+description: Jeg arbejder på tværs af den moderne TypeScript-stack og har stærke kompentencer indenfor klassisk frontend og backend arbejde, men også opsætning, skalering og drift af web applikationer.
 ---
 
-Jeg arbejder på tværs af den moderne TypeScript-stack med React i centrum — fra frontend-arkitektur og API'er til datamodellering, test og drift. AI er en fast del af værktøjskassen, både i de produkter jeg bygger, og i måden jeg bygger dem på. Listerne herunder er repræsentative, ikke udtømmende.
+Jeg arbejder hovedsageligt på tværs af den moderne TypeScript-stack og har stærke kompentencer indenfor frontend og backend, men også opsætning, skalering og drift af web applikationer. Nedenfor er et overblik:
 
 ## AI
 
@@ -53,11 +53,12 @@ Jeg arbejder på tværs af den moderne TypeScript-stack med React i centrum — 
 
 ## Platform og drift
 
-- CI/CD (GitHub Actions)
+- CI/CD (f.eks. GitHub Actions)
 - Docker
 - Cloudflare, AWS og Vercel
 - Linux, Nginx og VPS
 - Git
+- Infrastructure as Code (IaC)
 
 ## Produkt og ledelse
 
