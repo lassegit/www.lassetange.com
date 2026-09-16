@@ -9,7 +9,7 @@ Four products I have taken all the way myself: idea, architecture, UX, operation
 
 ### AI-powered SQL multitool
 
-An AI-powered SQL multitool for generating, explaining, optimising and validating SQL without losing control. It has grown from first paying customer to over **150,000 users** and **25 million generated queries** across **30+ database engines**, including PostgreSQL, MySQL, Snowflake, BigQuery and MongoDB.
+An AI-powered SQL multitool for generating, explaining, optimising and validating SQL without losing control. It has grown from the first paying customer to over 150,000 users across 30+ database engines.
 
 The applied AI spans RAG, embeddings, vector search and prompt design. I also own the commercial side: Stripe and Lemon Squeezy billing, subscription lifecycle, pricing, SEO and paid acquisition.
 

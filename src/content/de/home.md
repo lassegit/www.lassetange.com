@@ -1,27 +1,29 @@
 ---
 title: Lasse Tange
 tagline: Tech Lead & Full-Stack-Entwickler
-description: Tech Lead und Full-Stack-Entwickler in Kopenhagen mit über 15 Jahren Erfahrung in Planung, Architektur und Entwicklung von Web- und Mobile-Produkten — zuletzt vier eigene KI-Produkte.
+description: Tech Lead und Full-Stack-Entwickler in Kopenhagen mit über 15 Jahren Erfahrung in Planung, Architektur und Entwicklung von Web- und Mobile-Produkten.
 ---
 
-Seit 15 Jahren baue ich [Web- und Mobile-Anwendungen](/de/client-work), überwiegend in internationalen Startups und öffentlichen Einrichtungen in Berlin und Kopenhagen. Seit 2023 habe ich vier eigene KI-Produkte entwickelt und veröffentlicht.
+Seit 15 Jahren baue ich [Web- und Mobile-Anwendungen](/de/client-work), überwiegend in internationalen Startups und öffentlichen Einrichtungen in Berlin und Kopenhagen.
 
 ## Über mich {#about}
 
-Ich bin Full-Stack-Entwickler und plane, konzipiere und entwickle Web- und Mobile-Anwendungen von Anfang bis Ende — mit einem soliden Fundament in TypeScript. Im Frontend bin ich genauso zu Hause wie im Backend und arbeite mit einer breiten Palette von [Technologien](/de/technologies): von React über PostgreSQL bis in die Cloud.
+Ich bin Full-Stack-Entwickler und plane, konzipiere und entwickle Web- und Mobile-Anwendungen von Anfang bis Ende, überwiegend in TypeScript/Node.js. Im Frontend bin ich genauso zu Hause wie im Backend und arbeite mit einer breiten Palette von [Technologien](/de/technologies).
 
-Mit KI arbeite ich, seit OpenAI GPT-3 veröffentlicht hat. Vier eigene KI-Produkte habe ich seither gebaut und an den Start gebracht — darunter [SQLAI.ai](https://www.sqlai.ai), das profitabel ist und über 150.000 Nutzerinnen und Nutzer hat. Diese Arbeit deckt die praktische Seite angewandter KI ab: RAG, Embeddings und Vektorsuche, Prompt-Design und agentische Workflows.
+Neben der Entwicklung bin ich auch erfahren im Aufsetzen, Skalieren und Betreiben von Web-Anwendungen: Cloud-Infrastruktur, Infrastructure as Code (IaC), CI/CD-Pipelines und Testing.
 
-Ich spreche Dänisch, Deutsch und Englisch.
+Ich arbeite außerdem mit KI, seit OpenAI GPT-3 veröffentlicht hat, und habe seither mehrere eigene KI-Produkte gebaut und an den Start gebracht. Dabei nutze ich verschiedene KI-Technologien: RAG, Embeddings und Vektorsuche, Prompt-Design und agentische Workflows.
 
 ## Wie ich arbeite {#approach}
 
+Abgesehen davon, dass ich leicht ansprechbar und umgänglich bin, ist mein Ansatz:
+
 - **Analytisch:** Ich dringe in das Problem und die Möglichkeiten ein, bevor ich mich auf eine konkrete Lösung festlege.
-- **Kreativ:** Ich hinterfrage Konventionen und eingespielte Ansätze, um die beste Lösung zu finden.
 - **Ergebnisorientiert:** Ich setze auf Vertrauen statt Kontrolle und Mikromanagement — und auf einen Prozess, der an seinen Ergebnissen gemessen wird.
-- **Menschenorientiert:** Ich arbeite gern mit Menschen aus den unterschiedlichsten Ausbildungsrichtungen zusammen, und das Gespräch mit ihnen halte ich für unverzichtbar, um gute Software zu bauen.
 - **Qualitätsbewusst:** Ich verbinde schnelles, pragmatisches Problemlösen mit Software, die Bestand hat.
 
-## Aktuell {#now}
+## Weiteres
 
-Ausgewählte Freelance- und Beratungsprojekte nehme ich an, und für Startup-Ideen bin ich ebenfalls offen. [Schreiben Sie mir](/de/contact), wenn das zu Ihrem Vorhaben passt.
+In den letzten Jahren habe ich das TypeScript/Node.js-Ökosystem intensiv genutzt, weil die Entwicklererfahrung und die Integration zwischen Server und Client unübertroffen sind, aber ich bin offen für andere Sprachen und Technologien.
+
+[Schreiben Sie mir](/de/contact), wenn das zu Ihrem Vorhaben passt.

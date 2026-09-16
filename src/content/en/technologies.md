@@ -1,9 +1,9 @@
 ---
 title: Technologies
-description: The modern TypeScript stack with React at the centre — front-end architecture, APIs, data modelling, testing and delivery, with applied AI as a first-class part of the toolbox.
+description: Full-stack developer with TypeScript and React at the centre — strong skills in cloud, IaC, CI/CD, backend and applied AI.
 ---
 
-I work across the modern TypeScript stack with React at the centre — from front-end architecture and APIs to data modelling, testing and delivery. AI is a first-class part of the toolbox, both in the products I build and in how I build them. The lists below are representative rather than exhaustive.
+I work primarily across the modern TypeScript stack with React at the centre. In addition, I have strong skills in setting up, scaling and operating web applications — cloud infrastructure, IaC and CI/CD pipelines. Applied AI is a fixed part of the toolbox. Below is an overview:
 
 ## AI
 
@@ -53,11 +53,12 @@ I work across the modern TypeScript stack with React at the centre — from fron
 
 ## Platform and delivery
 
-- CI/CD (GitHub Actions)
+- CI/CD (e.g. GitHub Actions)
 - Docker
 - Cloudflare, AWS and Vercel
 - Linux, Nginx and VPS
 - Git
+- Infrastructure as Code (IaC)
 
 ## Product and leadership
 
