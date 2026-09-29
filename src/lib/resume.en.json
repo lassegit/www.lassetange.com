@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Lasse Tange",
-    "label": "Tech Lead & Full-Stack Developer",
+    "label": "Senior Full-Stack Developer & Tech Lead",
     "email": "contact@lassetange.com",
     "url": "https://www.lassetange.com",
     "summary": "Full-stack developer and tech lead with 15+ years planning, architecting and building web and mobile products. Most of my career has been spent in international startups and scale-ups in Berlin and Copenhagen — leading teams, owning architecture decisions, and helping early-stage companies grow into successful businesses. Since 2023 I have built and launched four AI products of my own, including the profitable SQLAI.ai (150,000+ users, 25M+ queries generated). Before that, a decade of client work across automotive marketplaces, crypto banking, e-learning, delivery apps and Danish public-sector platforms — from front-end architecture and design systems to APIs, search and geospatial data. I care about strong product thinking, a good eye for UX/UI, and code that stays simple, testable and maintainable. I lead with results over processes and personal responsibility over micro-management.",

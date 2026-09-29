@@ -1,6 +1,6 @@
 ---
 title: Lasse Tange
-tagline: Tech Lead & Full-Stack-Entwickler
+tagline: Senior Full-Stack-Entwickler & Tech Lead
 description: Tech Lead und Full-Stack-Entwickler in Kopenhagen mit über 15 Jahren Erfahrung in Planung, Architektur und Entwicklung von Web- und Mobile-Produkten.
 ---
 
