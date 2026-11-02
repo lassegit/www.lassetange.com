@@ -29,6 +29,10 @@ Pages are **server components**: they render the whole document, may be `async`,
 Interactive parts are `'use client'` components a page imports — only those ship JavaScript. The three on
 this site are the CV's print button, the contact form, and the header's mobile menu.
 
+English is the primary language and has no prefix, so `/resume` is English. Danish and German are
+prefixed: `/da/resume` and `/de/resume`. The path itself stays English in all three, so the route table
+has one shape rather than three.
+
 ## Content
 
 Text lives in `src/content/<locale>/*.md` and nowhere else. Facts that do not translate — dates, URLs,

@@ -1,15 +1,5 @@
 import { PROFILE } from '../lib/data';
-import {
-  LOCALES,
-  LOCALE_FLAGS,
-  LOCALE_NAMES,
-  LOCALE_TAGS,
-  dictionary,
-  localePath,
-  localeSwitchPath,
-  PAGES,
-  type Locale,
-} from '../lib/i18n';
+import { LOCALES, LOCALE_FLAGS, LOCALE_NAMES, LOCALE_TAGS, dictionary, localePath, PAGES, type Locale } from '../lib/i18n';
 import { GitHubIcon, LinkedInIcon } from './icons';
 import { Shell } from './ui';
 
@@ -116,17 +106,12 @@ export function Footer({ locale, path }: { locale: Locale; path: string }) {
 /**
  * The language selector is three plain links rather than a `<select>`: it needs no JavaScript, it is
  * crawlable, and each one lands on the same page in the other language rather than dumping the
- * reader back at the front page.
+ * reader back at the front page. Every locale has an explicit URL — English at the root, Danish and
+ * German prefixed — so a switch is never a redirect.
  *
- * The two a reader could switch to point at the prefixed form — `/da/resume` included, which is not
- * a page but a statement: `src/server.ts` records it and then redirects to `/resume`. That is what
- * makes clicking “Dansk” an explicit choice rather than a round trip through the language negotiation,
- * which would otherwise send a German browser straight back where it came from. The language already
- * being read needs none of that and stays a plain self-link, so no page links to a redirect to itself.
- *
- * `data-native` opts them out of soft navigation. A `Set-Cookie` would survive the flight fetch, but
- * the Danish redirect would not: `history.pushState` has already written `/da/resume` by the time
- * `fetch` follows the 302, which would leave that in the address bar with `/resume` underneath it.
+ * `data-native` opts them out of soft navigation. A language switch is a different document — `<html
+ * lang>`, the metadata, every string — and a full load is the one path that leaves nothing of the old
+ * language behind.
  *
  * The flags are decoration and marked as such — on Windows they come down as “DK”, “DE”, “GB”, and to
  * a screen reader as nothing at all. The endonym beside them is what actually names each language.
@@ -143,7 +128,7 @@ function LanguageLinks({ locale, path }: { locale: Locale; path: string }) {
             <li key={option}>
               <a
                 className={`${LANGUAGE} ${current ? LANGUAGE_CURRENT : LANGUAGE_IDLE}`}
-                href={current ? localePath(path, option) : localeSwitchPath(path, option)}
+                href={localePath(path, option)}
                 hrefLang={LOCALE_TAGS[option]}
                 lang={LOCALE_TAGS[option]}
                 data-native

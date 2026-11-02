@@ -1,23 +1,11 @@
 import { onServerError, publicUrl } from '@rshono/core/server';
-import { Hono, type Context } from 'hono';
+import { Hono } from 'hono';
 import { bodyLimit } from 'hono/body-limit';
-import { getCookie, setCookie } from 'hono/cookie';
 import { csrf } from 'hono/csrf';
 import { secureHeaders } from 'hono/secure-headers';
 import { trimTrailingSlash } from 'hono/trailing-slash';
 import { PROFILE } from './lib/data';
-import {
-  DEFAULT_LOCALE,
-  LOCALES,
-  LOCALE_COOKIE,
-  PAGE_PATHS,
-  canonicalPath,
-  isLocale,
-  localeFromPath,
-  localePath,
-  preferredLocale,
-  type Locale,
-} from './lib/i18n';
+import { DEFAULT_LOCALE, LOCALES, PAGE_PATHS, localePath } from './lib/i18n';
 
 /**
  * Mounted at `/` ahead of the page routes, so middleware registered here wraps page requests too — auth,
@@ -52,19 +40,25 @@ server.use(trimTrailingSlash({ alwaysRedirect: true }));
 /** Old paths that should keep working. One place to add to, rather than a handler each. */
 const REDIRECTS: Record<string, string> = {
   '/cv': '/resume',
-  '/kontakt': '/contact',
+  '/kontakt': '/da/contact',
   '/de/lebenslauf': '/de/resume',
+  // The old English tree is now served unprefixed.
+  '/en': '/',
+  '/en/technologies': '/technologies',
+  '/en/open-source': '/open-source',
+  '/en/resume': '/resume',
+  '/en/contact': '/contact',
   // Products and client work now live on the CV as one continuous work history.
   '/products': '/resume',
   '/client-work': '/resume',
-  '/produkter': '/resume',
-  '/kundeopgaver': '/resume',
-  '/da/products': '/resume',
-  '/da/client-work': '/resume',
-  '/da/produkter': '/resume',
-  '/da/kundeopgaver': '/resume',
-  '/en/products': '/en/resume',
-  '/en/client-work': '/en/resume',
+  '/produkter': '/da/resume',
+  '/kundeopgaver': '/da/resume',
+  '/da/products': '/da/resume',
+  '/da/client-work': '/da/resume',
+  '/da/produkter': '/da/resume',
+  '/da/kundeopgaver': '/da/resume',
+  '/en/products': '/resume',
+  '/en/client-work': '/resume',
   '/de/products': '/de/resume',
   '/de/client-work': '/de/resume',
 };
@@ -72,99 +66,6 @@ const REDIRECTS: Record<string, string> = {
 for (const [from, to] of Object.entries(REDIRECTS)) {
   server.get(from, (c) => c.redirect(to, 301));
 }
-
-/* -------------------------------------------------------------------------------------------------
- * Language
- *
- * A reader who has not said which language they read is sent to the one their browser asks for, and a
- * reader who has said stays where they put themselves. Both live here rather than in the pages: this
- * runs ahead of the page routes, so every page stays `render: 'static'` and is still answered from the
- * prerendered tree. Nothing below reads per-request state during a render.
- * ---------------------------------------------------------------------------------------------- */
-
-/** A year — long enough that a returning reader is not asked twice, short enough that a stale choice lapses. */
-const LOCALE_COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
-
-/** The two request properties an unprefixed page's answer now turns on, for any cache in between. */
-const NEGOTIATED_VARY = 'Accept-Language, Cookie';
-
-/** The paths negotiation applies to. Anything else the server answers — the sitemap, an asset — is left alone. */
-const NEGOTIABLE_PATHS = new Set<string>(PAGE_PATHS);
-
-/** Records a reader's language so `Accept-Language` stops deciding for them. */
-function rememberLocale(c: Context, locale: Locale): void {
-  setCookie(c, LOCALE_COOKIE, locale, {
-    path: '/',
-    maxAge: LOCALE_COOKIE_MAX_AGE,
-    httpOnly: true,
-    sameSite: 'Lax',
-    // Not unconditional: Safari drops a `Secure` cookie on `http://localhost`, which is where dev runs.
-    secure: publicUrl(c).protocol === 'https:',
-  });
-}
-
-/** Adds to `Vary` rather than replacing it — the page route has already put `RSC` there by the time this runs. */
-function appendVary(headers: Headers, value: string): void {
-  const existing = headers.get('vary');
-  if (existing === null) headers.set('vary', value);
-  else if (existing.trim() !== '*') headers.set('vary', `${existing}, ${value}`);
-}
-
-/**
- * Danish is the unprefixed language, so `/da/…` is not a second copy of it — it is the one way a reader
- * can say “Danish”, which the page they end up on cannot. The prefix is recorded, then dropped.
- *
- * 302 rather than the 301 this used to be: a permanent redirect is cached by the browser, and a `/da/…`
- * that never reaches the server again would never set the cookie a second time.
- */
-server.get('/da', (c) => {
-  rememberLocale(c, 'da');
-  return c.redirect('/', 302);
-});
-
-server.get('/da/*', (c) => {
-  rememberLocale(c, 'da');
-  return c.redirect(publicUrl(c).pathname.slice('/da'.length) || '/', 302);
-});
-
-/**
- * Sends a reader to their own language when the URL has not already named one.
- *
- * Only the unprefixed tree is negotiated. `/en/resume` and `/de/resume` are a reader's own statement of
- * intent and are never second-guessed — they are only *recorded*, so the next unprefixed URL knows. It is
- * `/resume` that is ambiguous, being both the Danish page and the site's `x-default`, and that is where
- * the cookie, and failing that `Accept-Language`, gets to decide.
- *
- * A browser naming none of the three falls through to Danish rather than to a guess, and so does a
- * crawler, which sends no `Accept-Language` at all — which is what keeps the unprefixed tree indexable
- * and the `hreflang` block in `layout.tsx` honest.
- */
-server.use(async (c, next) => {
-  const { pathname } = publicUrl(c);
-  const path = canonicalPath(pathname);
-  if (c.req.method !== 'GET' || !NEGOTIABLE_PATHS.has(path)) return next();
-
-  // Only when it would change: a `Set-Cookie` on every page would cost the prerendered tree its cacheability.
-  const fromPath = localeFromPath(pathname);
-  if (fromPath !== DEFAULT_LOCALE) {
-    if (getCookie(c, LOCALE_COOKIE) !== fromPath) rememberLocale(c, fromPath);
-    return next();
-  }
-
-  const chosen = getCookie(c, LOCALE_COOKIE);
-  const locale = chosen !== undefined && isLocale(chosen) ? chosen : preferredLocale(c.req.header('accept-language'));
-
-  if (locale !== null && locale !== DEFAULT_LOCALE) {
-    // One reader's answer, so no shared cache may keep it and hand it to the next.
-    c.header('cache-control', 'private, no-store');
-    c.header('vary', NEGOTIATED_VARY);
-    return c.redirect(localePath(path, locale), 302);
-  }
-
-  // The Danish page, served from a URL that could have gone either way. Say what it turned on.
-  await next();
-  appendVary(c.res.headers, NEGOTIATED_VARY);
-});
 
 /**
  * Every page in every language, with `hreflang` alternates so the three versions of a page are
@@ -182,7 +83,7 @@ server.get('/sitemap.xml', (c) => {
         '  <url>',
         `    <loc>${url(path, locale)}</loc>`,
         alternates,
-        `    <xhtml:link rel="alternate" hreflang="x-default" href="${url(path, 'da')}" />`,
+        `    <xhtml:link rel="alternate" hreflang="x-default" href="${url(path, DEFAULT_LOCALE)}" />`,
         '  </url>',
       ].join('\n');
     }),

@@ -8,12 +8,12 @@
  * they would only add ceremony.
  */
 
-export const LOCALES = ['da', 'en', 'de'] as const;
+export const LOCALES = ['en', 'da', 'de'] as const;
 
 export type Locale = (typeof LOCALES)[number];
 
-/** Danish is the primary language and sits at the web root; the others are prefixed. */
-export const DEFAULT_LOCALE: Locale = 'da';
+/** English is the primary language and sits at the web root; the others are prefixed. */
+export const DEFAULT_LOCALE: Locale = 'en';
 
 /** Endonyms — a language is always offered in its own language, never translated. */
 export const LOCALE_NAMES: Record<Locale, string> = { da: 'Dansk', en: 'English', de: 'Deutsch' };
@@ -35,12 +35,12 @@ export function isLocale(value: string): value is Locale {
 /* -------------------------------------------------------------------------------------------------
  * Paths
  *
- * Every page has one canonical path — the Danish one, e.g. `/resume`. `localePath` prefixes it for
+ * Every page has one canonical path — the English one, e.g. `/resume`. `localePath` prefixes it for
  * the other two, `localeFromPath` and `canonicalPath` take a request pathname back apart. Path
  * segments stay English in all three languages, so there is one route table shape, not three.
  * ---------------------------------------------------------------------------------------------- */
 
-/** The locale a request pathname belongs to — the first segment if it names one, else Danish. */
+/** The locale a request pathname belongs to — the first segment if it names one, else English. */
 export function localeFromPath(pathname: string): Locale {
   const first = pathname.split('/')[1] ?? '';
   return isLocale(first) ? first : DEFAULT_LOCALE;
@@ -53,26 +53,14 @@ export function canonicalPath(pathname: string): string {
   return rest.length ? `/${rest.join('/')}` : '/';
 }
 
-/** A canonical path under a locale's prefix, Danish included — `('/resume', 'da')` → `/da/resume`. */
+/** A canonical path under a locale's prefix — `('/resume', 'da')` → `/da/resume`. */
 function prefixedPath(path: string, locale: Locale): string {
   return path === '/' ? `/${locale}` : `/${locale}${path}`;
 }
 
-/** A canonical path rendered in `locale`, e.g. `('/resume', 'de')` → `/de/resume`. */
+/** A canonical path rendered in `locale`, e.g. `('/resume', 'da')` → `/da/resume`. */
 export function localePath(path: string, locale: Locale): string {
   return locale === DEFAULT_LOCALE ? path : prefixedPath(path, locale);
-}
-
-/**
- * Where the footer's language links point — the same page, prefixed in every language including Danish.
- *
- * For English and German that is the page itself. For Danish it is `/da/…`, which is not a page: the
- * unprefixed tree is the one place a URL cannot say “I chose Danish”, so `src/server.ts` takes the prefix
- * as the statement, records it, and redirects to the real path. Without it, clicking “Dansk” from the
- * German tree would land on `/resume` and be negotiated straight back to `/de/resume`.
- */
-export function localeSwitchPath(path: string, locale: Locale): string {
-  return prefixedPath(path, locale);
 }
 
 /* -------------------------------------------------------------------------------------------------
@@ -89,52 +77,10 @@ export const PAGES = [
 ] as const satisfies ReadonlyArray<{ path: string; key: keyof Dictionary }>;
 
 /**
- * Every canonical page path — the tabs themselves. The sitemap enumerates it, and so does the language
- * negotiation in `src/server.ts`: a path that is not here is not a page, which is what keeps
- * `/sitemap.xml` and `/robots.txt` from being redirected into a language.
+ * Every canonical page path — the tabs themselves. The sitemap enumerates it to build one entry per
+ * page per language.
  */
 export const PAGE_PATHS: readonly string[] = PAGES.map((page) => page.path);
-
-/* -------------------------------------------------------------------------------------------------
- * Preference
- *
- * Which language a reader gets when the URL has not said — that is, anywhere in the unprefixed tree,
- * which is simultaneously the Danish site and the site's `x-default`. A choice made in the footer wins,
- * then the browser's own `Accept-Language`, then Danish. `src/server.ts` acts on the answer.
- * ---------------------------------------------------------------------------------------------- */
-
-/** The reader's own choice. Written by the prefixed switch paths, read before `Accept-Language` is consulted. */
-export const LOCALE_COOKIE = 'lang';
-
-/**
- * The best supported locale an `Accept-Language` header names, or `null` when it names none of them.
- *
- * Quality values decide the order — `sort` is stable, so equal weights keep the order the browser sent —
- * and only the primary subtag is compared, so `de-AT` is German without a reader having to also list
- * `de`. `q=0` is a refusal and `*` matches no locale, so both fall out on their own.
- *
- * `null` rather than {@link DEFAULT_LOCALE}: the caller has to tell “asked for Danish” from “expressed no
- * opinion”, because only one of them is worth a redirect. A crawler sends no header at all and lands there.
- */
-export function preferredLocale(acceptLanguage: string | undefined): Locale | null {
-  if (!acceptLanguage) return null;
-
-  const ranked = acceptLanguage
-    .split(',')
-    .map((entry) => {
-      const [tag = '', ...parameters] = entry.split(';');
-      const quality = parameters.find((parameter) => parameter.trimStart().startsWith('q='));
-      const weight = quality === undefined ? 1 : Number.parseFloat(quality.trim().slice(2));
-      return { language: tag.trim().toLowerCase().split('-')[0] ?? '', weight: Number.isFinite(weight) ? weight : 0 };
-    })
-    .filter((entry) => entry.weight > 0)
-    .sort((a, b) => b.weight - a.weight);
-
-  for (const { language } of ranked) {
-    if (isLocale(language)) return language;
-  }
-  return null;
-}
 
 /* -------------------------------------------------------------------------------------------------
  * Interface labels
