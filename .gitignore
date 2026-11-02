@@ -4,9 +4,11 @@ dist/
 *.tsbuildinfo
 .DS_Store
 
-# Secrets. `.env` is committed with defaults; `.env.local` overrides it and stays out of git.
+# Secrets. No env file is committed; copy `.env.example` if one exists.
+.env
 .env.local
 .env.*.local
+!.env.example
 
 # deploy-cloudflare
 .wrangler/

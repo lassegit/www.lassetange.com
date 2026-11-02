@@ -65,9 +65,9 @@ than assembling class names, which Tailwind's scanner would not see.
 
 ## Environment
 
-`.env` holds committed defaults; `.env.local` overrides it and is gitignored. Only `PUBLIC_`-prefixed
-variables reach the browser — everything else is server-only, and a stray read of it in client code
-compiles to `undefined` rather than shipping. Nothing on this site needs one yet.
+No env file is committed — put values in `.env` or `.env.local` locally; both are gitignored. Only
+`PUBLIC_`-prefixed variables reach the browser — everything else is server-only, and a stray read of it
+in client code compiles to `undefined` rather than shipping. Nothing on this site needs one yet.
 
 ## Deploying
 
