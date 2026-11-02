@@ -13,7 +13,7 @@ const SITE_KEY = '0x4AAAAAAFwf63rzd5It60gV';
 
 /** Shared by every field, so their fill, padding and borders cannot drift apart. */
 const FIELD =
-  'mt-1 w-full rounded-md border border-line bg-field px-2.5 py-1.5 text-base text-ink hover:border-line-strong focus:border-accent';
+  'mt-1 w-full rounded-md border border-line bg-field px-2.5 py-1.5 text-base text-ink placeholder:text-muted hover:border-line-strong focus:border-accent';
 
 export function ContactForm({ copy, email, locale }: { copy: ContactFormCopy; email: string; locale: Locale }) {
   const [state, formAction, pending] = useActionState(submitContact, initial);
@@ -66,6 +66,7 @@ export function ContactForm({ copy, email, locale }: { copy: ContactFormCopy; em
             minLength={2}
             maxLength={100}
             defaultValue={error?.values.name}
+            placeholder="..."
             aria-invalid={error?.fields?.name ? true : undefined}
             aria-describedby={error?.fields?.name ? 'contact-name-error' : undefined}
             className={FIELD}
@@ -91,6 +92,7 @@ export function ContactForm({ copy, email, locale }: { copy: ContactFormCopy; em
             required
             maxLength={254}
             defaultValue={error?.values.email}
+            placeholder="..."
             aria-invalid={error?.fields?.email ? true : undefined}
             aria-describedby={error?.fields?.email ? 'contact-email-error' : undefined}
             className={FIELD}
@@ -115,6 +117,7 @@ export function ContactForm({ copy, email, locale }: { copy: ContactFormCopy; em
           maxLength={5000}
           rows={4}
           defaultValue={error?.values.message}
+          placeholder={copy.messagePlaceholder}
           aria-invalid={messageError ? true : undefined}
           aria-describedby={messageError ? 'contact-message-error' : undefined}
           className={`${FIELD} resize-y`}

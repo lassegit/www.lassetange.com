@@ -146,6 +146,7 @@ export interface ContactFormCopy {
   name: string;
   email: string;
   message: string;
+  messagePlaceholder: string;
   send: string;
   sending: string;
   success: string;
@@ -255,6 +256,7 @@ const da: Dictionary = {
     name: 'Navn',
     email: 'E-mail',
     message: 'Besked',
+    messagePlaceholder: 'Projekt, rolle og tidslinje — eller bare et hej.',
     send: 'Send besked',
     sending: 'Sender…',
     success: 'Tak for beskeden. Jeg vender tilbage hurtigst muligt.',
@@ -324,6 +326,7 @@ const en: Dictionary = {
     name: 'Name',
     email: 'Email',
     message: 'Message',
+    messagePlaceholder: 'Project, role and timeline — or just say hello.',
     send: 'Send message',
     sending: 'Sending…',
     success: 'Thanks for your message. I’ll get back to you as soon as I can.',
@@ -393,6 +396,7 @@ const de: Dictionary = {
     name: 'Name',
     email: 'E-Mail',
     message: 'Nachricht',
+    messagePlaceholder: 'Projekt, Rolle und Zeitrahmen — oder einfach Hallo.',
     send: 'Nachricht senden',
     sending: 'Wird gesendet…',
     success: 'Danke für Ihre Nachricht. Ich melde mich so bald wie möglich.',
