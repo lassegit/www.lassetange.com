@@ -94,10 +94,6 @@ function getContactEmailHTML({ name, email, message, sentAt }: ContactEmailProps
       <tbody>
         <tr style="width:100%">
           <td>
-            <h1
-              style="color:#333;font-family:${fontFamily};font-size:24px;font-weight:bold;margin:40px 0;padding:0">
-              New message from lassetange.com
-            </h1>
             <p
               style="font-size:14px;line-height:24px;margin:24px 0;color:#333;font-family:${fontFamily};margin-bottom:14px">
               <strong>Name:</strong> ${escapeHtml(name)}<br />
