@@ -1,9 +1,9 @@
 ---
 title: Technologies
-description: Full-stack developer with TypeScript and React at the centre — strong skills in cloud, IaC, CI/CD, backend and applied AI.
+description: Full-stack developer with TypeScript and React at the centre: strong skills in cloud, IaC, CI/CD, backend and applied AI.
 ---
 
-I work primarily across the modern TypeScript stack with React at the centre. In addition, I have strong skills in setting up, scaling and operating web applications — cloud infrastructure, IaC and CI/CD pipelines. Applied AI is a fixed part of the toolbox. Below is an overview:
+Below is an overview of the technologies I work with: applied AI as a fixed focal point and a broad stack spanning web and mobile through cloud, IaC and CI/CD.
 
 ## AI
 
@@ -18,7 +18,7 @@ I work primarily across the modern TypeScript stack with React at the centre. In
 ## Frontend
 
 - React and React Native
-- Next.js and Astro
+- Next.js, Astro and other web frameworks
 - Tailwind CSS and design systems
 - State management (Redux, Zustand, Nanostores)
 - SSR, SSG and web performance

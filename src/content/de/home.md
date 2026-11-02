@@ -4,7 +4,7 @@ tagline: KI-Berater, Senior-Full-Stack-Entwickler & Tech Lead
 description: KI-Berater, Full-Stack-Entwickler und Tech Lead in Kopenhagen. Über 15 Jahre Erfahrung mit KI, Web, Mobile, Cloud und DevOps.
 ---
 
-Seit 15 Jahren baue ich KI-, [Web- und Mobile-Anwendungen](/de/resume), überwiegend in internationalen Startups und öffentlichen Einrichtungen in Berlin und Kopenhagen.
+Seit 15 Jahren baue ich [KI-, Web- und Mobile-Anwendungen](/de/resume), überwiegend in internationalen Startups und öffentlichen Einrichtungen in Berlin und Kopenhagen.
 
 ## Über mich {#about}
 

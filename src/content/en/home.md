@@ -4,7 +4,7 @@ tagline: AI Consultant, Senior Full-Stack Developer & Tech Lead
 description: AI consultant, full-stack developer and tech lead in Copenhagen. 15+ years of experience with AI, web, mobile, cloud and DevOps.
 ---
 
-I have spent 15 years building AI, [web and mobile applications](/en/resume), most of that time inside international startups and public institutions in Berlin and Copenhagen.
+I have spent 15 years building [AI, web and mobile applications](/en/resume), most of that time inside international startups and public institutions in Berlin and Copenhagen.
 
 ## About me {#about}
 

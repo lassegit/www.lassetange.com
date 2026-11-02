@@ -4,7 +4,7 @@ tagline: AI-konsulent, senior full-stack-udvikler & tech lead
 description: AI-konsulent, full-stack-udvikler og tech lead i København. 15+ års erfaring med AI, web, mobil, cloud og DevOps.
 ---
 
-Jeg har brugt 15 år på at bygge AI-, [web- og mobilapplikationer](/resume), det meste af tiden i internationale startups og offentlige institutioner i Berlin og København.
+Jeg har brugt 15 år på at bygge [AI-, web- og mobilapplikationer](/resume), det meste af tiden i internationale startups og offentlige institutioner i Berlin og København.
 
 ## Om mig {#about}
 

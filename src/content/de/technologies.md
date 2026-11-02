@@ -3,7 +3,7 @@ title: Technologien
 description: Full-Stack-Entwickler mit TypeScript und React im Zentrum: starke Kompetenzen in Cloud, IaC, CI/CD, Backend und angewandter KI.
 ---
 
-Ich arbeite überwiegend über den modernen TypeScript-Stack hinweg, mit React im Zentrum. Darüber hinaus habe ich starke Kompetenzen im Aufsetzen, Skalieren und Betreiben von Web-Anwendungen: Cloud-Infrastruktur, IaC und CI/CD-Pipelines. Angewandte KI gehört fest zum Werkzeugkasten. Unten ein Überblick:
+Unten ein Überblick über die Technologien, mit denen ich arbeite: angewandte KI als fester Schwerpunkt und ein breiter Stack, der von Web und Mobile bis zu Cloud, IaC und CI/CD reicht.
 
 ## KI
 
@@ -18,7 +18,7 @@ Ich arbeite überwiegend über den modernen TypeScript-Stack hinweg, mit React i
 ## Frontend
 
 - React und React Native
-- Next.js und Astro
+- Next.js, Astro und andere Web-Frameworks
 - Tailwind CSS und Designsysteme
 - State-Management (Redux, Zustand, Nanostores)
 - SSR, SSG und Web-Performance

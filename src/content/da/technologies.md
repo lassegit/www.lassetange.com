@@ -3,7 +3,7 @@ title: Teknologier
 description: Full-stack-udvikler med TypeScript og React i centrum: stærke kompetencer inden for cloud, IaC, CI/CD, backend og anvendt AI.
 ---
 
-Jeg arbejder hovedsageligt på tværs af den moderne TypeScript-stack med React i centrum. Derudover har jeg stærke kompetencer inden for opsætning, skalering og drift af webapplikationer: cloud-infrastruktur, IaC og CI/CD-pipelines. Anvendt AI er en fast del af værktøjskassen. Nedenfor er et overblik:
+Nedenfor er et overblik over de teknologier, jeg arbejder med: anvendt AI som fast omdrejningspunkt og en bred stack, der spænder fra web og mobil til cloud, IaC og CI/CD.
 
 ## AI
 
@@ -18,7 +18,7 @@ Jeg arbejder hovedsageligt på tværs af den moderne TypeScript-stack med React 
 ## Frontend
 
 - React og React Native
-- Next.js og Astro
+- Next.js, Astro og andre web frameworks
 - Tailwind CSS og designsystemer
 - Tilstandshåndtering (Redux, Zustand, Nanostores)
 - SSR, SSG og webydelse
