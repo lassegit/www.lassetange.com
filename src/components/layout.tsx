@@ -95,8 +95,8 @@ export function Layout({ locale, path, title, description, noIndex, jsonLd, chil
         <meta name="twitter:image" content={card} />
         <meta name="twitter:image:alt" content={cardAlt} />
 
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131315" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f6" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151412" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
         {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}

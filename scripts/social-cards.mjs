@@ -34,9 +34,9 @@ const PORTRAIT = 372;
 
 /** The site's palette, from `src/styles.css`. A card has no dark mode, so only the light values. */
 const INK = '#1b1b1b';
-const MUTED = '#5f5f5f';
-const CANVAS = '#ffffff';
-const SURFACE = '#f6f6f4';
+const MUTED = '#5f5d57';
+const CANVAS = '#faf9f6';
+const SURFACE = '#f2f0ea';
 const ACCENT = '#14539a';
 
 /** `ui-sans-serif` as the card renderer resolves it. Named explicitly because librsvg has no notion
