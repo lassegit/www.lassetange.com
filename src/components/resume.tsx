@@ -5,7 +5,7 @@ import { dictionary, formatPeriod, localeFromPath } from '../lib/i18n';
 import { firstParagraph, section, slug } from '../lib/markdown';
 import { Layout } from './layout';
 import { PrintButton } from './print-button';
-import { CompactEntry, LINK, Prose, Section, TechList, placeLabel } from './ui';
+import { CompactEntry, LINK, PORTRAIT, Prose, Section, TechList, placeLabel } from './ui';
 
 /**
  * The whole CV on one page: who, then one continuous work history, then the tools, open source,
@@ -48,7 +48,7 @@ export default function Resume({ url }: PageProps) {
 
       <header className="flex flex-wrap items-start gap-5 border-b-2 border-ink pb-6 break-inside-avoid">
         <img
-          className="size-22 flex-none rounded object-cover object-[50%_5%]"
+          className={`size-22 flex-none rounded object-cover object-[50%_5%] ${PORTRAIT}`}
           src={PROFILE.photo}
           width={PROFILE.photoWidth}
           height={PROFILE.photoHeight}

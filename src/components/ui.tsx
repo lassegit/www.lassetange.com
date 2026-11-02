@@ -42,6 +42,14 @@ export const PROSE = [
 /** The opening paragraph of a page, set larger and quieter than the body it introduces. */
 export const LEAD = 'text-lg/relaxed text-muted';
 
+/**
+ * The portrait, warmed a touch so it belongs on `canvas` rather than on white. The photograph is lit
+ * neutrally and its grey backdrop is cooler than the paper palette, so a little desaturation and a
+ * trace of sepia meet the page halfway without turning the picture into a duotone. Printed copies
+ * get the photograph as shot.
+ */
+export const PORTRAIT = 'saturate-[90%] sepia-[8%] print:filter-none';
+
 /** The page's one heading. Preflight resets `font-weight`, so it has to be said out loud. */
 export const PAGE_TITLE = 'mb-3 text-display font-semibold text-balance';
 

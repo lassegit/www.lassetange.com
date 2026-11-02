@@ -3,7 +3,7 @@ import { content } from '../lib/content';
 import { OPEN_SOURCE, PRODUCTS, PROFILE, countryName } from '../lib/data';
 import { dictionary, localeFromPath, localePath } from '../lib/i18n';
 import { Layout } from './layout';
-import { LEAD, Prose, Section } from './ui';
+import { LEAD, PORTRAIT, Prose, Section } from './ui';
 
 /**
  * The front page answers “who is this and should I keep reading?” before anything else: a photo, a
@@ -41,7 +41,7 @@ export default function Home({ url }: PageProps) {
           make a screen reader say it twice. */}
       <div className="mb-8 flex flex-wrap items-start gap-6">
         <img
-          className="size-34 flex-none rounded-full bg-surface object-cover object-[50%_5%]"
+          className={`size-34 flex-none rounded-full bg-surface object-cover object-[50%_5%] ${PORTRAIT}`}
           src={PROFILE.photo}
           width={PROFILE.photoWidth}
           height={PROFILE.photoHeight}
