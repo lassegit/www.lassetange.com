@@ -11,6 +11,10 @@ const initial: ContactState = { status: 'idle' };
 /** Public by design; the secret is the Worker secret. */
 const SITE_KEY = '0x4AAAAAAFwf63rzd5It60gV';
 
+/** Shared by every field, so their fill, padding and borders cannot drift apart. */
+const FIELD =
+  'mt-1 w-full rounded-md border border-line bg-field px-2.5 py-1.5 text-base text-ink hover:border-line-strong focus:border-accent';
+
 export function ContactForm({ copy, email, locale }: { copy: ContactFormCopy; email: string; locale: Locale }) {
   const [state, formAction, pending] = useActionState(submitContact, initial);
   const [turnstileStatus, setTurnstileStatus] = useState<'loading' | 'ready' | 'error'>('loading');
@@ -48,53 +52,55 @@ export function ContactForm({ copy, email, locale }: { copy: ContactFormCopy; em
         </div>
       )}
 
-      <div>
-        <label htmlFor="contact-name" className="block text-sm font-medium text-ink">
-          {copy.name}
-        </label>
-        <input
-          id="contact-name"
-          name="name"
-          type="text"
-          autoComplete="name"
-          required
-          minLength={2}
-          maxLength={100}
-          defaultValue={error?.values.name}
-          aria-invalid={error?.fields?.name ? true : undefined}
-          aria-describedby={error?.fields?.name ? 'contact-name-error' : undefined}
-          className="mt-1.5 w-full rounded-md border border-line bg-surface px-3 py-2 text-base text-ink hover:border-line-strong focus:border-accent"
-        />
-        {error?.fields?.name && (
-          <p id="contact-name-error" className="mt-1.5 text-sm text-danger">
-            {error.fields.name}
-          </p>
-        )}
-      </div>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label htmlFor="contact-name" className="block text-sm font-medium text-ink">
+            {copy.name}
+          </label>
+          <input
+            id="contact-name"
+            name="name"
+            type="text"
+            autoComplete="name"
+            required
+            minLength={2}
+            maxLength={100}
+            defaultValue={error?.values.name}
+            aria-invalid={error?.fields?.name ? true : undefined}
+            aria-describedby={error?.fields?.name ? 'contact-name-error' : undefined}
+            className={FIELD}
+          />
+          {error?.fields?.name && (
+            <p id="contact-name-error" className="mt-1.5 text-sm text-danger">
+              {error.fields.name}
+            </p>
+          )}
+        </div>
 
-      <div>
-        <label htmlFor="contact-email" className="block text-sm font-medium text-ink">
-          {copy.email}
-        </label>
-        <input
-          id="contact-email"
-          name="email"
-          type="email"
-          inputMode="email"
-          autoComplete="email"
-          spellCheck={false}
-          required
-          maxLength={254}
-          defaultValue={error?.values.email}
-          aria-invalid={error?.fields?.email ? true : undefined}
-          aria-describedby={error?.fields?.email ? 'contact-email-error' : undefined}
-          className="mt-1.5 w-full rounded-md border border-line bg-surface px-3 py-2 text-base text-ink hover:border-line-strong focus:border-accent"
-        />
-        {error?.fields?.email && (
-          <p id="contact-email-error" className="mt-1.5 text-sm text-danger">
-            {error.fields.email}
-          </p>
-        )}
+        <div>
+          <label htmlFor="contact-email" className="block text-sm font-medium text-ink">
+            {copy.email}
+          </label>
+          <input
+            id="contact-email"
+            name="email"
+            type="email"
+            inputMode="email"
+            autoComplete="email"
+            spellCheck={false}
+            required
+            maxLength={254}
+            defaultValue={error?.values.email}
+            aria-invalid={error?.fields?.email ? true : undefined}
+            aria-describedby={error?.fields?.email ? 'contact-email-error' : undefined}
+            className={FIELD}
+          />
+          {error?.fields?.email && (
+            <p id="contact-email-error" className="mt-1.5 text-sm text-danger">
+              {error.fields.email}
+            </p>
+          )}
+        </div>
       </div>
 
       <div>
@@ -107,11 +113,11 @@ export function ContactForm({ copy, email, locale }: { copy: ContactFormCopy; em
           required
           minLength={10}
           maxLength={5000}
-          rows={6}
+          rows={4}
           defaultValue={error?.values.message}
           aria-invalid={messageError ? true : undefined}
           aria-describedby={messageError ? 'contact-message-error' : undefined}
-          className="mt-1.5 w-full resize-y rounded-md border border-line bg-surface px-3 py-2 text-base text-ink hover:border-line-strong focus:border-accent"
+          className={`${FIELD} resize-y`}
         />
         {messageError && (
           <p id="contact-message-error" className="mt-1.5 text-sm text-danger">
