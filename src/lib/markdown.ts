@@ -22,6 +22,10 @@
  * heading itself stays free to be translated. An optional `###` immediately after is the section's
  * subtitle — a role, a tagline. Everything else is markdown.
  *
+ * A section whose body is nothing but `{{document#section}}` borrows that section's body from another
+ * content file, so a paragraph that belongs on two pages is still written once. The parser only
+ * records the reference; `src/lib/content.ts` knows which documents exist and fills it in.
+ *
  * Parsing happens on the server only (at build time for prerendered routes), and every document is
  * memoised by source text, so a file is parsed once per process however many pages import it.
  */
@@ -35,6 +39,11 @@ export interface Section {
   title: string;
   /** The `###` line directly beneath the heading, if there is one. */
   subtitle?: string;
+  /**
+   * Set when the body is nothing but a `{{document#section}}` reference. `html` stays empty until
+   * `src/lib/content.ts` has resolved it against the other content files.
+   */
+  include?: { document: string; section: string };
   /** The rest of the section, rendered to HTML. */
   html: string;
 }
@@ -55,6 +64,8 @@ const FRONTMATTER = /^---\r?\n([\s\S]*?)\r?\n---[ \t]*\r?\n?/;
 const HEADING = /^##[ \t]+(.+?)[ \t]*$/;
 const SUBHEADING = /^###[ \t]+(.+?)[ \t]*$/;
 const EXPLICIT_ID = /^(.*?)[ \t]*\{#([A-Za-z0-9_-]+)\}$/;
+/** A section body that is nothing but a reference to another section: `{{home#about}}`. */
+const INCLUDE = /^\{\{([a-z][a-z0-9-]*)#([A-Za-z0-9_-]+)\}\}$/;
 
 const cache = new Map<string, ContentDocument>();
 
@@ -152,7 +163,17 @@ function splitSections(body: string): [lead: string, sections: Section[]] {
 }
 
 function finish(current: { id: string; title: string; subtitle?: string; lines: string[] }): Section {
-  return { id: current.id, title: current.title, subtitle: current.subtitle, html: toHtml(current.lines.join('\n')) };
+  const body = current.lines.join('\n');
+  const reference = INCLUDE.exec(body.trim());
+  const section: Section = {
+    id: current.id,
+    title: current.title,
+    subtitle: current.subtitle,
+    html: reference ? '' : toHtml(body),
+  };
+
+  if (reference) section.include = { document: reference[1], section: reference[2] };
+  return section;
 }
 
 function splitHeading(raw: string): { title: string; id: string } {

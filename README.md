@@ -49,6 +49,17 @@ The body of the section, in markdown. The CV shows the full body for work entrie
 first paragraph for open-source entries.
 ```
 
+A section body that is nothing but a reference borrows another page's section, so one profile can
+appear on two pages without being written twice:
+
+```md
+## Profil {#profile}
+
+{{home#about}}
+```
+
+The reference resolves inside the same locale — each `resume.md` gets its own language's `home.md`.
+
 Short interface labels — nav, buttons, field names — are in `src/lib/i18n.ts`. Adding a language means
 a fourth `Dictionary`, a fourth folder under `content/`, and five more routes.
 
