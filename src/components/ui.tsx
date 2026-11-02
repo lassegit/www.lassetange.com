@@ -97,9 +97,8 @@ export function Facts({ items, children }: { items: readonly string[]; children?
 
 /**
  * “Copenhagen, Denmark” — where an engagement sat, named in the reader's language. An array rather
- * than a string, so a remote engagement contributes nothing to the line it is spread into. Both
- * `/client-work` and `/resume` set the period beside the title, so place is all their facts lines
- * carry beyond the role.
+ * than a string, so a remote engagement contributes nothing to the line it is spread into. The CV
+ * sets the period beside the title, so place is all its facts line carries beyond the role.
  */
 export function placeLabel(engagement: Engagement, locale: Locale): string[] {
   if (!engagement.place) return [];
@@ -128,11 +127,13 @@ export function TechList({ html }: { html: string }) {
 }
 
 /**
- * One engagement at list density: title and dates on a line, role beneath, a paragraph, and the
- * stack. Used for the long tail on `/client-work` and for everything on the CV, where completeness
- * matters more than depth. `printUrl` prints the address after the title, which only the CV wants.
+ * One entry at CV density: title and dates on a line, role beneath, the body, and the stack. `id` is
+ * the same anchor the markdown section uses, so `/resume#sqlai` from the front page lands on the
+ * entry itself. The body is rendered through `Prose` because it may contain more than one paragraph.
+ * `printUrl` prints the address after the title, which only the CV wants.
  */
 export function CompactEntry({
+  id,
   title,
   href,
   period,
@@ -141,6 +142,7 @@ export function CompactEntry({
   stack,
   printUrl,
 }: {
+  id?: string;
   title: string;
   href?: string;
   period?: string;
@@ -150,7 +152,7 @@ export function CompactEntry({
   printUrl?: boolean;
 }) {
   return (
-    <li className="border-t border-line py-3.5 break-inside-avoid first:border-t-0">
+    <li className="border-t border-line py-3.5 break-inside-avoid first:border-t-0" id={id}>
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
         <h3 className="text-base leading-snug font-semibold">
           {href ? (
@@ -164,8 +166,8 @@ export function CompactEntry({
         {period && <span className="text-sm whitespace-nowrap text-muted tabular-nums">{period}</span>}
       </div>
       {role && <p className="text-sm text-muted">{role}</p>}
-      {html && <p className={`mt-1.5 text-sm ${PROSE_LINKS}`} dangerouslySetInnerHTML={{ __html: html }} />}
-      {stack && stack.length > 0 && <p className="mt-1 text-xs text-muted">{stack.join(' · ')}</p>}
+      {html && <Prose html={html} className="mt-2 text-sm" />}
+      {stack && stack.length > 0 && <p className="mt-1.5 text-xs text-muted">{stack.join(' · ')}</p>}
     </li>
   );
 }

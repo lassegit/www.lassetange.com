@@ -54,6 +54,19 @@ const REDIRECTS: Record<string, string> = {
   '/cv': '/resume',
   '/kontakt': '/contact',
   '/de/lebenslauf': '/de/resume',
+  // Products and client work now live on the CV as one continuous work history.
+  '/products': '/resume',
+  '/client-work': '/resume',
+  '/produkter': '/resume',
+  '/kundeopgaver': '/resume',
+  '/da/products': '/resume',
+  '/da/client-work': '/resume',
+  '/da/produkter': '/resume',
+  '/da/kundeopgaver': '/resume',
+  '/en/products': '/en/resume',
+  '/en/client-work': '/en/resume',
+  '/de/products': '/de/resume',
+  '/de/client-work': '/de/resume',
 };
 
 for (const [from, to] of Object.entries(REDIRECTS)) {

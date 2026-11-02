@@ -35,7 +35,7 @@ export function isLocale(value: string): value is Locale {
 /* -------------------------------------------------------------------------------------------------
  * Paths
  *
- * Every page has one canonical path — the Danish one, e.g. `/products`. `localePath` prefixes it for
+ * Every page has one canonical path — the Danish one, e.g. `/resume`. `localePath` prefixes it for
  * the other two, `localeFromPath` and `canonicalPath` take a request pathname back apart. Path
  * segments stay English in all three languages, so there is one route table shape, not three.
  * ---------------------------------------------------------------------------------------------- */
@@ -46,19 +46,19 @@ export function localeFromPath(pathname: string): Locale {
   return isLocale(first) ? first : DEFAULT_LOCALE;
 }
 
-/** A request pathname with any locale prefix removed, e.g. `/de/products` → `/products`. */
+/** A request pathname with any locale prefix removed, e.g. `/de/resume` → `/resume`. */
 export function canonicalPath(pathname: string): string {
   const [, first, ...rest] = pathname.split('/');
   if (!first || !isLocale(first)) return pathname === '' ? '/' : pathname;
   return rest.length ? `/${rest.join('/')}` : '/';
 }
 
-/** A canonical path under a locale's prefix, Danish included — `('/products', 'da')` → `/da/products`. */
+/** A canonical path under a locale's prefix, Danish included — `('/resume', 'da')` → `/da/resume`. */
 function prefixedPath(path: string, locale: Locale): string {
   return path === '/' ? `/${locale}` : `/${locale}${path}`;
 }
 
-/** A canonical path rendered in `locale`, e.g. `('/products', 'de')` → `/de/products`. */
+/** A canonical path rendered in `locale`, e.g. `('/resume', 'de')` → `/de/resume`. */
 export function localePath(path: string, locale: Locale): string {
   return locale === DEFAULT_LOCALE ? path : prefixedPath(path, locale);
 }
@@ -69,7 +69,7 @@ export function localePath(path: string, locale: Locale): string {
  * For English and German that is the page itself. For Danish it is `/da/…`, which is not a page: the
  * unprefixed tree is the one place a URL cannot say “I chose Danish”, so `src/server.ts` takes the prefix
  * as the statement, records it, and redirects to the real path. Without it, clicking “Dansk” from the
- * German tree would land on `/products` and be negotiated straight back to `/de/products`.
+ * German tree would land on `/resume` and be negotiated straight back to `/de/resume`.
  */
 export function localeSwitchPath(path: string, locale: Locale): string {
   return prefixedPath(path, locale);
@@ -82,11 +82,9 @@ export function localeSwitchPath(path: string, locale: Locale): string {
 /** The tab strip, in order. `/contact` is deliberately absent — it lives in the header instead. */
 export const PAGES = [
   { path: '/', key: 'navAbout' },
-  { path: '/products', key: 'navProducts' },
-  { path: '/client-work', key: 'navClientWork' },
+  { path: '/resume', key: 'navResume' },
   { path: '/technologies', key: 'navTechnologies' },
   { path: '/open-source', key: 'navOpenSource' },
-  { path: '/resume', key: 'navResume' },
 ] as const satisfies ReadonlyArray<{ path: string; key: keyof Dictionary }>;
 
 /**
@@ -143,8 +141,6 @@ export function preferredLocale(acceptLanguage: string | undefined): Locale | nu
 
 export interface Dictionary {
   navAbout: string;
-  navProducts: string;
-  navClientWork: string;
   navTechnologies: string;
   navOpenSource: string;
   navResume: string;
@@ -165,24 +161,18 @@ export interface Dictionary {
   present: string;
   since: string;
   stack: string;
-  visitSite: string;
   sourceOnGithub: string;
   profitable: string;
 
-  productsNoun: string;
-  engagementsNoun: string;
   areasNoun: string;
   projectsNoun: string;
 
   printResume: string;
   printHint: string;
   profile: string;
+  experience: string;
   spokenLanguages: string;
   fullHistory: string;
-
-  /** One-line introductions above the product and client-work lists on the CV. */
-  productsIntro: string;
-  clientWorkIntro: string;
 
   moreOnGithub: string;
   emailMe: string;
@@ -200,8 +190,6 @@ export interface Dictionary {
 
 const da: Dictionary = {
   navAbout: 'Om mig',
-  navProducts: 'Produkter',
-  navClientWork: 'Kundeopgaver',
   navTechnologies: 'Teknologier',
   navOpenSource: 'Open source',
   navResume: 'CV',
@@ -220,25 +208,18 @@ const da: Dictionary = {
   present: 'i dag',
   since: 'Siden',
   stack: 'Teknologi',
-  visitSite: 'Besøg sitet',
   sourceOnGithub: 'Kildekode på GitHub',
   profitable: 'Profitabelt',
 
-  productsNoun: 'produkter',
-  engagementsNoun: 'opgaver',
   areasNoun: 'områder',
   projectsNoun: 'projekter',
 
   printResume: 'Print eller gem som PDF',
   printHint: 'Åbner browserens printdialog. Vælg “Gem som PDF” for at hente CV’et som fil.',
   profile: 'Profil',
+  experience: 'Erfaring',
   spokenLanguages: 'Sprog',
   fullHistory: 'Fuld arbejdshistorik',
-
-  productsIntro:
-    'Fire produkter jeg har taget hele vejen selv: idé, arkitektur, UX, drift, markedsføring og omsætning.',
-  clientWorkIntro:
-    'Et årti med kundeopgaver, først som freelancer i København og siden i det tyske startup-miljø.',
 
   moreOnGithub: 'Se flere projekter på GitHub',
   emailMe: 'Skriv til mig',
@@ -259,8 +240,6 @@ const da: Dictionary = {
 
 const en: Dictionary = {
   navAbout: 'About',
-  navProducts: 'Products',
-  navClientWork: 'Client work',
   navTechnologies: 'Technologies',
   navOpenSource: 'Open source',
   navResume: 'Résumé',
@@ -279,24 +258,18 @@ const en: Dictionary = {
   present: 'present',
   since: 'Since',
   stack: 'Stack',
-  visitSite: 'Visit site',
   sourceOnGithub: 'Source on GitHub',
   profitable: 'Profitable',
 
-  productsNoun: 'products',
-  engagementsNoun: 'engagements',
   areasNoun: 'areas',
   projectsNoun: 'projects',
 
   printResume: 'Print or save as PDF',
   printHint: 'Opens your browser’s print dialog. Choose “Save as PDF” to download the CV as a file.',
   profile: 'Profile',
+  experience: 'Experience',
   spokenLanguages: 'Languages',
   fullHistory: 'Full work history',
-
-  productsIntro:
-    'Four products I have taken all the way myself: idea, architecture, UX, operations, marketing and revenue.',
-  clientWorkIntro: 'A decade of client work, first freelancing in Copenhagen and later inside the German startup scene.',
 
   moreOnGithub: 'More projects on GitHub',
   emailMe: 'Send me an email',
@@ -317,8 +290,6 @@ const en: Dictionary = {
 
 const de: Dictionary = {
   navAbout: 'Über mich',
-  navProducts: 'Produkte',
-  navClientWork: 'Kundenprojekte',
   navTechnologies: 'Technologien',
   navOpenSource: 'Open Source',
   navResume: 'Lebenslauf',
@@ -337,25 +308,18 @@ const de: Dictionary = {
   present: 'heute',
   since: 'Seit',
   stack: 'Technologie',
-  visitSite: 'Website ansehen',
   sourceOnGithub: 'Quellcode auf GitHub',
   profitable: 'Profitabel',
 
-  productsNoun: 'Produkte',
-  engagementsNoun: 'Projekte',
   areasNoun: 'Bereiche',
   projectsNoun: 'Projekte',
 
   printResume: 'Drucken oder als PDF speichern',
   printHint: 'Öffnet den Druckdialog des Browsers. Wählen Sie „Als PDF speichern“, um den Lebenslauf herunterzuladen.',
   profile: 'Profil',
+  experience: 'Berufserfahrung',
   spokenLanguages: 'Sprachen',
   fullHistory: 'Vollständiger Werdegang',
-
-  productsIntro:
-    'Vier Produkte, die ich vollständig selbst verantwortet habe: Idee, Architektur, UX, Betrieb, Marketing und Umsatz.',
-  clientWorkIntro:
-    'Ein Jahrzehnt Kundenarbeit, zunächst freiberuflich in Kopenhagen, später in der Berliner Startup-Szene.',
 
   moreOnGithub: 'Weitere Projekte auf GitHub',
   emailMe: 'Schreiben Sie mir',

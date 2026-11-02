@@ -1,6 +1,6 @@
 import type { PageProps } from '@rshono/core';
 import { content } from '../lib/content';
-import { CLIENT_WORK, OPEN_SOURCE, PRODUCTS, PROFILE, countryName } from '../lib/data';
+import { OPEN_SOURCE, PRODUCTS, PROFILE, countryName } from '../lib/data';
 import { dictionary, localeFromPath, localePath } from '../lib/i18n';
 import { Layout } from './layout';
 import { LEAD, Prose, Section } from './ui';
@@ -17,11 +17,9 @@ export default function Home({ url }: PageProps) {
   const tagline = doc.meta.tagline ?? '';
 
   const destinations = [
-    { path: '/products', label: t.navProducts, note: `${PRODUCTS.length} ${t.productsNoun}` },
-    { path: '/client-work', label: t.navClientWork, note: `${CLIENT_WORK.length} ${t.engagementsNoun}` },
+    { path: '/resume', label: t.navResume, note: t.fullHistory },
     { path: '/technologies', label: t.navTechnologies, note: `${content(locale, 'technologies').sections.length} ${t.areasNoun}` },
     { path: '/open-source', label: t.navOpenSource, note: `${OPEN_SOURCE.length} ${t.projectsNoun}` },
-    { path: '/resume', label: t.navResume, note: t.fullHistory },
   ];
 
   const jsonLd = {

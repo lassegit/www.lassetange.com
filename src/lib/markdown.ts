@@ -88,9 +88,8 @@ export function inlineHtml(markdown: string): string {
 }
 
 /**
- * A section's opening paragraph. The CV lists every engagement, and at that density one paragraph
- * each is the readable length — so content is written with a self-contained first paragraph, and the
- * longer treatment on `/client-work` picks up from there.
+ * A section's opening paragraph. The CV uses the full body for work entries and this trimmed form for
+ * the open-source list, where the opening line is the whole entry.
  */
 export function firstParagraph(html: string): string {
   return /<p>([\s\S]*?)<\/p>/.exec(html)?.[1] ?? '';

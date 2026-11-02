@@ -4,7 +4,7 @@ tagline: KI-Berater, Senior-Full-Stack-Entwickler & Tech Lead
 description: KI-Berater, Full-Stack-Entwickler und Tech Lead in Kopenhagen. Über 15 Jahre Erfahrung mit KI, Web, Mobile, Cloud und DevOps.
 ---
 
-Seit 15 Jahren baue ich KI-, [Web- und Mobile-Anwendungen](/de/client-work), überwiegend in internationalen Startups und öffentlichen Einrichtungen in Berlin und Kopenhagen.
+Seit 15 Jahren baue ich KI-, [Web- und Mobile-Anwendungen](/de/resume), überwiegend in internationalen Startups und öffentlichen Einrichtungen in Berlin und Kopenhagen.
 
 ## Über mich {#about}
 
@@ -12,7 +12,7 @@ Ich habe in vielen Branchen und mit vielen Technologien gearbeitet. Heute konzen
 
 ### KI-Berater
 
-Ich arbeite mit KI, seit OpenAI GPT-3 veröffentlicht hat, und habe unter anderem [SQLAI.ai](/de/products) gebaut, das über 150.000 Nutzerinnen und Nutzer hat. Als Berater helfe ich Unternehmen dabei, herauszufinden, wo KI sinnvoll ist und wie die Lösungen in Produktion kommen: RAG und Vektorsuche, agentische Workflows, Prompt-Design, AI Harnesses, Evaluierung der Modelle und so weiter.
+Ich arbeite mit KI, seit OpenAI GPT-3 veröffentlicht hat, und habe unter anderem [SQLAI.ai](/de/resume#sqlai) gebaut, das über 150.000 Nutzerinnen und Nutzer hat. Als Berater helfe ich Unternehmen dabei, herauszufinden, wo KI sinnvoll ist und wie die Lösungen in Produktion kommen: RAG und Vektorsuche, agentische Workflows, Prompt-Design, AI Harnesses, Evaluierung der Modelle und so weiter.
 
 ### Senior-Full-Stack-Entwickler
 

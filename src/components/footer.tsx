@@ -14,7 +14,7 @@ import { GitHubIcon, LinkedInIcon, MailIcon } from './icons';
 import { Shell } from './ui';
 
 /**
- * A column's heading — a `<p>` rather than an `<h2>`. It names four or seven links at the foot of the
+ * A column's heading — a `<p>` rather than an `<h2>`. It names four or three links at the foot of the
  * page, and two real headings would enter the outline of every page below the content the page is
  * actually about. The `<nav>`'s own label is what a screen reader navigates by.
  */
@@ -128,15 +128,15 @@ export function Footer({ locale, path }: { locale: Locale; path: string }) {
  * crawlable, and each one lands on the same page in the other language rather than dumping the
  * reader back at the front page.
  *
- * The two a reader could switch to point at the prefixed form — `/da/products` included, which is not
- * a page but a statement: `src/server.ts` records it and then redirects to `/products`. That is what
+ * The two a reader could switch to point at the prefixed form — `/da/resume` included, which is not
+ * a page but a statement: `src/server.ts` records it and then redirects to `/resume`. That is what
  * makes clicking “Dansk” an explicit choice rather than a round trip through the language negotiation,
  * which would otherwise send a German browser straight back where it came from. The language already
  * being read needs none of that and stays a plain self-link, so no page links to a redirect to itself.
  *
  * `data-native` opts them out of soft navigation. A `Set-Cookie` would survive the flight fetch, but
- * the Danish redirect would not: `history.pushState` has already written `/da/products` by the time
- * `fetch` follows the 302, which would leave that in the address bar with `/products` underneath it.
+ * the Danish redirect would not: `history.pushState` has already written `/da/resume` by the time
+ * `fetch` follows the 302, which would leave that in the address bar with `/resume` underneath it.
  *
  * The flags are decoration and marked as such — on Windows they come down as “DK”, “DE”, “GB”, and to
  * a screen reader as nothing at all. The endonym beside them is what actually names each language.

@@ -17,7 +17,7 @@ pnpm lint:fix    # apply what it can — then run typecheck, see eslint.config.m
 rshono.config.ts   deploy target, siteUrl, and the .md / .css loader rules
 public/            served verbatim at the web root (favicon.svg → /favicon.svg)
 src/
-  routes.ts        the route table — 7 pages × 3 languages, all prerendered
+  routes.ts        the route table — 5 pages × 3 languages, all prerendered
   server.ts        a Hono app: security headers, redirects, sitemap.xml, error reporting
   components/      pages and components
   content/         da|en|de — all prose, in markdown
@@ -37,21 +37,20 @@ suffix on a section heading:
 
 ```md
 ---
-title: Kundeopgaver
+title: CV
 description: Shown as the meta description.
 ---
-
-A lead paragraph, before the first section.
 
 ## hey.car {#heycar}
 
 ### Udvikler & tech lead
 
-The body of the section, in markdown. Its first paragraph is what the CV shows.
+The body of the section, in markdown. The CV shows the full body for work entries and the
+first paragraph for open-source entries.
 ```
 
 Short interface labels — nav, buttons, field names — are in `src/lib/i18n.ts`. Adding a language means
-a fourth `Dictionary`, a fourth folder under `content/`, and seven more routes.
+a fourth `Dictionary`, a fourth folder under `content/`, and five more routes.
 
 `src/lib/resume.en.json` is the compiled JSON Resume the content was written from. Nothing imports it;
 it is kept as the source of record.

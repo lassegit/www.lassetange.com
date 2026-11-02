@@ -8,27 +8,33 @@ import { PrintButton } from './print-button';
 import { CompactEntry, LINK, Prose, Section, TechList, placeLabel } from './ui';
 
 /**
- * The whole CV on one page, in the order a recruiter reads: who, then what I have built, then who I
- * have built it for, then the tools. The languages and the degree close it out — background rather
- * than evidence, so they sit last.
+ * The whole CV on one page: who, then one continuous work history, then the tools, open source,
+ * languages and education. Products and client work are the same list — there is no separate product
+ * section — and every entry keeps its full markdown body, so the concrete work and the technologies
+ * used stay visible.
+ *
+ * The list keeps the order the data is written in: products first because their end dates are the
+ * most recent, then client work newest first. That is chronological without turning the page into
+ * two labelled catalogues.
  *
  * This page is designed to leave the browser as a PDF. `print:` variants drop the header, tabs,
  * footer and the print bar itself, the theme's colour variables swap to black on white, and entries
  * carry `break-inside-avoid` — so what comes out of “Save as PDF” is a document, not a screenshot of
- * a website. It reuses the same markdown as `/products` and `/client-work`, trimmed to each entry's
- * opening paragraph, so there is no second copy of the text to keep in sync.
+ * a website.
  */
 export default function Resume({ url }: PageProps) {
   const locale = localeFromPath(url.pathname);
   const t = dictionary(locale);
   const doc = content(locale, 'resume');
-  const products = content(locale, 'products');
-  const clientWork = content(locale, 'client-work');
   const technologies = content(locale, 'technologies');
   const openSource = content(locale, 'open-source');
   const tagline = content(locale, 'home').meta.tagline ?? '';
   const profile = section(doc, 'profile');
   const education = section(doc, 'education');
+  const work = [
+    ...PRODUCTS.map((product) => ({ product, entry: section(doc, product.id) })),
+    ...CLIENT_WORK.map((engagement) => ({ engagement, entry: section(doc, engagement.id) })),
+  ];
   /** What “Save as PDF” suggests as the filename, in place of the page title — `lasse-tange-cv`,
    *  `lasse-tange-resume`, `lasse-tange-lebenslauf`. The browser appends the extension. */
   const fileName = slug(`${PROFILE.name} ${doc.title}`);
@@ -83,39 +89,33 @@ export default function Resume({ url }: PageProps) {
         </Section>
       )}
 
-      <Section title={t.navProducts} id="cv-products">
-        <p className="mb-4 text-sm text-muted">{t.productsIntro}</p>
+      <Section title={t.experience} id="cv-experience">
         <ul>
-          {PRODUCTS.map((product) => {
-            const entry = section(products, product.id);
-            if (!entry) return null;
+          {work.map((item) => {
+            if (!item.entry) return null;
 
-            return (
-              <CompactEntry
-                key={product.id}
-                title={entry.title}
-                href={product.url}
-                printUrl
-                period={formatPeriod(product.start, product.end, locale)}
-                role={[entry.subtitle ?? [], product.profitable ? t.profitable : []].flat().join(' · ')}
-                html={firstParagraph(entry.html)}
-                stack={product.stack}
-              />
-            );
-          })}
-        </ul>
-      </Section>
+            if ('product' in item) {
+              const { product, entry } = item;
+              return (
+                <CompactEntry
+                  key={product.id}
+                  id={product.id}
+                  title={entry.title}
+                  href={product.url}
+                  printUrl
+                  period={formatPeriod(product.start, product.end, locale)}
+                  role={[entry.subtitle ?? [], product.profitable ? t.profitable : []].flat().join(' · ')}
+                  html={entry.html}
+                  stack={product.stack}
+                />
+              );
+            }
 
-      <Section title={t.navClientWork} id="cv-work">
-        <p className="mb-4 text-sm text-muted">{t.clientWorkIntro}</p>
-        <ul>
-          {CLIENT_WORK.map((engagement) => {
-            const entry = section(clientWork, engagement.id);
-            if (!entry) return null;
-
+            const { engagement, entry } = item;
             return (
               <CompactEntry
                 key={engagement.id}
+                id={engagement.id}
                 title={entry.title}
                 href={engagement.url}
                 printUrl
@@ -123,7 +123,7 @@ export default function Resume({ url }: PageProps) {
                 // Role first — it is what a reader scans for — then the place. The period is
                 // already set on the line above.
                 role={[entry.subtitle ?? [], placeLabel(engagement, locale)].flat().join(' · ')}
-                html={firstParagraph(entry.html)}
+                html={entry.html}
                 stack={engagement.stack}
               />
             );

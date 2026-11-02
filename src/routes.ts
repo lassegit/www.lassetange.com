@@ -1,10 +1,10 @@
 import { defineRoutes } from '@rshono/core';
 
 /**
- * Seven pages in three languages, written out rather than generated.
+ * Five pages in three languages, written out rather than generated.
  *
  * A `/:lang{en|de}` prefix would be four lines shorter, but a regex param cannot be prerendered — and
- * every page here is static text, so all twenty-one are built to HTML at deploy time and served from
+ * every page here is static text, so all fifteen are built to HTML at deploy time and served from
  * the edge with an ETag. Writing them out is also what makes the table readable as a sitemap: what
  * exists, in which languages, is the file itself.
  *
@@ -15,8 +15,6 @@ export const routes = defineRoutes({
   routes: [
     // Danish — the primary language, at the web root.
     { path: '/', render: 'static', component: () => import('./components/home') },
-    { path: '/products', render: 'static', component: () => import('./components/products') },
-    { path: '/client-work', render: 'static', component: () => import('./components/client-work') },
     { path: '/technologies', render: 'static', component: () => import('./components/technologies') },
     { path: '/open-source', render: 'static', component: () => import('./components/open-source') },
     { path: '/resume', render: 'static', component: () => import('./components/resume') },
@@ -24,8 +22,6 @@ export const routes = defineRoutes({
 
     // English.
     { path: '/en', render: 'static', component: () => import('./components/home') },
-    { path: '/en/products', render: 'static', component: () => import('./components/products') },
-    { path: '/en/client-work', render: 'static', component: () => import('./components/client-work') },
     { path: '/en/technologies', render: 'static', component: () => import('./components/technologies') },
     { path: '/en/open-source', render: 'static', component: () => import('./components/open-source') },
     { path: '/en/resume', render: 'static', component: () => import('./components/resume') },
@@ -33,8 +29,6 @@ export const routes = defineRoutes({
 
     // German.
     { path: '/de', render: 'static', component: () => import('./components/home') },
-    { path: '/de/products', render: 'static', component: () => import('./components/products') },
-    { path: '/de/client-work', render: 'static', component: () => import('./components/client-work') },
     { path: '/de/technologies', render: 'static', component: () => import('./components/technologies') },
     { path: '/de/open-source', render: 'static', component: () => import('./components/open-source') },
     { path: '/de/resume', render: 'static', component: () => import('./components/resume') },

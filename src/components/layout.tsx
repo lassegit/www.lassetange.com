@@ -14,7 +14,7 @@ function ogLocale(locale: Locale): string {
 
 export interface LayoutProps {
   locale: Locale;
-  /** The page's canonical (unprefixed) path, e.g. `/products`. Drives the tabs, canonical and hreflang. */
+  /** The page's canonical (unprefixed) path, e.g. `/resume`. Drives the tabs, canonical and hreflang. */
   path: string;
   /** The full `<title>`, composed by the page. */
   title: string;

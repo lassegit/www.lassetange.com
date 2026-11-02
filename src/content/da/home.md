@@ -4,7 +4,7 @@ tagline: AI-konsulent, senior full-stack-udvikler & tech lead
 description: AI-konsulent, full-stack-udvikler og tech lead i København. 15+ års erfaring med AI, web, mobil, cloud og DevOps.
 ---
 
-Jeg har brugt 15 år på at bygge AI-, [web- og mobilapplikationer](/client-work), det meste af tiden i internationale startups og offentlige institutioner i Berlin og København.
+Jeg har brugt 15 år på at bygge AI-, [web- og mobilapplikationer](/resume), det meste af tiden i internationale startups og offentlige institutioner i Berlin og København.
 
 ## Om mig {#about}
 
@@ -12,7 +12,7 @@ Jeg har arbejdet i mange brancher og med mange teknologier. I dag arbejder jeg i
 
 ### AI-konsulent
 
-Jeg har arbejdet med AI siden OpenAI udgav GPT-3, og jeg har bl.a. bygget [SQLAI.ai](/products), som har over 150.000 brugere. Som konsulent hjælper jeg virksomheder med at finde ud af, hvor AI giver mening, og få løsningerne i produktion: RAG og vektorsøgning, agentiske workflows, promptdesign, AI harness, evaluering af modellerne og så videre.
+Jeg har arbejdet med AI siden OpenAI udgav GPT-3, og jeg har bl.a. bygget [SQLAI.ai](/resume#sqlai), som har over 150.000 brugere. Som konsulent hjælper jeg virksomheder med at finde ud af, hvor AI giver mening, og få løsningerne i produktion: RAG og vektorsøgning, agentiske workflows, promptdesign, AI harness, evaluering af modellerne og så videre.
 
 ### Senior full-stack-udvikler
 

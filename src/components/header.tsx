@@ -34,7 +34,7 @@ const ICON = '-m-1.5 flex p-1.5 text-muted no-underline hover:text-accent';
  * can go. The tab strip is the site's primary navigation — some sections run long, so they are pages
  * rather than anchors, and the current tab is marked with `aria-current` as well as a heavier rule.
  *
- * Below `sm` there is no room for six tabs, so both rows collapse into a burger menu. It is a native
+ * Below `sm` there is no room for four tabs, so both rows collapse into a burger menu. It is a native
  * `<details>` disclosure rather than a script: the browser owns the open state and announces it as a
  * button, and it works before (and without) hydration. Closing it is where the browser needs help: a
  * same-origin link is soft-navigated, so the document — and the open panel with it — survives the click,
@@ -125,7 +125,7 @@ function PageLinks({ locale, path, as }: { locale: Locale; path: string; as: 'ta
  * Contact, GitHub and LinkedIn — the top row on desktop, the foot of the menu on mobile.
  *
  * In the top row the two profiles are their marks alone. That row shares a line with the name and sits
- * above six tabs, and spelling out “GitHub” beside a mark that already says it is what makes the line
+ * above four tabs, and spelling out “GitHub” beside a mark that already says it is what makes the line
  * crowded. A mark carries no accessible name of its own — the SVGs are `aria-hidden` — so the link has
  * to say what it is: `aria-label` for a screen reader, `title` for a mouse. The menu is a column with
  * room to spare and keeps the words.

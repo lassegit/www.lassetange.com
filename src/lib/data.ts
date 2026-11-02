@@ -2,10 +2,11 @@
  * The facts a CV is made of, in the one form that does not need translating: dates as `YYYY-MM`,
  * URLs, company names, technology names.
  *
- * Every entry's `id` is the key a `## Heading {#id}` in `src/content/<locale>/*.md` matches on, so
- * the prose about an engagement — and its heading, which for a public institution really does differ
- * per language — lives in markdown while the structure lives here. Ordering is by significance for
- * products and reverse-chronological for work, and the pages render them in the order given.
+ * Every entry's `id` is the key a `## Heading {#id}` in `src/content/<locale>/resume.md` (work) or
+ * `open-source.md` matches on, so the prose about an engagement — and its heading, which for a public
+ * institution really does differ per language — lives in markdown while the structure lives here.
+ * The CV renders products and client work as one continuous list in the order given: products first
+ * because their end dates are the most recent, then client work newest first.
  */
 
 import { LOCALE_TAGS, type Locale } from './i18n';
