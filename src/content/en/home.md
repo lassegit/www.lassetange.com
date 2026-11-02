@@ -12,7 +12,7 @@ I have worked in many industries and with many technologies. Today I focus on th
 
 ### AI consultant
 
-I have worked with AI since OpenAI released GPT-3, and among other things I have built [SQLAI.ai](/en/products), which has more than 150,000 users. As a consultant I help companies work out where AI makes sense — and get the solutions into production: RAG and vector search, agentic workflows, prompt design and model evaluation.
+I have worked with AI since OpenAI released GPT-3, and among other things I have built [SQLAI.ai](/en/products), which has more than 150,000 users. As a consultant I help companies work out where AI makes sense — and get the solutions into production: RAG and vector search, agentic workflows, prompt design, AI harnesses, model evaluation and more.
 
 ### Senior full-stack developer
 
@@ -22,7 +22,9 @@ As a senior full-stack developer I plan, architect and build web and mobile appl
 
 I also put the applications into production and keep them running: cloud infrastructure (AWS, Cloudflare), Docker, Infrastructure as Code, CI/CD pipelines and testing.
 
-I take on AI consulting engagements and freelance work in development and operations — and I am also open to discussing new startup ideas. [Get in touch](/en/contact) if that sounds interesting.
+I take on selected freelance and consulting engagements, and I am also open to startup ideas.
+
+[Get in touch](/en/contact) if that sounds interesting.
 
 ## How I work {#approach}
 
@@ -34,4 +36,4 @@ My approach is:
 
 ### What I'm like
 
-I am social and easy to talk to. I am open and curious, settle quickly into new office environments, and enjoy collaborating with people from different backgrounds and skill sets.
+I am social and easy to talk to. I am open and curious, settle quickly into new offices, and enjoy collaborating with people from different backgrounds and skill sets.

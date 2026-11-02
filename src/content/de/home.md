@@ -12,7 +12,7 @@ Ich habe in vielen Branchen und mit vielen Technologien gearbeitet. Heute konzen
 
 ### KI-Berater
 
-Ich arbeite mit KI, seit OpenAI GPT-3 veröffentlicht hat, und habe unter anderem [SQLAI.ai](/de/products) gebaut, das über 150.000 Nutzerinnen und Nutzer hat. Als Berater helfe ich Unternehmen dabei, herauszufinden, wo KI sinnvoll ist und wie die Lösungen in Produktion kommen: RAG und Vektorsuche, agentische Workflows, Prompt-Design und Evaluierung der Modelle.
+Ich arbeite mit KI, seit OpenAI GPT-3 veröffentlicht hat, und habe unter anderem [SQLAI.ai](/de/products) gebaut, das über 150.000 Nutzerinnen und Nutzer hat. Als Berater helfe ich Unternehmen dabei, herauszufinden, wo KI sinnvoll ist und wie die Lösungen in Produktion kommen: RAG und Vektorsuche, agentische Workflows, Prompt-Design, AI Harnesses, Evaluierung der Modelle und so weiter.
 
 ### Senior-Full-Stack-Entwickler
 
@@ -22,7 +22,9 @@ Als Senior-Full-Stack-Entwickler plane, konzipiere und entwickle ich Web- und Mo
 
 Ich bringe die Anwendungen außerdem in Produktion und halte sie am Laufen: Cloud-Infrastruktur (AWS, Cloudflare), Docker, Infrastructure as Code, CI/CD-Pipelines und Testing.
 
-Ich übernehme Beratungsaufträge im Bereich KI und Freelance-Aufträge in Entwicklung und Betrieb. Ich bin auch offen für neue Startup-Ideen. [Schreiben Sie mir](/de/contact), wenn das interessant klingt.
+Ich übernehme ausgewählte Freelance- und Beratungsaufträge und bin auch offen für Startup-Ideen.
+
+[Schreiben Sie mir gerne](/de/contact), wenn das interessant klingt.
 
 ## Wie ich arbeite {#approach}
 
@@ -34,4 +36,4 @@ Mein Ansatz:
 
 ### So bin ich
 
-Ich bin sozial und umgänglich. Ich bin offen und neugierig, finde mich schnell in neuen Büroumgebungen zurecht und arbeite gern mit Menschen zusammen, die unterschiedliche Hintergründe und Kompetenzen mitbringen.
+Ich bin sozial und umgänglich. Ich bin offen und neugierig, finde mich schnell in neuen Büros zurecht und arbeite gern mit Menschen zusammen, die unterschiedliche Hintergründe und Kompetenzen mitbringen.
