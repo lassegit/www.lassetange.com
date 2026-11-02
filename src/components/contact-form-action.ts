@@ -2,7 +2,7 @@
 
 import { getRequestContext } from '@rshono/core/server';
 import { PROFILE } from '../lib/data';
-import { LOCALE_NAMES, dictionary, localeFromPath } from '../lib/i18n';
+import { dictionary, localeFromPath } from '../lib/i18n';
 
 export type ContactValues = {
   name: string;
@@ -55,6 +55,75 @@ function escapeHtml(value: string): string {
 function field(form: FormData, name: string): string {
   const value = form.get(name);
   return typeof value === 'string' ? value.trim() : '';
+}
+
+type ContactEmailProps = {
+  name: string;
+  email: string;
+  message: string;
+  sentAt: string;
+};
+
+/** The table-based notification, kept in step with the react-email-starter template. */
+function getContactEmailHTML({ name, email, message, sentAt }: ContactEmailProps): string {
+  const fontFamily =
+    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
+
+  return `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>New message - lassetange.com</title>
+  </head>
+  <body style="background-color:#ffffff">
+    <div style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0">
+      New message - lassetange.com
+      <div>
+        &nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;&nbsp;&zwnj;&#8203;
+      </div>
+    </div>
+    <table
+      align="center"
+      width="100%"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+      style="max-width:37.5em;padding-left:12px;padding-right:12px;margin:0 auto">
+      <tbody>
+        <tr style="width:100%">
+          <td>
+            <h1
+              style="color:#333;font-family:${fontFamily};font-size:24px;font-weight:bold;margin:40px 0;padding:0">
+              New message from lassetange.com
+            </h1>
+            <p
+              style="font-size:14px;line-height:24px;margin:24px 0;color:#333;font-family:${fontFamily};margin-bottom:14px">
+              <strong>Name:</strong> ${escapeHtml(name)}<br />
+              <strong>Email:</strong> <a href="mailto:${escapeHtml(email)}" style="color:#2754C5;text-decoration-line:none;text-decoration:underline">${escapeHtml(email)}</a><br />
+              <strong>Sent:</strong> ${escapeHtml(sentAt)}
+            </p>
+            <p
+              style="font-size:14px;line-height:24px;margin:24px 0;color:#333;font-family:${fontFamily};margin-bottom:14px">
+              Message:
+            </p>
+            <code
+              style="display:inline-block;padding:16px 4.5%;margin-bottom:20px;width:90.5%;background-color:#f4f4f4;border-radius:5px;border:1px solid #eee;color:#333;white-space:pre-line;word-break:break-word"
+              >${escapeHtml(message)}</code
+            >
+            <a
+              href="${PROFILE.siteUrl}"
+              style="color:#2754C5;text-decoration-line:none;font-family:${fontFamily};font-size:14px;text-decoration:underline;display:block;margin-bottom:16px"
+              target="_blank"
+              >Go to lassetange.com</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>`;
 }
 
 export async function submitContact(_previous: ContactState, form: FormData): Promise<ContactState> {
@@ -133,35 +202,21 @@ export async function submitContact(_previous: ContactState, form: FormData): Pr
   const name = values.name.replace(/[\r\n\t]+/g, ' ').trim();
   const sentAt = new Date().toISOString();
 
-  const text = [
-    `Navn: ${values.name}`,
-    `E-mail: ${values.email}`,
-    `Sprog: ${LOCALE_NAMES[locale]}`,
-    `Sendt: ${sentAt}`,
-    `Side: ${ctx.url.href}`,
-    '',
-    'Besked:',
-    values.message,
-  ].join('\n');
+  const text = [`Name: ${values.name}`, `Email: ${values.email}`, `Sent: ${sentAt}`, '', 'Message:', values.message].join('\n');
 
-  const html = `
-    <div style="font-family: ui-sans-serif, system-ui, sans-serif; line-height: 1.6; color: #1b1b1b;">
-      <h1 style="font-size: 18px; margin: 0 0 12px;">Ny besked fra kontaktformularen</h1>
-      <p style="margin: 0 0 4px;"><strong>Navn:</strong> ${escapeHtml(values.name)}</p>
-      <p style="margin: 0 0 4px;"><strong>E-mail:</strong> <a href="mailto:${escapeHtml(values.email)}">${escapeHtml(values.email)}</a></p>
-      <p style="margin: 0 0 4px;"><strong>Sprog:</strong> ${escapeHtml(LOCALE_NAMES[locale])}</p>
-      <p style="margin: 0 0 4px;"><strong>Sendt:</strong> ${escapeHtml(sentAt)}</p>
-      <p style="margin: 0 0 16px;"><strong>Side:</strong> ${escapeHtml(ctx.url.href)}</p>
-      <div style="border-top: 1px solid #e3e3df; padding-top: 12px; white-space: pre-wrap; word-break: break-word;">${escapeHtml(values.message)}</div>
-    </div>
-  `;
+  const html = getContactEmailHTML({
+    name: values.name,
+    email: values.email,
+    message: values.message,
+    sentAt,
+  });
 
   try {
     await email.send({
       to: CONTACT_DESTINATION,
-      from: { email: PROFILE.formEmail, name: 'Kontaktformular' },
+      from: { email: PROFILE.formEmail, name: 'Contact form' },
       replyTo: { email: values.email, name },
-      subject: `[Kontakt] ${name}`,
+      subject: `[Contact] ${name}`,
       text,
       html,
     });
