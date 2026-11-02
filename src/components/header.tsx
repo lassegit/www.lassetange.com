@@ -21,20 +21,17 @@ const ROW_CURRENT = 'border-accent text-accent';
 /** The lists pull left by their own indent, so a row's text aligns with the name above it. */
 const LIST_INDENT = '-ml-3.5';
 
-/** Contact, in words, in the top row. */
-const META = 'inline-flex items-center gap-1.5 text-muted no-underline hover:text-accent hover:underline';
-
 /** A profile in the top row, where it is its mark alone. The padding is a target a thumb can hit and
     the negative margin takes it back out of the layout, so the marks neither space the row apart nor
     add to its height. */
 const ICON = '-m-1.5 flex p-1.5 text-muted no-underline hover:text-accent';
 
 /**
- * Two rows, deliberately: the top one is who I am and how to reach me, the bottom one is where you
- * can go. The tab strip is the site's primary navigation — some sections run long, so they are pages
- * rather than anchors, and the current tab is marked with `aria-current` as well as a heavier rule.
+ * Two rows, deliberately: the top one is who I am, the bottom one is where you can go. The tab strip
+ * is the site's primary navigation — some sections run long, so they are pages rather than anchors,
+ * contact included — and the current tab is marked with `aria-current` as well as a heavier rule.
  *
- * Below `sm` there is no room for four tabs, so both rows collapse into a burger menu. It is a native
+ * Below `sm` there is no room for five tabs, so both rows collapse into a burger menu. It is a native
  * `<details>` disclosure rather than a script: the browser owns the open state and announces it as a
  * button, and it works before (and without) hydration. Closing it is where the browser needs help: a
  * same-origin link is soft-navigated, so the document — and the open panel with it — survives the click,
@@ -56,7 +53,7 @@ export function Header({ locale, path }: { locale: Locale; path: string }) {
           </a>
 
           <div className="hidden sm:block">
-            <MetaLinks locale={locale} as="row" />
+            <MetaLinks as="row" />
           </div>
 
           <MobileMenu className="group sm:hidden">
@@ -76,7 +73,7 @@ export function Header({ locale, path }: { locale: Locale; path: string }) {
                   <PageLinks locale={locale} path={path} as="menu" />
                 </nav>
                 <div className="mt-2 border-t border-line pt-2">
-                  <MetaLinks locale={locale} as="menu" />
+                  <MetaLinks as="menu" />
                 </div>
               </Shell>
             </div>
@@ -122,43 +119,39 @@ function PageLinks({ locale, path, as }: { locale: Locale; path: string; as: 'ta
 }
 
 /**
- * Contact, GitHub and LinkedIn — the top row on desktop, the foot of the menu on mobile.
+ * GitHub and LinkedIn — the top row on desktop, the foot of the menu on mobile. Contact is a page
+ * like the rest, so it lives in the tab strip rather than here.
  *
  * In the top row the two profiles are their marks alone. That row shares a line with the name and sits
- * above four tabs, and spelling out “GitHub” beside a mark that already says it is what makes the line
+ * above five tabs, and spelling out “GitHub” beside a mark that already says it is what makes the line
  * crowded. A mark carries no accessible name of its own — the SVGs are `aria-hidden` — so the link has
  * to say what it is: `aria-label` for a screen reader, `title` for a mouse. The menu is a column with
  * room to spare and keeps the words.
  */
-function MetaLinks({ locale, as }: { locale: Locale; as: 'row' | 'menu' }) {
-  const t = dictionary(locale);
+function MetaLinks({ as }: { as: 'row' | 'menu' }) {
   const row = as === 'row';
 
   const links = [
-    { label: t.contact, href: localePath('/contact', locale) },
     { label: 'GitHub', href: PROFILE.github, rel: 'me noopener', icon: <GitHubIcon /> },
     { label: 'LinkedIn', href: PROFILE.linkedin, rel: 'me noopener', icon: <LinkedInIcon /> },
   ];
 
   return (
     <ul className={row ? 'flex items-center gap-3 text-sm' : LIST_INDENT}>
-      {links.map((link) => {
-        const mark = row && link.icon !== undefined;
-        return (
-          <li key={link.href}>
-            <a
-              className={row ? (mark ? ICON : META) : `${ROW} ${ROW_IDLE}`}
-              href={link.href}
-              rel={link.rel}
-              aria-label={mark ? link.label : undefined}
-              title={mark ? link.label : undefined}
-            >
-              {link.icon}
-              {!mark && link.label}
-            </a>
-          </li>
-        );
-      })}
+      {links.map((link) => (
+        <li key={link.href}>
+          <a
+            className={row ? ICON : `${ROW} ${ROW_IDLE}`}
+            href={link.href}
+            rel={link.rel}
+            aria-label={row ? link.label : undefined}
+            title={row ? link.label : undefined}
+          >
+            {link.icon}
+            {!row && link.label}
+          </a>
+        </li>
+      ))}
     </ul>
   );
 }

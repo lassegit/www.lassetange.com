@@ -79,20 +79,21 @@ export function localeSwitchPath(path: string, locale: Locale): string {
  * Navigation
  * ---------------------------------------------------------------------------------------------- */
 
-/** The tab strip, in order. `/contact` is deliberately absent — it lives in the header instead. */
+/** The tab strip, in order. */
 export const PAGES = [
   { path: '/', key: 'navAbout' },
   { path: '/resume', key: 'navResume' },
   { path: '/technologies', key: 'navTechnologies' },
   { path: '/open-source', key: 'navOpenSource' },
+  { path: '/contact', key: 'navContact' },
 ] as const satisfies ReadonlyArray<{ path: string; key: keyof Dictionary }>;
 
 /**
- * Every canonical page path — the tabs, plus the `/contact` the tabs leave out. The sitemap enumerates
- * it, and so does the language negotiation in `src/server.ts`: a path that is not here is not a page,
- * which is what keeps `/sitemap.xml` and `/robots.txt` from being redirected into a language.
+ * Every canonical page path — the tabs themselves. The sitemap enumerates it, and so does the language
+ * negotiation in `src/server.ts`: a path that is not here is not a page, which is what keeps
+ * `/sitemap.xml` and `/robots.txt` from being redirected into a language.
  */
-export const PAGE_PATHS: readonly string[] = [...PAGES.map((page) => page.path), '/contact'];
+export const PAGE_PATHS: readonly string[] = PAGES.map((page) => page.path);
 
 /* -------------------------------------------------------------------------------------------------
  * Preference
@@ -144,12 +145,12 @@ export interface Dictionary {
   navTechnologies: string;
   navOpenSource: string;
   navResume: string;
+  navContact: string;
 
   skipToContent: string;
   sections: string;
   /** The burger button's accessible name, below `sm` where the tab strip becomes a menu. */
   menu: string;
-  contact: string;
   homeLabel: string;
   /** The footer's two columns: the site's own pages, and everywhere else I am. */
   pages: string;
@@ -193,11 +194,11 @@ const da: Dictionary = {
   navTechnologies: 'Teknologier',
   navOpenSource: 'Open source',
   navResume: 'CV',
+  navContact: 'Kontakt',
 
   skipToContent: 'Gå til indhold',
   sections: 'Sektioner',
   menu: 'Menu',
-  contact: 'Kontakt',
   homeLabel: 'Forside',
   pages: 'Sider',
   elsewhere: 'Andre steder',
@@ -243,11 +244,11 @@ const en: Dictionary = {
   navTechnologies: 'Technologies',
   navOpenSource: 'Open source',
   navResume: 'Résumé',
+  navContact: 'Contact',
 
   skipToContent: 'Skip to content',
   sections: 'Sections',
   menu: 'Menu',
-  contact: 'Contact',
   homeLabel: 'Home',
   pages: 'Pages',
   elsewhere: 'Elsewhere',
@@ -293,11 +294,11 @@ const de: Dictionary = {
   navTechnologies: 'Technologien',
   navOpenSource: 'Open Source',
   navResume: 'Lebenslauf',
+  navContact: 'Kontakt',
 
   skipToContent: 'Zum Inhalt springen',
   sections: 'Bereiche',
   menu: 'Menü',
-  contact: 'Kontakt',
   homeLabel: 'Startseite',
   pages: 'Seiten',
   elsewhere: 'Anderswo',

@@ -10,11 +10,11 @@ import {
   PAGES,
   type Locale,
 } from '../lib/i18n';
-import { GitHubIcon, LinkedInIcon, MailIcon } from './icons';
+import { GitHubIcon, LinkedInIcon } from './icons';
 import { Shell } from './ui';
 
 /**
- * A column's heading — a `<p>` rather than an `<h2>`. It names four or three links at the foot of the
+ * A column's heading — a `<p>` rather than an `<h2>`. It names five or two links at the foot of the
  * page, and two real headings would enter the outline of every page below the content the page is
  * actually about. The `<nav>`'s own label is what a screen reader navigates by.
  */
@@ -46,19 +46,14 @@ const LANGUAGE_CURRENT = 'border-accent bg-accent-soft font-semibold text-ink';
  * page but the front one ends without a way onward — the tab strip is a scroll away, back at the top.
  * The pages column is {@link PAGES} itself rather than its own list, so the order here and the order of
  * the tabs cannot drift apart, and it names the page being read with `aria-current` exactly as the
- * header does. `/contact` is the one page it leaves out, in the second column with the rest of the ways
- * to reach me.
+ * header does. `/contact` is among them, because contact is a page like the rest.
  */
 export function Footer({ locale, path }: { locale: Locale; path: string }) {
   const t = dictionary(locale);
 
-  // Contact is a page rather than a `mailto:` — the page writes the address out, so it works for a
-  // reader whose browser has nothing behind the scheme — and it is the only link to it in the footer,
-  // so it marks itself when it is the page being read.
   const elsewhere = [
     { label: 'GitHub', href: PROFILE.github, rel: 'me noopener', icon: <GitHubIcon /> },
     { label: 'LinkedIn', href: PROFILE.linkedin, rel: 'me noopener', icon: <LinkedInIcon /> },
-    { label: t.contact, href: localePath('/contact', locale), current: path === '/contact', icon: <MailIcon /> },
   ];
 
   return (
@@ -90,12 +85,7 @@ export function Footer({ locale, path }: { locale: Locale; path: string }) {
             <ul className="grid gap-1.5">
               {elsewhere.map((link) => (
                 <li key={link.href}>
-                  <a
-                    className={`${COLUMN_LINK} ${link.current ? COLUMN_LINK_CURRENT : COLUMN_LINK_IDLE}`}
-                    href={link.href}
-                    rel={link.rel}
-                    aria-current={link.current ? 'page' : undefined}
-                  >
+                  <a className={`${COLUMN_LINK} ${COLUMN_LINK_IDLE}`} href={link.href} rel={link.rel}>
                     {link.icon}
                     {link.label}
                   </a>
