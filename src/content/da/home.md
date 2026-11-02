@@ -1,35 +1,37 @@
 ---
 title: Lasse Tange
 tagline: AI-konsulent, senior full-stack-udvikler & tech lead
-description: AI-konsulent, full-stack-udvikler og tech lead i København med 15+ års erfaring i at planlægge, arkitektere og bygge AI-, web- og mobilprodukter.
+description: AI-konsulent, full-stack-udvikler og tech lead i København. 15+ års erfaring med AI, web, mobil, cloud og DevOps.
 ---
 
-Jeg har brugt 15 år på at bygge [web- og mobilapplikationer](/client-work) og AI-applikationer, det meste af tiden i internationale startups og offentlige institutioner i Berlin og København.
+Jeg har brugt 15 år på at bygge AI-, [web- og mobilapplikationer](/client-work), det meste af tiden i internationale startups og offentlige institutioner i Berlin og København.
 
 ## Om mig {#about}
 
-Jeg har gennem de seneste 15 år arbejdet i mange brancher og med mange forskellige teknologier. De seneste år har jeg fokuseret på anvendt AI og hvordan det integreres i virksomheders applikationer.
+Jeg har arbejdet i mange brancher og med mange teknologier. I dag arbejder jeg især med tre ting: anvendt AI, full-stack-udvikling og drift.
 
 ### AI-konsulent
 
-Jeg har som AI-konsulent været med helt fra starten, da OpenAI udgav GPT-3, og har udviklet flere applikationer med det, bl.a. en af verdens førende SQL-generatorer. Jeg har arbejdet med forskellige AI-teknologier såsom RAG, embeddings og vektorsøgning, promptdesign, agentiske workflows, AI-harnesses og så videre.
+Jeg har arbejdet med AI siden OpenAI udgav GPT-3, og jeg har bl.a. bygget [SQLAI.ai](/products), som har over 150.000 brugere. Som konsulent hjælper jeg virksomheder med at finde ud af, hvor AI giver mening — og med at få løsningerne i produktion: RAG og vektorsøgning, agentiske workflows, promptdesign og evaluering af modellerne.
 
 ### Senior full-stack-udvikler
 
-Jeg har også arbejdet som full-stack-udvikler, hvor jeg planlægger, arkitekterer og bygger web- og mobilapplikationer fra ende til anden, hovedsageligt i TypeScript/Node.js. Jeg er lige godt hjemme i frontend som i backend og arbejder med en bred vifte af [teknologier og sprog](/technologies).
+Som senior full-stack-udvikler planlægger, arkitekterer og bygger jeg web- og mobilapplikationer fra ende til anden, hovedsageligt i TypeScript/Node.js. Jeg er lige godt hjemme i frontend som i backend og arbejder med en bred vifte af [teknologier og sprog](/technologies). Jeg har også været tech lead på flere opgaver — med ansvar for retning, arkitektur og mentoring af teamet.
 
-Ved siden af udvikling er jeg erfaren inden for opsætning, skalering og drift af webapplikationer: cloud-infrastruktur, Infrastructure as Code (IaC), CI/CD-pipelines og testing.
+### DevOps, cloud og drift
 
-Jeg tager imod freelance- og rådgivningsopgaver, og jeg er også åben for startup-idéer. [Skriv til mig](/contact) ved interesse.
+Jeg sætter også applikationerne i drift og holder dem kørende: cloud-infrastruktur (AWS, Cloudflare), Docker, Infrastructure as Code, CI/CD-pipelines og testing.
+
+Jeg tager imod rådgivningsopgaver inden for AI og freelanceopgaver inden for udvikling og drift — og er også åben for at drøfte nye startup-idéer. [Skriv til mig](/contact), hvis det lyder interessant.
 
 ## Sådan arbejder jeg {#approach}
 
-Udover at være nem at tale med og omgås, så er min tilgang:
+Min tilgang er:
 
 - **Analytisk:** Jeg graver mig ned i problemet og mulighederne, før jeg binder mig til en konkret løsning.
 - **Resultatorienteret:** Jeg foretrækker tillid frem for kontrol og mikrostyring — og en proces, der måles på, hvad den leverer.
 - **Kvalitetsbevidst:** Jeg kombinerer hurtig, pragmatisk problemløsning med software, der holder.
 
-## Sådan er jeg
+### Sådan er jeg
 
-Jeg er socialt anlagt og kan godt lide at samarbejde med folk med forskellige baggrunde og kompetencer. Jeg er åben, nysgerrig og indgår gnidningsfrit i nye kontormiljøer.
+Jeg er socialt anlagt og nem at tale med. Jeg er åben og nysgerrig og kan godt lide at samarbejde med mennesker, der har forskellige baggrunde og kompetencer. Jeg indgår gnidningsfrit i nye kontormiljøer og siger min mening — men skifter den, hvis argumenterne er bedre.

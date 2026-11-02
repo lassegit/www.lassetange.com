@@ -113,6 +113,17 @@ function escape(text) {
 function card({ name, tagline, url, image }) {
   const circle = { cx: 955, cy: HEIGHT / 2, r: PORTRAIT / 2 };
 
+  /* Three roles in one 34px line run past x=760, and the portrait starts at x=769. So the tagline is
+     set over as many lines as it has roles: the first role stays on the top line, the rest follow.
+     The rule and the address then move down by however many extra lines there are, which keeps the
+     single-line cards exactly where they have always been. */
+  const comma = tagline.indexOf(',');
+  const lines = comma === -1 ? [tagline] : [tagline.slice(0, comma), tagline.slice(comma + 1).trim()];
+  const taglineY = 330;
+  const lineHeight = 40;
+  const ruleY = taglineY + (lines.length - 1) * lineHeight + 44;
+  const urlY = ruleY + 50;
+
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}">
   <defs>
     <clipPath id="portrait">
@@ -130,9 +141,11 @@ function card({ name, tagline, url, image }) {
 
   <g font-family="${SANS}" fill="${INK}">
     <text x="80" y="272" font-size="78" font-weight="600" letter-spacing="-1.2">${escape(name)}</text>
-    <text x="80" y="330" font-size="34" fill="${MUTED}">${escape(tagline)}</text>
-    <rect x="80" y="374" width="56" height="3" fill="${ACCENT}" />
-    <text x="80" y="424" font-size="26" font-weight="500" fill="${ACCENT}">${escape(url)}</text>
+    ${lines
+      .map((line, index) => `<text x="80" y="${taglineY + index * lineHeight}" font-size="34" fill="${MUTED}">${escape(line)}</text>`)
+      .join('\n    ')}
+    <rect x="80" y="${ruleY}" width="56" height="3" fill="${ACCENT}" />
+    <text x="80" y="${urlY}" font-size="26" font-weight="500" fill="${ACCENT}">${escape(url)}</text>
   </g>
 </svg>
 `;

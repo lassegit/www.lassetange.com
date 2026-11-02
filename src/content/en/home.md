@@ -1,25 +1,37 @@
 ---
 title: Lasse Tange
-tagline: Senior Full-Stack Developer & Tech Lead
-description: Tech lead and full-stack developer in Copenhagen with 15+ years planning, architecting and building web and mobile products.
+tagline: AI Consultant, Senior Full-Stack Developer & Tech Lead
+description: AI consultant, full-stack developer and tech lead in Copenhagen. 15+ years of experience with AI, web, mobile, cloud and DevOps.
 ---
 
-I have spent 15 years building [web and mobile applications](/en/client-work), most of that time inside international startups and public institutions in Berlin and Copenhagen.
+I have spent 15 years building AI, [web and mobile applications](/en/client-work), most of that time inside international startups and public institutions in Berlin and Copenhagen.
 
 ## About me {#about}
 
-I am a full-stack developer who plans, architects and builds web and mobile applications end to end, primarily in TypeScript/Node.js. I am equally at home on the frontend and the backend, working with a wide range of [technologies and languages](/en/technologies).
+I have worked in many industries and with many technologies. Today I focus on three things: applied AI, full-stack development and operations.
 
-Beyond development, I am also experienced in setting up, scaling and operating web applications: cloud infrastructure, Infrastructure as Code (IaC), CI/CD pipelines and testing.
+### AI consultant
 
-I have also worked with AI since OpenAI released GPT-3, and I have built and launched several AI products of my own. In that work I use a range of AI technologies: RAG, embeddings and vector search, prompt design and agentic workflows.
+I have worked with AI since OpenAI released GPT-3, and among other things I have built [SQLAI.ai](/en/products), which has more than 150,000 users. As a consultant I help companies work out where AI makes sense — and get the solutions into production: RAG and vector search, agentic workflows, prompt design and model evaluation.
 
-I take on selected freelance and consulting engagements, and I am also open to startup ideas. [Get in touch](/en/contact) if you are interested.
+### Senior full-stack developer
+
+As a senior full-stack developer I plan, architect and build web and mobile applications end to end, primarily in TypeScript/Node.js. I am equally at home on the frontend and the backend, working with a wide range of [technologies and languages](/en/technologies). I have also been the tech lead on several engagements, responsible for direction, architecture and mentoring the team.
+
+### DevOps, cloud and operations
+
+I also put the applications into production and keep them running: cloud infrastructure (AWS, Cloudflare), Docker, Infrastructure as Code, CI/CD pipelines and testing.
+
+I take on AI consulting engagements and freelance work in development and operations — and I am also open to discussing new startup ideas. [Get in touch](/en/contact) if that sounds interesting.
 
 ## How I work {#approach}
 
-Besides being easy to talk to and get along with, my approach is:
+My approach is:
 
 - **Analytical:** I dig into the problem and the options before committing to a concrete solution.
 - **Result-oriented:** I value trust over control and micromanagement, and a process that is measured by what it delivers.
 - **Quality-driven:** I combine fast, pragmatic problem-solving with software built to last.
+
+### What I'm like
+
+I am social and easy to talk to. I am open and curious, and I enjoy collaborating with people from different backgrounds and skill sets. I settle quickly into new office environments and speak my mind — but change my mind when the arguments are better.
