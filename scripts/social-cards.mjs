@@ -3,10 +3,9 @@
  *
  * Facebook and LinkedIn do not render an arbitrary image: they lay a link preview out at 1.91:1 and
  * want at least 1200px of width for the large format, and their image pipelines only reliably accept
- * a baseline, three-channel sRGB JPEG. The portrait in `public/profile-picture.jpg` is none of those
- * things — it is a 797×1200 single-channel greyscale progressive JPEG — so rather than hand it over
- * and hope, a card is composed around it: the same round photo the site uses, the name, and the
- * tagline in the reader's language.
+ * a baseline, three-channel sRGB JPEG. The portrait in `public/profile-picture.jpg` is a 2:3
+ * photograph and none of those things, so rather than hand it over and hope, a card is composed
+ * around it: the same round photo the site uses, the name, and the tagline in the reader's language.
  *
  * The tagline is read out of `src/content/<locale>/home.md`, so the card cannot drift from the page.
  *
@@ -61,20 +60,27 @@ function tagline(locale) {
  *
  * Tighter than the page's crop, though. The avatar sits beside an `<h1>` that names the subject, so it
  * can afford headroom; a card has to survive being scaled down to a thumbnail in a feed, where a face
- * occupying half the frame stops reading as a face. 700 of the original's 797px is the tightest crop
- * that still clears the crown of the head.
+ * occupying half the frame stops reading as a face. The crop is a fraction of the export rather than
+ * a fixed number of pixels, so re-exporting the portrait at another resolution keeps the same
+ * framing: 88% of the width is the tightest crop that still clears the crown of the head.
  *
  * Rendered at twice the drawn size, so downscaling into the JPEG has detail to work from.
  */
 function photo() {
-  const size = 700;
-  const left = Math.round((797 - size) / 2);
-  const top = Math.round((1200 - size) * 0.05);
+  const source = join(root, 'public/profile-picture.jpg');
+  const [width, height] = execFileSync('magick', ['identify', '-format', '%w %h', source], { encoding: 'utf8' })
+    .trim()
+    .split(/\s+/)
+    .map(Number);
+
+  const size = Math.round(width * 0.88);
+  const left = Math.round((width - size) / 2);
+  const top = Math.round((height - size) * 0.05);
 
   const png = execFileSync(
     'magick',
     [
-      join(root, 'public/profile-picture.jpg'),
+      source,
       '-crop',
       `${size}x${size}+${left}+${top}`,
       '+repage',
@@ -172,9 +178,9 @@ try {
 
     /**
      * The encode is the part the networks are fussy about. `-colorspace sRGB -type TrueColor` forces
-     * three channels, since a single-channel greyscale JPEG is exactly what the source photo is and
-     * what their pipelines choke on; `-interlace none` writes a baseline rather than a progressive
-     * file; `-strip` drops the EXIF and GPS the camera left in the original.
+     * three channels, since a single-channel JPEG is exactly what their pipelines choke on;
+     * `-interlace none` writes a baseline rather than a progressive file; `-strip` drops the EXIF and
+     * GPS the camera left in the original.
      */
     execFileSync('magick', [
       png,

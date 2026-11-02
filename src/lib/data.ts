@@ -23,7 +23,7 @@ export const PROFILE = {
   siteUrl: 'https://www.lassetange.com',
   /** Shown at 120px on the front page and 88px on the CV, so a 480px derivative is plenty. */
   photo: '/profile-picture-480.jpg',
-  photoWidth: 319,
+  photoWidth: 320,
   photoHeight: 480,
   /** The full-size original. Used for the `image` of the front page's `Person` JSON-LD, where a
    *  crawler wants the photograph itself rather than the composed {@link SOCIAL_CARD}. */
@@ -39,9 +39,9 @@ export const PROFILE = {
  * What a link preview shows, built by `pnpm social-cards` — see `scripts/social-cards.mjs` for how.
  *
  * The portrait cannot do this job. Facebook and LinkedIn lay a preview out at 1.91:1 and want at least
- * 1200px across; a 797×1200 greyscale JPEG is neither, and LinkedIn answers that by shrinking it to a
- * thumbnail or dropping it entirely. Hence a landscape card, one per language, with the name and
- * tagline set large enough to read at the size a feed actually renders it.
+ * 1200px across; a 2:3 photograph is neither, and LinkedIn answers that by shrinking it to a thumbnail
+ * or dropping it entirely. Hence a landscape card, one per language, with the name and tagline set
+ * large enough to read at the size a feed actually renders it.
  * ---------------------------------------------------------------------------------------------- */
 
 /**
