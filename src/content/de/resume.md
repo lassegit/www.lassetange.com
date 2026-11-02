@@ -1,6 +1,6 @@
 ---
 title: Lebenslauf
-description: Vollständiger Lebenslauf von Lasse Tange — Tech Lead und Full-Stack-Entwickler mit über 15 Jahren Erfahrung. Eigene KI-Produkte, Kundenprojekte seit 2013, Technologien und Sprachen. Zum Drucken oder als PDF speichern.
+description: Vollständiger Lebenslauf von Lasse Tange, Tech Lead und Full-Stack-Entwickler mit über 15 Jahren Erfahrung. Eigene KI-Produkte, Kundenprojekte seit 2013, Technologien und Sprachen. Zum Drucken oder als PDF speichern.
 ---
 
 ## Profil {#profile}
@@ -15,4 +15,4 @@ Ich arbeite außerdem mit KI, seit OpenAI GPT-3 veröffentlicht hat, und habe se
 
 ## Ausbildung {#education}
 
-**Copenhagen Business School** — Betriebswirtschaftslehre und Informatik.
+**Copenhagen Business School:** Betriebswirtschaftslehre und Informatik.

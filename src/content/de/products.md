@@ -1,6 +1,6 @@
 ---
 title: Produkte
-description: Vier KI-Produkte, die ich selbst entworfen, gebaut und im Betrieb habe — von der Idee und Architektur über UX bis zu Marketing und Umsatz.
+description: Vier KI-Produkte, die ich selbst entworfen, gebaut und im Betrieb habe: von der Idee und Architektur über UX bis zu Marketing und Umsatz.
 ---
 
 Vier Produkte, die ich vollständig selbst verantwortet habe: Idee, Architektur, UX, Betrieb, Marketing und Umsatz. Jedes davon allein entwickelt, jedes im Produktivbetrieb mit echten, zahlenden Nutzerinnen und Nutzern.
@@ -27,7 +27,7 @@ Ich habe die Normalisierungsschicht gebaut, die unsaubere Eingaben aufräumt, di
 
 Ein KI-Reviewer für Landingpages und Marketing-Websites. Er analysiert eine Seite auf Klarheit, Positionierung und UX und liefert in Sekunden strukturiertes, umsetzbares Feedback.
 
-Das Produkt umfasst das Einlesen der Seite und die Inhaltsextraktion, die Prompting-Pipeline für die Bewertung, das strukturierte Ausgabeformat und die Berichtsoberfläche — dazu Abonnements und Abrechnung.
+Das Produkt umfasst das Einlesen der Seite und die Inhaltsextraktion, die Prompting-Pipeline für die Bewertung, das strukturierte Ausgabeformat und die Berichtsoberfläche, dazu Abonnements und Abrechnung.
 
 ## ViewDiff.ai {#viewdiff}
 

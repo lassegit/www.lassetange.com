@@ -1,6 +1,6 @@
 ---
 title: CV
-description: Fuldt CV for Lasse Tange — tech lead og full-stack-udvikler med 15+ års erfaring. Egne AI-produkter, kundeopgaver siden 2013, teknologier og sprog. Kan printes eller gemmes som PDF.
+description: Fuldt CV for Lasse Tange, tech lead og full-stack-udvikler med 15+ års erfaring. Egne AI-produkter, kundeopgaver siden 2013, teknologier og sprog. Kan printes eller gemmes som PDF.
 ---
 
 ## Profil {#profile}
@@ -15,4 +15,4 @@ Jeg har også arbejdet med AI siden OpenAI udgav GPT-3, og jeg har bygget og lan
 
 ## Uddannelse {#education}
 
-**Copenhagen Business School** — erhvervsøkonomi og datalogi.
+**Copenhagen Business School:** erhvervsøkonomi og datalogi.

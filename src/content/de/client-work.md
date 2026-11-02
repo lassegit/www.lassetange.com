@@ -1,6 +1,6 @@
 ---
 title: Kundenprojekte
-description: Rollen für Startups, Scale-ups und dänische öffentliche Institutionen in Berlin und Kopenhagen — von Automobil-Marktplätzen und Krypto-Banking bis zu Geodaten und digitaler Verwaltung.
+description: Rollen für Startups, Scale-ups und dänische öffentliche Institutionen in Berlin und Kopenhagen: von Automobil-Marktplätzen und Krypto-Banking bis zu Geodaten und digitaler Verwaltung.
 ---
 
 Ein Jahrzehnt Kundenarbeit, zunächst freiberuflich in Kopenhagen, später in der Berliner Startup-Szene. Alle Projekte stehen unten, die neuesten zuerst; der [Lebenslauf](/de/resume) führt dieselbe Liste in Kurzform.
@@ -11,7 +11,7 @@ Ein Jahrzehnt Kundenarbeit, zunächst freiberuflich in Kopenhagen, später in de
 
 Architekt und Entwickler der nativen Mobile- und Web-Apps für ein Berliner Lieferdienst-Startup, mit durchgehender Verantwortung für Design, Struktur und technische Umsetzung.
 
-Ich habe die gemeinsame Codebasis sowie die Muster und Konventionen aufgebaut, auf denen das interne Team weitergearbeitet hat — gemeinsame Komponenten und Geschäftslogik über React Native und React hinweg, Anbindung an GraphQL-APIs und das Werkzeug-Setup für die Weiterentwicklung.
+Ich habe die gemeinsame Codebasis sowie die Muster und Konventionen aufgebaut, auf denen das interne Team weitergearbeitet hat: gemeinsame Komponenten und Geschäftslogik über React Native und React hinweg, Anbindung an GraphQL-APIs und das Werkzeug-Setup für die Weiterentwicklung.
 
 ## brandTURBO {#brandturbo}
 
@@ -55,7 +55,7 @@ Intensiver Entwicklungssprint an einer Webanwendung, zu einer kurzen, festen Dea
 
 Das längste meiner Projekte für die dänische öffentliche Hand. Ich habe ufm.dk als Festpreisprojekt neu aufgebaut und gestaltet und anschließend 2017–2018 das neue Intranet des Ministeriums entworfen und umgesetzt.
 
-Laufende Verantwortung für Frontend-Architektur, Portlet- und Template-Entwicklung, Unterstützung des EU-Portals des Ministeriums, Barrierefreiheit und Browser-Kompatibilität auf einer stark frequentierten Behördenseite — dazu zwei Jahre ticketbasierte Wartung.
+Laufende Verantwortung für Frontend-Architektur, Portlet- und Template-Entwicklung, Unterstützung des EU-Portals des Ministeriums, Barrierefreiheit und Browser-Kompatibilität auf einer stark frequentierten Behördenseite, dazu zwei Jahre ticketbasierte Wartung.
 
 ## Autobranchen Danmark {#autobranchen}
 
@@ -85,13 +85,13 @@ Das Frontend für das Intranet der Behörde als Festpreisprojekt, dazu anschlie�
 
 ### Leitender Entwickler
 
-Alleiniger Entwickler des Webshops forsk.dk — Architektur, Umsetzung und Launch vollständig als Festpreisprojekt geliefert.
+Alleiniger Entwickler des Webshops forsk.dk: Architektur, Umsetzung und Launch vollständig als Festpreisprojekt geliefert.
 
 ## Fritz Schur Group {#fritzschur}
 
 ### Freiberuflicher Full-Stack-Entwickler
 
-Die Unternehmensplattform einer dänischen Industriegruppe: Multisite- und Mehrsprachigkeits-Konfiguration, Page-Builder-Module, Inhaltstypen für Produkte und Mitarbeitende, Lieferanten- und Datenblatt-Templates, Suche, Brotkrumen und Newsletter-Anmeldung — dazu der mobile Bestellprozess für die Produktseite accu-chek.guide.
+Die Unternehmensplattform einer dänischen Industriegruppe: Multisite- und Mehrsprachigkeits-Konfiguration, Page-Builder-Module, Inhaltstypen für Produkte und Mitarbeitende, Lieferanten- und Datenblatt-Templates, Suche, Brotkrumen und Newsletter-Anmeldung, dazu der mobile Bestellprozess für die Produktseite accu-chek.guide.
 
 ## Dänische Umwelt-Beschwerdekammer {#nmkn}
 
@@ -105,7 +105,7 @@ Alleiniger Entwickler von nmknafgoerelser.dk, der öffentlichen Entscheidungsdat
 
 Leitender Frontend-Entwickler einer interaktiven öffentlichen Kartenplattform für die Naturschutzgebiete Dänemarks.
 
-Ich habe die Karten- und Geodaten-Integration auf CartoDB und SQL gebaut, Geosuche mit Typeahead, Standortanzeige und Routendarstellung, die Kartenbedienung für Mobilgeräte und Touch, einbettbare Karten-Widgets für Drittseiten sowie Druckausgabe und Teilen. Es war das größte Einzelprojekt meiner Kopenhagener Jahre — vom Theme-Gerüst über den Launch bis zu Optimierung und Browser-Härtung.
+Ich habe die Karten- und Geodaten-Integration auf CartoDB und SQL gebaut, Geosuche mit Typeahead, Standortanzeige und Routendarstellung, die Kartenbedienung für Mobilgeräte und Touch, einbettbare Karten-Widgets für Drittseiten sowie Druckausgabe und Teilen. Es war das größte Einzelprojekt meiner Kopenhagener Jahre: vom Theme-Gerüst über den Launch bis zu Optimierung und Browser-Härtung.
 
 ## Bolighed.dk {#bolighed}
 
@@ -117,7 +117,7 @@ Frontend- und Feature-Arbeit für einen dänischen Immobilienmarktplatz: der Bol
 
 ### Freiberuflicher Full-Stack-Entwickler
 
-Eine Podio-API-Integration und eine CartoDB-Kartenschicht für einen internationalen NGO-Verband — Datenimport und Synchronisierung, ein Mitgliederverzeichnis über mehrere Subsites, Test-Deployments und technische Dokumentation.
+Eine Podio-API-Integration und eine CartoDB-Kartenschicht für einen internationalen NGO-Verband: Datenimport und Synchronisierung, ein Mitgliederverzeichnis über mehrere Subsites, Test-Deployments und technische Dokumentation.
 
 ## Akademikernes A-kasse {#akademikerne}
 
@@ -129,7 +129,7 @@ Mehrjähriges Frontend-Projekt für eine der größten Arbeitslosenkassen Dänem
 
 ### Freiberuflicher Frontend-Entwickler
 
-Das Frontend des Forschungsportals der Hochschule und die Suchoberfläche der Forschungsdatenbank Pure — Ergebnislisten, Personenprofile, facettierte Suche und eine für Mobilgeräte optimierte Sucherfahrung.
+Das Frontend des Forschungsportals der Hochschule und die Suchoberfläche der Forschungsdatenbank Pure: Ergebnislisten, Personenprofile, facettierte Suche und eine für Mobilgeräte optimierte Sucherfahrung.
 
 ## Nationalmuseum von Dänemark {#natmus}
 
@@ -153,4 +153,4 @@ Frontend- und Integrationsarbeit an der Routenplattform des Radschnellwegenetzes
 
 ### Freiberuflicher Entwickler
 
-Kürzere Projekte und Wartung im selben Zeitraum: Socialministeriet, Mødrehjælpen (Analytics), Hans Buch & Co, XO Shipping, V.DK, AT Work und Tommy V.C — dazu ein kommerzielles SiteAttention-Plugin für WordPress als Festpreisprojekt.
+Kürzere Projekte und Wartung im selben Zeitraum: Socialministeriet, Mødrehjælpen (Analytics), Hans Buch & Co, XO Shipping, V.DK, AT Work und Tommy V.C, dazu ein kommerzielles SiteAttention-Plugin für WordPress als Festpreisprojekt.

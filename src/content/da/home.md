@@ -12,26 +12,26 @@ Jeg har arbejdet i mange brancher og med mange teknologier. I dag arbejder jeg i
 
 ### AI-konsulent
 
-Jeg har arbejdet med AI siden OpenAI udgav GPT-3, og jeg har bl.a. bygget [SQLAI.ai](/products), som har over 150.000 brugere. Som konsulent hjælper jeg virksomheder med at finde ud af, hvor AI giver mening — og med at få løsningerne i produktion: RAG og vektorsøgning, agentiske workflows, promptdesign og evaluering af modellerne.
+Jeg har arbejdet med AI siden OpenAI udgav GPT-3, og jeg har bl.a. bygget [SQLAI.ai](/products), som har over 150.000 brugere. Som konsulent hjælper jeg virksomheder med at finde ud af, hvor AI giver mening, og få løsningerne i produktion: RAG og vektorsøgning, agentiske workflows, promptdesign og evaluering af modellerne.
 
 ### Senior full-stack-udvikler
 
-Som senior full-stack-udvikler planlægger, arkitekterer og bygger jeg web- og mobilapplikationer fra ende til anden, hovedsageligt i TypeScript/Node.js. Jeg er lige godt hjemme i frontend som i backend og arbejder med en bred vifte af [teknologier og sprog](/technologies). Jeg har også været tech lead på flere opgaver — med ansvar for retning, arkitektur og mentoring af teamet.
+Som senior full-stack-udvikler planlægger, arkitekterer og bygger jeg web- og mobilapplikationer fra ende til anden, hovedsageligt i TypeScript/Node.js. Jeg er lige godt hjemme i frontend som i backend og arbejder med en bred vifte af [teknologier og sprog](/technologies). Jeg har også været tech lead på flere opgaver med ansvar for retning, arkitektur og mentoring af teamet.
 
 ### DevOps, cloud og drift
 
 Jeg sætter også applikationerne i drift og holder dem kørende: cloud-infrastruktur (AWS, Cloudflare), Docker, Infrastructure as Code, CI/CD-pipelines og testing.
 
-Jeg tager imod rådgivningsopgaver inden for AI og freelanceopgaver inden for udvikling og drift — og er også åben for at drøfte nye startup-idéer. [Skriv til mig](/contact), hvis det lyder interessant.
+Jeg tager imod rådgivningsopgaver inden for AI og freelanceopgaver inden for udvikling og drift. Jeg er også åben for at drøfte nye startup-idéer. [Skriv til mig](/contact), hvis det lyder interessant.
 
 ## Sådan arbejder jeg {#approach}
 
 Min tilgang er:
 
 - **Analytisk:** Jeg graver mig ned i problemet og mulighederne, før jeg binder mig til en konkret løsning.
-- **Resultatorienteret:** Jeg foretrækker tillid frem for kontrol og mikrostyring — og en proces, der måles på, hvad den leverer.
+- **Resultatorienteret:** Jeg foretrækker tillid frem for kontrol og mikrostyring. Processen skal måles på, hvad den leverer.
 - **Kvalitetsbevidst:** Jeg kombinerer hurtig, pragmatisk problemløsning med software, der holder.
 
 ### Sådan er jeg
 
-Jeg er socialt anlagt og nem at tale med. Jeg er åben og nysgerrig og kan godt lide at samarbejde med mennesker, der har forskellige baggrunde og kompetencer. Jeg indgår gnidningsfrit i nye kontormiljøer og siger min mening — men skifter den, hvis argumenterne er bedre.
+Jeg er socialt anlagt og nem at tale med. Jeg er åben og nysgerrig, indgår gnidningsfrit i nye kontormiljøer og kan godt lide at samarbejde med mennesker, der har forskellige baggrunde og kompetencer.

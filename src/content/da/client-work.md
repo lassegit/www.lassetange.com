@@ -1,6 +1,6 @@
 ---
 title: Kundeopgaver
-description: Roller for startups, scale-ups og danske offentlige institutioner i Berlin og København — fra bilmarkedspladser og kryptobank til geodata og digital forvaltning.
+description: Roller for startups, scale-ups og danske offentlige institutioner i Berlin og København: fra bilmarkedspladser og kryptobank til geodata og digital forvaltning.
 ---
 
 Et årti med kundeopgaver, først som freelancer i København og siden i det tyske startup-miljø. Alle opgaver står herunder, de nyeste først; [CV'et](/resume) har den samme liste i kort form.
@@ -11,7 +11,7 @@ Et årti med kundeopgaver, først som freelancer i København og siden i det tys
 
 Arkitekt og udvikler på de native mobil- og webapps for en Berlin-baseret leveringstjeneste, med ansvar fra ende til anden for design, struktur og teknisk implementering.
 
-Jeg lagde den fælles kodebase og de mønstre og konventioner, det interne team byggede videre på — delte komponenter og forretningslogik på tværs af React Native og React, integration mod GraphQL-API'er, og den værktøjskasse teamet arbejdede videre i.
+Jeg lagde den fælles kodebase og de mønstre og konventioner, det interne team byggede videre på: delte komponenter og forretningslogik på tværs af React Native og React, integration mod GraphQL-API'er, og den værktøjskasse teamet arbejdede videre i.
 
 ## brandTURBO {#brandturbo}
 
@@ -55,7 +55,7 @@ Intensivt udviklingsforløb på en webapplikation, med kort og fast deadline.
 
 Den længstvarende af mine opgaver for den danske offentlige sektor. Jeg genopbyggede og redesignede ufm.dk som fastprisprojekt og designede derefter ministeriets nye intranet i 2017–2018.
 
-Løbende ansvar for frontend-arkitektur, portlet- og skabelonudvikling, support på ministeriets EU-portal, tilgængelighed og browserkompatibilitet på et offentligt site med høj trafik — plus to års sagsbaseret vedligeholdelse.
+Løbende ansvar for frontend-arkitektur, portlet- og skabelonudvikling, support på ministeriets EU-portal, tilgængelighed og browserkompatibilitet på et offentligt site med høj trafik samt to års sagsbaseret vedligeholdelse.
 
 ## Autobranchen Danmark {#autobranchen}
 
@@ -85,13 +85,13 @@ Frontend på styrelsens intranet som fastprisprojekt, samt efterfølgende udvikl
 
 ### Ledende udvikler
 
-Eneste udvikler på webshoppen forsk.dk — arkitektur, implementering og lancering leveret fra ende til anden som fastprisprojekt.
+Eneste udvikler på webshoppen forsk.dk: arkitektur, implementering og lancering leveret fra ende til anden som fastprisprojekt.
 
 ## Fritz Schur Group {#fritzschur}
 
 ### Freelance full-stack-udvikler
 
-Virksomhedsplatform for en dansk industrikoncern: multisite- og flersprogsopsætning, sidebygger-moduler, indholdstyper til produkter og medarbejdere, leverandør- og datablads-skabeloner, søgning, brødkrummer og nyhedsbrevstilmelding — plus mobilbestillingsflowet til produktsitet accu-chek.guide.
+Virksomhedsplatform for en dansk industrikoncern: multisite- og flersprogsopsætning, sidebygger-moduler, indholdstyper til produkter og medarbejdere, leverandør- og datablads-skabeloner, søgning, brødkrummer og nyhedsbrevstilmelding samt mobilbestillingsflowet til produktsitet accu-chek.guide.
 
 ## Natur- og Miljøklagenævnet {#nmkn}
 
@@ -105,7 +105,7 @@ Eneste udvikler på nmknafgoerelser.dk, nævnets offentlige database over afgør
 
 Ledende frontend-udvikler på en interaktiv, offentlig kortplatform over Danmarks fredede naturområder.
 
-Jeg byggede kort- og geodataintegrationen på CartoDB og SQL, geografisk søgning med typeahead, vis-min-position og rutevisning, kortoplevelsen til mobil og touch, indlejrbare kort-widgets til tredjepartssites samt print og deling. Det var den største enkeltopgave i mine år i København — fra skelet til lancering, optimering og browserhærdning.
+Jeg byggede kort- og geodataintegrationen på CartoDB og SQL, geografisk søgning med typeahead, vis-min-position og rutevisning, kortoplevelsen til mobil og touch, indlejrbare kort-widgets til tredjepartssites samt print og deling. Det var den største enkeltopgave i mine år i København: fra skelet til lancering, optimering og browserhærdning.
 
 ## Bolighed.dk {#bolighed}
 
@@ -117,7 +117,7 @@ Frontend og features for en dansk boligmarkedsplads: BoligCV-profileditoren til 
 
 ### Freelance full-stack-udvikler
 
-Podio-API-integration og CartoDB-kortlag for en international NGO-føderation — dataimport og synkronisering, et medlemskartotek på tværs af undersites, testudrulninger og teknisk dokumentation.
+Podio-API-integration og CartoDB-kortlag for en international NGO-føderation: dataimport og synkronisering, et medlemskartotek på tværs af undersites, testudrulninger og teknisk dokumentation.
 
 ## Akademikernes A-kasse {#akademikerne}
 
@@ -129,7 +129,7 @@ Flerårig frontend-opgave for en af Danmarks største a-kasser. Jeg byggede jobs
 
 ### Freelance frontend-udvikler
 
-Frontend på skolens forskningsportal og søgefladen til forskningsdatabasen Pure — resultatlister, personprofiler, facetteret søgning og en søgeoplevelse tilpasset mobil.
+Frontend på skolens forskningsportal og søgefladen til forskningsdatabasen Pure: resultatlister, personprofiler, facetteret søgning og en søgeoplevelse tilpasset mobil.
 
 ## Nationalmuseet {#natmus}
 
@@ -153,4 +153,4 @@ Frontend og integration på cykelrutesitet for hovedstadsregionens supercykelsti
 
 ### Freelance udvikler
 
-Kortere opgaver og vedligeholdelse i samme periode: Socialministeriet, Mødrehjælpen (analytics), Hans Buch & Co, XO Shipping, V.DK, AT Work og Tommy V.C — samt et kommercielt SiteAttention-plugin til WordPress leveret som fastprisprojekt.
+Kortere opgaver og vedligeholdelse i samme periode: Socialministeriet, Mødrehjælpen (analytics), Hans Buch & Co, XO Shipping, V.DK, AT Work og Tommy V.C, samt et kommercielt SiteAttention-plugin til WordPress leveret som fastprisprojekt.

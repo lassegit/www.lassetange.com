@@ -1,6 +1,6 @@
 ---
 title: Produkter
-description: Fire AI-produkter jeg selv har designet, bygget og driver — fra idé og arkitektur til UX, markedsføring og omsætning.
+description: Fire AI-produkter jeg selv har designet, bygget og driver: fra idé og arkitektur til UX, markedsføring og omsætning.
 ---
 
 Fire produkter jeg har taget hele vejen selv: idé, arkitektur, UX, drift, markedsføring og omsætning. De er bygget alene, og de kører i produktion med rigtige, betalende brugere.
@@ -27,7 +27,7 @@ Jeg byggede normaliseringslaget, der rydder op i rodet input, diagramgenereringe
 
 En AI-anmelder til landingssider og marketingsites. Den analyserer en side for klarhed, positionering og UX og giver struktureret, handlingsanvisende feedback på sekunder.
 
-Produktet dækker indhentning og udtræk af sideindhold, selve evalueringspipelinen med prompts, det strukturerede outputformat og rapportfladen — plus abonnementer og betaling.
+Produktet dækker indhentning og udtræk af sideindhold, selve evalueringspipelinen med prompts, det strukturerede outputformat og rapportfladen samt abonnementer og betaling.
 
 ## ViewDiff.ai {#viewdiff}
 

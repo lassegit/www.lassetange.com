@@ -1,6 +1,6 @@
 ---
 title: Open source
-description: Udvalgte open source-projekter jeg har udviklet og vedligeholder — heriblandt webframeworket rshono, Flask-boilerplates, React-pakker og browserudvidelser til opslag.
+description: Udvalgte open source-projekter jeg har udviklet og vedligeholder, heriblandt webframeworket rshono, Flask-boilerplates, React-pakker og browserudvidelser til opslag.
 ---
 
 Udvalgte projekter jeg har udviklet og vedligeholder. Flere ligger på [min GitHub-profil](https://github.com/lassegit).
@@ -15,7 +15,7 @@ Et minimalistisk webframework bygget på Hono, Rspack og React Server Components
 
 ### Editor-snippets
 
-Populær pakke med snippets til ES7, React, Redux og React Native i Sublime Text — både JavaScript og TypeScript.
+Populær pakke med snippets til ES7, React, Redux og React Native i Sublime Text, til både JavaScript og TypeScript.
 
 ## flask-reactjs {#flask-reactjs}
 
@@ -51,4 +51,4 @@ Let npm-pakke, der abstraherer håndteringen af oversættelser væk fra udvikler
 
 ### Chrome-udvidelser
 
-Hurtige ordbogs- og oversættelsesopslag direkte i browseren — én udvidelse hver til DeepL, Langenscheidt og Ordnet.
+Hurtige ordbogs- og oversættelsesopslag direkte i browseren: én udvidelse hver til DeepL, Langenscheidt og Ordnet.

@@ -34,4 +34,4 @@ My approach is:
 
 ### What I'm like
 
-I am social and easy to talk to. I am open and curious, and I enjoy collaborating with people from different backgrounds and skill sets. I settle quickly into new office environments and speak my mind — but change my mind when the arguments are better.
+I am social and easy to talk to. I am open and curious, settle quickly into new office environments, and enjoy collaborating with people from different backgrounds and skill sets.
