@@ -21,7 +21,7 @@ export const PROFILE = {
   /** The address the contact form sends from. Must be on the domain onboarded for Email Sending. */
   formEmail: 'noreply@lassetange.com',
   siteUrl: 'https://www.lassetange.com',
-  /** Shown at 120px on the front page and 88px on the CV, so a 480px derivative is plenty. */
+  /** Shown at 136px on the front page and 88px on the CV, so a 480px derivative is plenty. */
   photo: '/profile-picture-480.jpg',
   photoWidth: 320,
   photoHeight: 480,

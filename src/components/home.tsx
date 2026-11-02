@@ -41,7 +41,7 @@ export default function Home({ url }: PageProps) {
           make a screen reader say it twice. */}
       <div className="mb-8 flex flex-wrap items-start gap-6">
         <img
-          className="size-30 flex-none rounded-full bg-surface object-cover object-[50%_5%]"
+          className="size-34 flex-none rounded-full bg-surface object-cover object-[50%_5%]"
           src={PROFILE.photo}
           width={PROFILE.photoWidth}
           height={PROFILE.photoHeight}
