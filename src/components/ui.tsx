@@ -42,9 +42,8 @@ export const PROSE = [
 /** The opening paragraph of a page, set larger and quieter than the body it introduces. */
 export const LEAD = 'text-lg/relaxed text-muted';
 
-/** The two headings the site has. Preflight resets `font-weight`, so it has to be said out loud. */
+/** The page's one heading. Preflight resets `font-weight`, so it has to be said out loud. */
 export const PAGE_TITLE = 'mb-3 text-display font-semibold text-balance';
-export const ENTRY_TITLE = 'mb-0.5 text-heading font-semibold text-balance';
 
 /* -------------------------------------------------------------------------------------------------
  * Components
@@ -130,7 +129,9 @@ export function TechList({ html }: { html: string }) {
  * One entry at CV density: title and dates on a line, role beneath, the body, and the stack. `id` is
  * the same anchor the markdown section uses, so `/resume#sqlai` from the front page lands on the
  * entry itself. The body is rendered through `Prose` because it may contain more than one paragraph.
- * `printUrl` prints the address after the title, which only the CV wants.
+ * `printUrl` prints the address after the title, which only the CV wants. The open-source page uses
+ * the same entry — its projects are read at the same density — with `headingLevel={2}`, because there
+ * the entries are the page's top-level sections, and with `links` for the repositories beside each.
  */
 export function CompactEntry({
   id,
@@ -140,7 +141,9 @@ export function CompactEntry({
   role,
   html,
   stack,
+  links,
   printUrl,
+  headingLevel = 3,
 }: {
   id?: string;
   title: string;
@@ -149,12 +152,17 @@ export function CompactEntry({
   role?: string;
   html?: string;
   stack?: readonly string[];
+  /** A second row of links under the body — the open-source list's repository links. */
+  links?: readonly { name: string; url: string }[];
   printUrl?: boolean;
+  headingLevel?: 2 | 3;
 }) {
+  const Heading = headingLevel === 2 ? 'h2' : 'h3';
+
   return (
     <li className="border-t border-line py-3.5 break-inside-avoid first:border-t-0" id={id}>
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
-        <h3 className="text-base leading-snug font-semibold">
+        <Heading className="text-base leading-snug font-semibold">
           {href ? (
             <a className={QUIET_LINK} href={href} data-print-url={printUrl ? '' : undefined}>
               {title}
@@ -162,12 +170,23 @@ export function CompactEntry({
           ) : (
             title
           )}
-        </h3>
+        </Heading>
         {period && <span className="text-sm whitespace-nowrap text-muted tabular-nums">{period}</span>}
       </div>
       {role && <p className="text-sm text-muted">{role}</p>}
       {html && <Prose html={html} className="mt-2 text-sm" />}
       {stack && stack.length > 0 && <p className="mt-1.5 text-xs text-muted">{stack.join(' · ')}</p>}
+      {links && links.length > 0 && (
+        <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
+          {links.map((link) => (
+            <li key={link.url}>
+              <a className={LINK} href={link.url}>
+                {link.name} <span aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </li>
   );
 }

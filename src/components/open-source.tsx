@@ -4,7 +4,7 @@ import { EXTENSIONS, OPEN_SOURCE, PROFILE } from '../lib/data';
 import { dictionary, localeFromPath } from '../lib/i18n';
 import { section } from '../lib/markdown';
 import { Layout } from './layout';
-import { ENTRY_TITLE, LEAD, LINK, PAGE_TITLE, Prose, QUIET_LINK } from './ui';
+import { CompactEntry, LEAD, LINK, PAGE_TITLE, Prose } from './ui';
 
 /** Projects I wrote and still maintain, each linked to wherever it actually lives. */
 export default function OpenSource({ url }: PageProps) {
@@ -31,27 +31,16 @@ export default function OpenSource({ url }: PageProps) {
                 : [];
 
           return (
-            <li className="border-t border-line py-7 first:border-t-0 first:pt-1" key={project.id}>
-              <h2 className={ENTRY_TITLE}>
-                <a className={QUIET_LINK} href={project.url}>
-                  {entry.title}
-                </a>
-              </h2>
-              {entry.subtitle && <p className="mb-2 text-muted">{entry.subtitle}</p>}
-              <Prose html={entry.html} />
-
-              {links.length > 0 && (
-                <ul className="mt-3.5 flex flex-wrap gap-x-5 gap-y-3 text-sm">
-                  {links.map((link) => (
-                    <li key={link.url}>
-                      <a className={LINK} href={link.url}>
-                        {link.name} <span aria-hidden="true">→</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
+            <CompactEntry
+              headingLevel={2}
+              key={project.id}
+              id={project.id}
+              title={entry.title}
+              href={project.url}
+              role={entry.subtitle}
+              html={entry.html}
+              links={links}
+            />
           );
         })}
       </ul>
