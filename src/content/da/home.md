@@ -14,7 +14,7 @@ Jeg har gennem de seneste 15 år arbejdet i mange brancher og med mange forskell
 
 Jeg har som AI konsulent været med helt fra starten da OpenAI udgav GPT-3 og har udviklet flere applikationer i det, bl.a. en af verden førende SQL generatorer. Jeg har arbejdet med forskellige AI-teknologier såsom RAG, embeddings og vektorsøgning, promptdesign, agentiske workflows, AI harnesses og så videre.
 
-### Senior Full-stack-udvikler
+### Senior full-stack-udvikler
 
 Jeg har også arbejdet som full-stack-udvikler planlægger, arkitekterer og bygger web- og mobilapplikationer fra ende til anden, hovedsageligt i TypeScript/Node.js. Jeg er lige godt hjemme i frontend og backend og arbejder med en bred vifte af [teknologier og sprog](/technologies).
 

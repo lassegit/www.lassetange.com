@@ -29,6 +29,10 @@ export const PROSE_LINKS =
 export const PROSE = [
   'text-pretty',
   '[&>*+*]:mt-3.5',
+  // A `###` inside a section's prose — the front page's competence headings. It steps up by weight,
+  // not by size, so the section's own `##` stays the only larger line; the extra top margin is what
+  // separates it from the paragraph it follows.
+  '[&_h3]:mt-7 [&_h3]:text-base [&_h3]:leading-snug [&_h3]:font-semibold [&_h3]:text-balance',
   '[&_strong]:font-semibold',
   '[&_ul]:list-disc [&_ol]:list-decimal [&_ul]:pl-5 [&_ol]:pl-5',
   '[&_li+li]:mt-1.5 [&_li]:marker:text-muted',
