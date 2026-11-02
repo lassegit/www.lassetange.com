@@ -18,6 +18,8 @@ import { LOCALE_TAGS, type Locale } from './i18n';
 export const PROFILE = {
   name: 'Lasse Tange',
   email: 'contact@lassetange.com',
+  /** The address the contact form sends from. Must be on the domain onboarded for Email Sending. */
+  formEmail: 'noreply@lassetange.com',
   siteUrl: 'https://www.lassetange.com',
   /** Shown at 120px on the front page and 88px on the CV, so a 480px derivative is plenty. */
   photo: '/profile-picture-480.jpg',

@@ -9,5 +9,14 @@
   "assets": {
     "directory": "dist/cloudflare/assets",
     "binding": "ASSETS"
-  }
+  },
+  "send_email": [
+    {
+      "name": "EMAIL",
+      // Keep in sync with CONTACT_DESTINATION in src/components/contact-form-action.ts.
+      "destination_address": "lassetange@gmail.com"
+    }
+  ]
+  // TURNSTILE_SECRET_KEY is a Worker secret, not a var: `wrangler secret put TURNSTILE_SECRET_KEY`.
+  // Never put it in this file — wrangler.jsonc is committed.
 }

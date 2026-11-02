@@ -37,6 +37,7 @@
   --color-accent: #14539a;
   --color-accent-hover: #0d3f77;
   --color-accent-soft: #eef3fa;
+  --color-danger: #b42318;
 }
 
 /* --------------------------------------------------------------------------------------------------
@@ -58,6 +59,7 @@
     --color-accent: #8ab4f8;
     --color-accent-hover: #adc9fb;
     --color-accent-soft: #1c2432;
+    --color-danger: #f97066;
   }
 }
 
@@ -76,6 +78,7 @@
     --color-accent: #000000;
     --color-accent-hover: #000000;
     --color-accent-soft: #ffffff;
+    --color-danger: #000000;
   }
 }
 

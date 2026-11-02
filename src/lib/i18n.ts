@@ -140,6 +140,25 @@ export function preferredLocale(acceptLanguage: string | undefined): Locale | nu
  * Interface labels
  * ---------------------------------------------------------------------------------------------- */
 
+/** Every string the contact form renders, in the reader's language. */
+export interface ContactFormCopy {
+  title: string;
+  name: string;
+  email: string;
+  message: string;
+  send: string;
+  sending: string;
+  success: string;
+  invalidSummary: string;
+  invalidName: string;
+  invalidEmail: string;
+  invalidMessage: string;
+  verification: string;
+  error: string;
+  noScript: string;
+  turnstileError: string;
+}
+
 export interface Dictionary {
   navAbout: string;
   navTechnologies: string;
@@ -179,6 +198,9 @@ export interface Dictionary {
   emailMe: string;
   basedIn: string;
   city: string;
+
+  contactDirect: string;
+  contactForm: ContactFormCopy;
 
   notFoundTitle: string;
   notFoundBody: string;
@@ -226,6 +248,25 @@ const da: Dictionary = {
   emailMe: 'Skriv til mig',
   basedIn: 'Bosat i',
   city: 'København',
+
+  contactDirect: 'Eller skriv direkte',
+  contactForm: {
+    title: 'Send en besked',
+    name: 'Navn',
+    email: 'E-mail',
+    message: 'Besked',
+    send: 'Send besked',
+    sending: 'Sender…',
+    success: 'Tak for beskeden. Jeg vender tilbage hurtigst muligt.',
+    invalidSummary: 'Tjek de markerede felter.',
+    invalidName: 'Skriv et navn på 2–100 tegn.',
+    invalidEmail: 'Skriv en gyldig e-mailadresse.',
+    invalidMessage: 'Beskeden skal være mindst 10 tegn.',
+    verification: 'Kunne ikke verificere, at du er et menneske. Prøv igen, eller skriv til {email}.',
+    error: 'Der skete en fejl. Prøv igen, eller skriv til {email}.',
+    noScript: 'Formularen kræver JavaScript. Skriv i stedet til {email}.',
+    turnstileError: 'Verificeringen kunne ikke indlæses. Skriv til {email} i stedet.',
+  },
 
   notFoundTitle: 'Siden findes ikke',
   notFoundBody: 'Der er ikke noget på denne adresse. Prøv en af sektionerne ovenfor.',
@@ -277,6 +318,25 @@ const en: Dictionary = {
   basedIn: 'Based in',
   city: 'Copenhagen',
 
+  contactDirect: 'Or write directly',
+  contactForm: {
+    title: 'Send a message',
+    name: 'Name',
+    email: 'Email',
+    message: 'Message',
+    send: 'Send message',
+    sending: 'Sending…',
+    success: 'Thanks for your message. I’ll get back to you as soon as I can.',
+    invalidSummary: 'Check the fields marked below.',
+    invalidName: 'Enter a name between 2 and 100 characters.',
+    invalidEmail: 'Enter a valid email address.',
+    invalidMessage: 'Your message must be at least 10 characters.',
+    verification: 'Could not verify that you are human. Try again, or email {email}.',
+    error: 'Something went wrong. Try again, or email {email}.',
+    noScript: 'This form needs JavaScript. Email {email} instead.',
+    turnstileError: 'Verification could not load. Email {email} instead.',
+  },
+
   notFoundTitle: 'Page not found',
   notFoundBody: 'There is nothing at this address. Try one of the sections above.',
   errorTitle: 'Something went wrong',
@@ -326,6 +386,25 @@ const de: Dictionary = {
   emailMe: 'Schreiben Sie mir',
   basedIn: 'Wohnhaft in',
   city: 'Kopenhagen',
+
+  contactDirect: 'Oder direkt schreiben',
+  contactForm: {
+    title: 'Nachricht senden',
+    name: 'Name',
+    email: 'E-Mail',
+    message: 'Nachricht',
+    send: 'Nachricht senden',
+    sending: 'Wird gesendet…',
+    success: 'Danke für Ihre Nachricht. Ich melde mich so bald wie möglich.',
+    invalidSummary: 'Bitte prüfen Sie die markierten Felder.',
+    invalidName: 'Bitte geben Sie einen Namen mit 2 bis 100 Zeichen ein.',
+    invalidEmail: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+    invalidMessage: 'Die Nachricht muss mindestens 10 Zeichen lang sein.',
+    verification: 'Die Überprüfung ist fehlgeschlagen. Versuchen Sie es erneut oder schreiben Sie an {email}.',
+    error: 'Etwas ist schiefgelaufen. Versuchen Sie es erneut oder schreiben Sie an {email}.',
+    noScript: 'Das Formular benötigt JavaScript. Schreiben Sie stattdessen an {email}.',
+    turnstileError: 'Die Überprüfung konnte nicht geladen werden. Schreiben Sie stattdessen an {email}.',
+  },
 
   notFoundTitle: 'Seite nicht gefunden',
   notFoundBody: 'Unter dieser Adresse gibt es nichts. Probieren Sie einen der Bereiche oben.',

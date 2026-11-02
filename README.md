@@ -26,8 +26,8 @@ src/
 ```
 
 Pages are **server components**: they render the whole document, may be `async`, and await data directly.
-Interactive parts are `'use client'` components a page imports — only those ship JavaScript. The one on
-this site is the CV's print button.
+Interactive parts are `'use client'` components a page imports — only those ship JavaScript. The three on
+this site are the CV's print button, the contact form, and the header's mobile menu.
 
 ## Content
 
@@ -71,18 +71,38 @@ it is kept as the source of record.
 Tailwind utilities in the markup; `src/styles.css` is only the `@theme` block they resolve against.
 The palette is semantic — `bg-canvas`, `text-ink`, `text-muted`, `border-line`, `text-accent` — and
 dark mode and print are the same variables redefined, so nothing carries a `dark:` variant. Repeated
-strings (`LINK`, `PROSE`, `PAGE_TITLE`) are constants in `src/components/ui.tsx`; compose them rather
-than assembling class names, which Tailwind's scanner would not see.
+strings (`LINK`, `PROSE`, `PAGE_TITLE`) are constants in `src/components/ui.tsx`; `BUTTON` lives in
+`src/components/button.ts`, which is safe to import from client components. Compose them rather than
+assembling class names, which Tailwind's scanner would not see.
 
 ## Environment
 
-No env file is committed — put values in `.env` or `.env.local` locally; both are gitignored. Only
+No env file is committed — put values in `.env` or `.env.local` locally; both are gitignored. `pnpm dev`
+reads `.env` and `.env.local`. `pnpm preview` (`wrangler dev`) reads `.dev.vars` or `.env`; if both
+exist, `.dev.vars` wins. Use `.env` if you want both commands to see the secret. Only
 `PUBLIC_`-prefixed variables reach the browser — everything else is server-only, and a stray read of it
-in client code compiles to `undefined` rather than shipping. Nothing on this site needs one yet.
+in client code compiles to `undefined` rather than shipping.
+
+The contact form's Turnstile sitekey is public and lives in `src/components/contact-form.tsx`. The
+secret is a Worker secret: `wrangler secret put TURNSTILE_SECRET_KEY`. Locally, put the secret in
+`.env` (or in `.dev.vars` if you only use `pnpm preview`); both are gitignored. The sitekey and secret
+must belong to the same widget: use the production pair and add `localhost` to the widget's hostnames,
+or temporarily swap `SITE_KEY` to Cloudflare's test sitekey and use the matching test secret. The test
+values are listed at
+<https://developers.cloudflare.com/turnstile/troubleshooting/testing/>.
+
+The widget itself is `@marsidev/react-turnstile`, which injects Cloudflare's script and exposes
+`reset()` through a ref.
 
 ## Deploying
 
 This app is built for `cloudflare`. `pnpm run deploy` does the build and the upload in one step.
+
+The contact form sends through the `EMAIL` binding in `wrangler.jsonc`, restricted to
+`lassetange@gmail.com` and sent from `noreply@lassetange.com`. Onboard `lassetange.com` for
+**Email Sending** in the Cloudflare dashboard before the first deploy, or `EMAIL.send()` will fail with
+`E_SENDER_NOT_VERIFIED`. Onboarding also adds a DMARC record; check any other senders on the domain
+before relying on it.
 
 Building from a git repo instead: set Workers Builds' **Build command** to `pnpm build`.
 Its deploy command already defaults to `npx wrangler deploy`, and it installs dependencies itself.

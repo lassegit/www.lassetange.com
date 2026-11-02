@@ -1,13 +1,15 @@
 import type { PageProps } from '@rshono/core';
 import { content } from '../lib/content';
-import { PROFILE, countryName } from '../lib/data';
+import { PROFILE } from '../lib/data';
 import { dictionary, localeFromPath } from '../lib/i18n';
+import { ContactForm } from './contact-form';
 import { Layout } from './layout';
 import { LEAD, LINK, PAGE_TITLE, Prose, Section } from './ui';
 
 /**
- * No contact form. A form on a personal site adds a failure mode, a spam surface and a privacy
- * question in exchange for saving the reader one click — so the page hands over the address instead.
+ * The form is the primary way to get in touch. The direct links stay below it: they are the fallback
+ * for a browser that blocks Turnstile, and the better option for anyone who prefers their own mail
+ * client.
  */
 export default function Contact({ url }: PageProps) {
   const locale = localeFromPath(url.pathname);
@@ -25,22 +27,22 @@ export default function Contact({ url }: PageProps) {
       <h1 className={PAGE_TITLE}>{doc.title}</h1>
       <Prose html={doc.lead} className={LEAD} />
 
-      <ul className="mt-6 grid gap-3">
-        {methods.map((method) => (
-          <li className="flex items-baseline gap-3" key={method.label}>
-            <span className="w-22 flex-none text-sm text-muted">{method.label}</span>
-            <a className={LINK} href={method.href}>
-              {method.text}
-            </a>
-          </li>
-        ))}
-        <li className="flex items-baseline gap-3">
-          <span className="w-22 flex-none text-sm text-muted">{t.basedIn}</span>
-          <span>
-            {t.city}, {countryName('copenhagen', locale)}
-          </span>
-        </li>
-      </ul>
+      <Section title={t.contactForm.title} id="contact-form">
+        <ContactForm copy={t.contactForm} email={PROFILE.email} locale={locale} />
+      </Section>
+
+      <Section title={t.contactDirect} id="contact-direct">
+        <ul className="grid gap-3">
+          {methods.map((method) => (
+            <li className="flex items-baseline gap-3" key={method.label}>
+              <span className="w-22 flex-none text-sm text-muted">{method.label}</span>
+              <a className={LINK} href={method.href}>
+                {method.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </Section>
 
       {doc.sections.map((entry) => (
         <Section title={entry.title} id={entry.id} key={entry.id}>

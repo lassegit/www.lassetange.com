@@ -1,6 +1,7 @@
 'use client';
 
 import { useSyncExternalStore } from 'react';
+import { BUTTON } from './button';
 
 /** No subscription: the value simply differs between the server snapshot and the client one. */
 const noop = () => () => {};
@@ -30,7 +31,7 @@ export function PrintButton({ label, fileName }: { label: string; fileName: stri
   return (
     <button
       type="button"
-      className="cursor-pointer rounded border border-accent bg-accent px-3.5 py-1.5 text-sm font-semibold text-canvas hover:border-accent-hover hover:bg-accent-hover"
+      className={BUTTON}
       onClick={() => {
         // `print()` blocks until the dialog closes, so the two assignments straddle the whole of the
         // browser's chance to read a filename off the title.
