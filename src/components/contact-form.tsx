@@ -49,6 +49,7 @@ export function ContactForm({ copy, email, locale }: { copy: ContactFormCopy; em
       {error && (
         <div ref={status} tabIndex={-1} role="alert" className="rounded-md border border-danger/40 px-3 py-2 text-sm text-danger">
           {error.message}
+          {error.reason === 'verification' && <p className="mt-1.5 text-xs text-muted">{copy.verificationHint}</p>}
         </div>
       )}
 
@@ -160,9 +161,10 @@ export function ContactForm({ copy, email, locale }: { copy: ContactFormCopy; em
       />
 
       {turnstileStatus === 'error' && (
-        <p aria-live="polite" className="text-xs text-danger">
-          {withEmail(copy.turnstileError)}
-        </p>
+        <div aria-live="polite" className="text-xs text-danger">
+          <p>{withEmail(copy.turnstileError)}</p>
+          {!error && <p className="mt-1 text-muted">{copy.verificationHint}</p>}
+        </div>
       )}
 
       <noscript>

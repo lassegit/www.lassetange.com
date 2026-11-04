@@ -101,6 +101,8 @@ export interface ContactFormCopy {
   invalidEmail: string;
   invalidMessage: string;
   verification: string;
+  /** Follows a failed verification, as the usual causes are local to the reader's browser. */
+  verificationHint: string;
   error: string;
   noScript: string;
   turnstileError: string;
@@ -211,6 +213,8 @@ const da: Dictionary = {
     invalidEmail: 'Skriv en gyldig e-mailadresse.',
     invalidMessage: 'Beskeden skal være mindst 10 tegn.',
     verification: 'Kunne ikke verificere, at du er et menneske. Prøv igen, eller skriv til {email}.',
+    verificationHint:
+      'Det skyldes oftest en VPN, en browser med fokus på privatliv eller en udvidelse, der blokerer verifikationen. Slå den fra på denne side, og genindlæs.',
     error: 'Der skete en fejl. Prøv igen, eller skriv til {email}.',
     noScript: 'Formularen kræver JavaScript. Skriv i stedet til {email}.',
     turnstileError: 'Verificeringen kunne ikke indlæses. Skriv til {email} i stedet.',
@@ -281,6 +285,8 @@ const en: Dictionary = {
     invalidEmail: 'Enter a valid email address.',
     invalidMessage: 'Your message must be at least 10 characters.',
     verification: 'Could not verify that you are human. Try again, or email {email}.',
+    verificationHint:
+      'This is usually caused by a VPN, a privacy-focused browser or an extension blocking the verification. Turn it off for this page and reload.',
     error: 'Something went wrong. Try again, or email {email}.',
     noScript: 'This form needs JavaScript. Email {email} instead.',
     turnstileError: 'Verification could not load. Email {email} instead.',
@@ -351,6 +357,8 @@ const de: Dictionary = {
     invalidEmail: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
     invalidMessage: 'Die Nachricht muss mindestens 10 Zeichen lang sein.',
     verification: 'Die Überprüfung ist fehlgeschlagen. Versuchen Sie es erneut oder schreiben Sie an {email}.',
+    verificationHint:
+      'Meist liegt das an einem VPN, einem datenschutzorientierten Browser oder einer Erweiterung, die die Überprüfung blockiert. Deaktivieren Sie sie für diese Seite und laden Sie neu.',
     error: 'Etwas ist schiefgelaufen. Versuchen Sie es erneut oder schreiben Sie an {email}.',
     noScript: 'Das Formular benötigt JavaScript. Schreiben Sie stattdessen an {email}.',
     turnstileError: 'Die Überprüfung konnte nicht geladen werden. Schreiben Sie stattdessen an {email}.',

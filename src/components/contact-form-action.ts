@@ -17,6 +17,8 @@ export type ContactState =
       status: 'error';
       message: string;
       values: ContactValues;
+      /** Lets the form add the right advice after the message. */
+      reason: 'validation' | 'verification' | 'error';
       fields?: Partial<Record<keyof ContactValues, string>>;
     };
 
@@ -142,18 +144,18 @@ export async function submitContact(_previous: ContactState, form: FormData): Pr
   if (values.message.length < 10 || values.message.length > 5000) fields.message = copy.invalidMessage;
 
   if (Object.keys(fields).length > 0) {
-    return { status: 'error', message: copy.invalidSummary, fields, values };
+    return { status: 'error', message: copy.invalidSummary, reason: 'validation', fields, values };
   }
 
   const token = form.get('cf-turnstile-response');
   if (typeof token !== 'string' || token.length === 0 || token.length > 2048) {
-    return { status: 'error', message: copy.verification.replace('{email}', PROFILE.email), values };
+    return { status: 'error', message: copy.verification.replace('{email}', PROFILE.email), reason: 'verification', values };
   }
 
   const secret = ctx.env.TURNSTILE_SECRET_KEY;
   if (!secret) {
     console.error('[contact] TURNSTILE_SECRET_KEY is not configured');
-    return { status: 'error', message: copy.error.replace('{email}', PROFILE.email), values };
+    return { status: 'error', message: copy.error.replace('{email}', PROFILE.email), reason: 'error', values };
   }
 
   try {
@@ -176,11 +178,11 @@ export async function submitContact(_previous: ContactState, form: FormData): Pr
 
     if (!response.ok || !result.success || (result.action !== undefined && result.action !== 'contact')) {
       console.warn('[contact] Turnstile rejected the token', result['error-codes']);
-      return { status: 'error', message: copy.verification.replace('{email}', PROFILE.email), values };
+      return { status: 'error', message: copy.verification.replace('{email}', PROFILE.email), reason: 'verification', values };
     }
   } catch (error) {
     console.error('[contact] Turnstile verification failed', error);
-    return { status: 'error', message: copy.verification.replace('{email}', PROFILE.email), values };
+    return { status: 'error', message: copy.verification.replace('{email}', PROFILE.email), reason: 'verification', values };
   }
 
   const email = ctx.env.EMAIL;
@@ -191,7 +193,7 @@ export async function submitContact(_previous: ContactState, form: FormData): Pr
     }
 
     console.error('[contact] EMAIL binding is missing');
-    return { status: 'error', message: copy.error.replace('{email}', PROFILE.email), values };
+    return { status: 'error', message: copy.error.replace('{email}', PROFILE.email), reason: 'error', values };
   }
 
   /** Header values may not contain line breaks. */
@@ -218,7 +220,7 @@ export async function submitContact(_previous: ContactState, form: FormData): Pr
     });
   } catch (error) {
     console.error('[contact] Email send failed', error);
-    return { status: 'error', message: copy.error.replace('{email}', PROFILE.email), values };
+    return { status: 'error', message: copy.error.replace('{email}', PROFILE.email), reason: 'error', values };
   }
 
   return { status: 'success' };
