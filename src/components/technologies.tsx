@@ -6,9 +6,8 @@ import { Layout } from './layout';
 import { LEAD, PAGE_TITLE, Prose, TechList } from './ui';
 
 /**
- * Seven groups, each a markdown list. There is no structured data behind this page: the group names
- * and half the entries are phrases rather than product names, so the whole thing translates, and the
- * markdown file is the single source for it.
+ * Technology groups, each a markdown list. The group names and entries mix practices with product
+ * names, so the translated markdown file is the single source for the page.
  */
 export default function Technologies({ url }: PageProps) {
   const locale = localeFromPath(url.pathname);

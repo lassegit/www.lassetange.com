@@ -1,69 +1,49 @@
 ---
 title: Technologies
-description: Full-stack developer with TypeScript and React at the centre: strong skills in cloud, IaC, CI/CD, backend and applied AI.
+description: Technologies for applied AI, web and app development, data and operations across TypeScript, Python, Go, PHP and SQL.
 ---
 
-Below is an overview of the technologies I work with: applied AI as a fixed focal point and a broad stack spanning web and mobile through cloud, IaC and CI/CD.
+Here are some of the technologies I work with.
 
-## AI
+## Applied AI
 
 - LLM APIs (OpenAI, Anthropic)
-- RAG and vector search
-- Embeddings and semantic search
-- Prompt engineering
-- AI-assisted development (Claude Code, Codex CLI)
-- Applied AI product design
-- Agentic AI workflows
+- LangChain, LangGraph and LlamaIndex (Python)
+- RAG, embeddings and vector search
+- Prompt design, agentic workflows and evaluation
+- AI-assisted coding: Claude Code, Codex CLI
 
-## Frontend
+## Web, mobile and desktop
 
-- React and React Native
-- Next.js, Astro and other web frameworks
+- Web: React, Angular, Next.js, Astro
+- Mobile: React Native
+- Desktop: Electron, Tauri
 - Tailwind CSS and design systems
-- State management (Redux, Zustand, Nanostores)
-- SSR, SSG and web performance
-- Accessibility and cross-browser compatibility
-- SEO and web analytics
+- UX, accessibility, performance and SEO
 
 ## Backend and data
 
-- Node.js
-- REST and GraphQL APIs, typesafe end to end
-- PostgreSQL, MySQL and Redis
+- Node.js: Express, Fastify, NestJS, Hono
+- Python: Flask, FastAPI, Django
+- Go: Gin, Echo
+- REST, GraphQL and webhooks
+- PostgreSQL, MySQL, Redis and Elasticsearch
 - Data modelling and ORMs (Prisma, Drizzle)
-- Elasticsearch and search
-- Geospatial data and mapping
-- Payments and integrations (Stripe, Lemon Squeezy)
+- Payments (Stripe, Lemon Squeezy)
 
-## Programming languages
+## Delivery and operations
 
-- TypeScript
-- JavaScript
-- SQL
-- Python
+- AWS, Cloudflare and Vercel
+- Docker, Linux and Nginx
+- Git, CI/CD and GitHub Actions
+- Infrastructure as code and environments
+- Jest, Vitest, Testing Library and Playwright
+- pytest and test-driven development
+- Logging and operations
+
+## Languages and runtimes
+
+- TypeScript, JavaScript and Node.js
+- Python and Go
 - PHP
-
-## Testing and tooling
-
-- Testing (Jest, Testing Library, Playwright)
-- Test-driven development
-- Storybook
-- Monorepos and modern tooling (pnpm, Vite, Rspack)
-- A/B testing and feature flags
-
-## Platform and delivery
-
-- CI/CD (e.g. GitHub Actions)
-- Docker
-- Cloudflare, AWS and Vercel
-- Linux, Nginx and VPS
-- Git
-- Infrastructure as Code (IaC)
-
-## Product and leadership
-
-- Product strategy and digital business
-- Team leadership and mentoring
-- UX research and user testing
-- Domain-driven design
-- Online marketing and growth
+- SQL
