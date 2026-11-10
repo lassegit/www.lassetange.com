@@ -1,69 +1,49 @@
 ---
 title: Technologien
-description: Full-Stack-Entwickler mit TypeScript und React im Zentrum: starke Kompetenzen in Cloud, IaC, CI/CD, Backend und angewandter KI.
+description: Technologien für angewandte KI, Web- und App-Entwicklung, Daten und Betrieb mit TypeScript, Python, Go, PHP und SQL.
 ---
 
-Unten ein Überblick über die Technologien, mit denen ich arbeite: angewandte KI als fester Schwerpunkt und ein breiter Stack, der von Web und Mobile bis zu Cloud, IaC und CI/CD reicht.
+Hier sind einige der Technologien, mit denen ich arbeite.
 
-## KI
+## Angewandte KI
 
 - LLM-APIs (OpenAI, Anthropic)
-- RAG und Vektorsuche
-- Embeddings und semantische Suche
-- Prompt-Design
-- KI-gestützte Entwicklung (Claude Code, Codex CLI)
-- Produktgestaltung mit angewandter KI
-- Agentische KI-Workflows
+- LangChain, LangGraph und LlamaIndex (Python)
+- RAG, Embeddings und Vektorsuche
+- Prompt-Design, agentische Workflows und Evaluierung
+- KI-gestütztes Programmieren: Claude Code, Codex CLI
 
-## Frontend
+## Web, Mobile und Desktop
 
-- React und React Native
-- Next.js, Astro und andere Web-Frameworks
+- Web: React, Angular, Next.js, Astro
+- Mobile: React Native
+- Desktop: Electron, Tauri
 - Tailwind CSS und Designsysteme
-- State-Management (Redux, Zustand, Nanostores)
-- SSR, SSG und Web-Performance
-- Barrierefreiheit und Browser-Kompatibilität
-- SEO und Web-Analytics
+- UX, Barrierefreiheit, Performance und SEO
 
 ## Backend und Daten
 
-- Node.js
-- REST- und GraphQL-APIs, durchgehend typsicher
-- PostgreSQL, MySQL und Redis
+- Node.js: Express, Fastify, NestJS, Hono
+- Python: Flask, FastAPI, Django
+- Go: Gin, Echo
+- REST, GraphQL und Webhooks
+- PostgreSQL, MySQL, Redis und Elasticsearch
 - Datenmodellierung und ORMs (Prisma, Drizzle)
-- Elasticsearch und Suche
-- Geodaten und Karten
-- Zahlungen und Integrationen (Stripe, Lemon Squeezy)
+- Zahlungen (Stripe, Lemon Squeezy)
 
-## Programmiersprachen
+## Bereitstellung und Betrieb
 
-- TypeScript
-- JavaScript
-- SQL
-- Python
+- AWS, Cloudflare und Vercel
+- Docker, Linux und Nginx
+- Git, CI/CD und GitHub Actions
+- Infrastructure as Code und Umgebungen
+- Jest, Vitest, Testing Library und Playwright
+- pytest und testgetriebene Entwicklung
+- Logging und Betrieb
+
+## Sprachen und Laufzeitumgebungen
+
+- TypeScript, JavaScript und Node.js
+- Python und Go
 - PHP
-
-## Tests und Werkzeuge
-
-- Testen (Jest, Testing Library, Playwright)
-- Testgetriebene Entwicklung
-- Storybook
-- Monorepos und modernes Tooling (pnpm, Vite, Rspack)
-- A/B-Tests und Feature Flags
-
-## Plattform und Betrieb
-
-- CI/CD (z. B. GitHub Actions)
-- Docker
-- Cloudflare, AWS und Vercel
-- Linux, Nginx und VPS
-- Git
-- Infrastructure as Code (IaC)
-
-## Produkt und Führung
-
-- Produktstrategie und digitales Geschäft
-- Teamführung und Mentoring
-- UX-Research und Nutzertests
-- Domain-Driven Design
-- Online-Marketing und Wachstum
+- SQL

@@ -1,69 +1,49 @@
 ---
 title: Teknologier
-description: Full-stack-udvikler med TypeScript og React i centrum: stærke kompetencer inden for cloud, IaC, CI/CD, backend og anvendt AI.
+description: Teknologier til anvendt AI, web- og appudvikling, data og drift med TypeScript, Python, Go, PHP og SQL.
 ---
 
-Nedenfor er et overblik over de teknologier, jeg arbejder med: anvendt AI som fast omdrejningspunkt og en bred stack, der spænder fra web og mobil til cloud, IaC og CI/CD.
+Her er nogle af de teknologier, jeg arbejder med.
 
-## AI
+## Anvendt AI
 
 - LLM-API'er (OpenAI, Anthropic)
-- RAG og vektorsøgning
-- Embeddings og semantisk søgning
-- Promptdesign
-- AI-assisteret udvikling (Claude Code, Codex CLI)
-- Produktdesign med anvendt AI
-- Agentiske AI-workflows
+- LangChain, LangGraph og LlamaIndex (Python)
+- RAG, embeddings og vektorsøgning
+- Promptdesign, agentiske workflows og evaluering
+- AI-assisteret kodning: Claude Code, Codex CLI
 
-## Frontend
+## Web, mobil og desktop
 
-- React og React Native
-- Next.js, Astro og andre web frameworks
+- Web: React, Angular, Next.js, Astro
+- Mobil: React Native
+- Desktop: Electron, Tauri
 - Tailwind CSS og designsystemer
-- Tilstandshåndtering (Redux, Zustand, Nanostores)
-- SSR, SSG og webydelse
-- Tilgængelighed og browserkompatibilitet
-- SEO og webanalyse
+- UX, tilgængelighed, ydeevne og SEO
 
 ## Backend og data
 
-- Node.js
-- REST- og GraphQL-API'er, typesikre fra ende til anden
-- PostgreSQL, MySQL og Redis
+- Node.js: Express, Fastify, NestJS, Hono
+- Python: Flask, FastAPI, Django
+- Go: Gin, Echo
+- REST, GraphQL og webhooks
+- PostgreSQL, MySQL, Redis og Elasticsearch
 - Datamodellering og ORM'er (Prisma, Drizzle)
-- Elasticsearch og søgning
-- Geodata og kort
-- Betaling og integrationer (Stripe, Lemon Squeezy)
+- Betalinger (Stripe, Lemon Squeezy)
 
-## Programmeringssprog
+## Levering og drift
 
-- TypeScript
-- JavaScript
-- SQL
-- Python
+- AWS, Cloudflare og Vercel
+- Docker, Linux og Nginx
+- Git, CI/CD og GitHub Actions
+- Infrastruktur som kode og miljøer
+- Jest, Vitest, Testing Library og Playwright
+- pytest og testdrevet udvikling
+- Logning og drift
+
+## Sprog og kørselsmiljøer
+
+- TypeScript, JavaScript og Node.js
+- Python og Go
 - PHP
-
-## Test og værktøj
-
-- Test (Jest, Testing Library, Playwright)
-- Testdrevet udvikling
-- Storybook
-- Monorepos og moderne værktøj (pnpm, Vite, Rspack)
-- A/B-test og feature flags
-
-## Platform og drift
-
-- CI/CD (f.eks. GitHub Actions)
-- Docker
-- Cloudflare, AWS og Vercel
-- Linux, Nginx og VPS
-- Git
-- Infrastructure as Code (IaC)
-
-## Produkt og ledelse
-
-- Produktstrategi og digital forretning
-- Teamledelse og mentoring
-- UX-research og brugertest
-- Domænedrevet design
-- Online markedsføring og vækst
+- SQL
