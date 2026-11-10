@@ -11,9 +11,9 @@ description: Full CV for Lasse Tange — tech lead and full-stack developer with
 
 ### Principal Applied AI & Full-Stack Developer
 
-An AI-powered SQL multitool for generating, explaining, optimizing and validating SQL without losing control. It has grown from the first paying customer to over 150,000 users across 30+ database engines.
+An AI-powered SQL multitool for generating, explaining, optimizing and validating SQL without losing control. It has grown to over 150,000 users across 30+ database engines.
 
-The applied AI spans RAG, embeddings, vector search and prompt design. I also own the commercial side: Stripe and Lemon Squeezy billing, subscription lifecycle, pricing, SEO and paid acquisition.
+The applied AI spans RAG, embeddings, vector search and prompt design. I have also built the billing and subscription lifecycle with Stripe and Lemon Squeezy, and worked on pricing, SEO and paid acquisition.
 
 ## Chartmaker.io {#chartmaker}
 
@@ -21,7 +21,7 @@ The applied AI spans RAG, embeddings, vector search and prompt design. I also ow
 
 A charting tool that accepts data in any shape, reformats it automatically and produces interactive charts from a plain-language description.
 
-I built the normalization layer that cleans up messy input, the chart generation on top of LLM APIs, and the rendering, customization, image export and embedding. Hosting, deployment and billing are mine too.
+I built the normalization layer that cleans up messy input, the chart generation on top of LLM APIs, and the rendering, customization, image export and embedding. I also set up hosting and deployment and integrated billing.
 
 ## WebsiteFeedback.ai {#websitefeedback}
 
@@ -29,7 +29,7 @@ I built the normalization layer that cleans up messy input, the chart generation
 
 An AI reviewer for landing pages and marketing sites. It analyzes a page for clarity, positioning and UX and returns structured, actionable feedback in seconds.
 
-The product covers page ingestion and content extraction, the evaluation prompting pipeline, the structured output format and the reporting interface — plus subscriptions and billing.
+I built the page ingestion and content extraction, the evaluation prompting pipeline, the structured output format and the reporting interface, as well as subscriptions and billing.
 
 ## ViewDiff.ai {#viewdiff}
 
@@ -37,7 +37,7 @@ The product covers page ingestion and content extraction, the evaluation prompti
 
 A diff viewer for professional writers and editorial workflows. It shows original and AI-modified text side by side, so changes can be reviewed and accepted deliberately instead of trusting a black box.
 
-I built the diffing engine, the generation flow, the review interface and the subscription tiers, and I operate the product in production.
+I built the diffing engine, the generation flow, the review interface and the subscription tiers, and I support the product in production.
 
 ## alpakas.app {#alpakas}
 

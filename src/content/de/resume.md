@@ -11,9 +11,9 @@ description: Vollständiger Lebenslauf von Lasse Tange, Tech Lead und Full-Stack
 
 ### Leitender Entwickler für angewandte KI und Full-Stack
 
-Ein KI-gestütztes SQL-Multitool, um SQL zu erzeugen, zu erklären, zu optimieren und zu prüfen, ohne die Kontrolle abzugeben. Vom ersten zahlenden Kunden auf über 150.000 Nutzerinnen und Nutzer über mehr als 30 Datenbank-Engines gewachsen.
+Ein KI-gestütztes SQL-Multitool, um SQL zu erzeugen, zu erklären, zu optimieren und zu prüfen, ohne die Kontrolle abzugeben. Mittlerweile über 150.000 Nutzerinnen und Nutzer auf mehr als 30 Datenbank-Engines.
 
-Die angewandte KI umfasst RAG, Embeddings, Vektorsuche und Prompt-Design. Auch die kommerzielle Seite gehört dazu: Abrechnung über Stripe und Lemon Squeezy, Abo-Verwaltung, Preisgestaltung, SEO und bezahlte Akquise.
+Die angewandte KI umfasst RAG, Embeddings, Vektorsuche und Prompt-Design. Ich habe außerdem Abrechnung und Abo-Verwaltung mit Stripe und Lemon Squeezy gebaut und an Preisgestaltung, SEO und bezahlter Akquise gearbeitet.
 
 ## Chartmaker.io {#chartmaker}
 
@@ -21,7 +21,7 @@ Die angewandte KI umfasst RAG, Embeddings, Vektorsuche und Prompt-Design. Auch d
 
 Ein Diagrammwerkzeug, das Daten in beliebiger Form annimmt, sie automatisch umformatiert und aus einer Beschreibung in natürlicher Sprache interaktive Diagramme erzeugt.
 
-Ich habe die Normalisierungsschicht gebaut, die unsaubere Eingaben aufräumt, die Diagrammerzeugung auf Basis von LLM-APIs sowie Rendering, Anpassung, Bildexport und Einbettung. Hosting, Deployment und Abrechnung liegen ebenfalls bei mir.
+Ich habe die Normalisierungsschicht gebaut, die unsaubere Eingaben aufräumt, die Diagrammerzeugung auf Basis von LLM-APIs sowie Rendering, Anpassung, Bildexport und Einbettung. Ich habe außerdem Hosting und Deployment eingerichtet und die Abrechnung integriert.
 
 ## WebsiteFeedback.ai {#websitefeedback}
 
@@ -29,7 +29,7 @@ Ich habe die Normalisierungsschicht gebaut, die unsaubere Eingaben aufräumt, di
 
 Ein KI-Reviewer für Landingpages und Marketing-Websites. Er analysiert eine Seite auf Klarheit, Positionierung und UX und liefert in Sekunden strukturiertes, umsetzbares Feedback.
 
-Das Produkt umfasst das Einlesen der Seite und die Inhaltsextraktion, die Prompting-Pipeline für die Bewertung, das strukturierte Ausgabeformat und die Berichtsoberfläche, dazu Abonnements und Abrechnung.
+Ich habe das Einlesen der Seite und die Inhaltsextraktion, die Prompting-Pipeline für die Bewertung, das strukturierte Ausgabeformat und die Berichtsoberfläche gebaut, dazu Abonnements und Abrechnung.
 
 ## ViewDiff.ai {#viewdiff}
 
@@ -37,7 +37,7 @@ Das Produkt umfasst das Einlesen der Seite und die Inhaltsextraktion, die Prompt
 
 Eine Diff-Ansicht für professionelle Autorinnen und redaktionelle Abläufe. Original und KI-bearbeiteter Text stehen nebeneinander, sodass Änderungen bewusst geprüft und übernommen werden, statt einer Blackbox zu vertrauen.
 
-Ich habe die Diff-Engine, den Generierungsablauf, die Prüfoberfläche und die Abo-Stufen gebaut und betreibe das Produkt im Produktivbetrieb.
+Ich habe die Diff-Engine, den Generierungsablauf, die Prüfoberfläche und die Abo-Stufen gebaut und unterstütze das Produkt im Produktivbetrieb.
 
 ## alpakas.app {#alpakas}
 

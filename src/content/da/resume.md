@@ -11,9 +11,9 @@ description: Fuldt CV for Lasse Tange, tech lead og full-stack-udvikler med 15+ 
 
 ### Ledende udvikler for anvendt AI og full-stack
 
-Et AI-drevet SQL-multiværktøj til at generere, forklare, optimere og validere SQL uden at give slip på kontrollen. Produktet er vokset fra den første betalende kunde til over 150.000 brugere på tværs af 30+ databasemotorer.
+Et AI-drevet SQL-multiværktøj til at generere, forklare, optimere og validere SQL uden at give slip på kontrollen. Produktet er vokset til over 150.000 brugere på tværs af 30+ databasemotorer.
 
-Den anvendte AI dækker RAG, embeddings, vektorsøgning og promptdesign. Jeg ejer også den kommercielle side: abonnementer via Stripe og Lemon Squeezy, prissætning, SEO og betalt annoncering.
+Den anvendte AI dækker RAG, embeddings, vektorsøgning og promptdesign. Jeg har også bygget abonnementer og abonnementslivscyklus med Stripe og Lemon Squeezy og arbejdet med prissætning, SEO og betalt annoncering.
 
 ## Chartmaker.io {#chartmaker}
 
@@ -21,7 +21,7 @@ Den anvendte AI dækker RAG, embeddings, vektorsøgning og promptdesign. Jeg eje
 
 Et diagramværktøj, der tager data i vilkårlig form, formaterer dem om automatisk og laver interaktive diagrammer ud fra en beskrivelse i almindeligt sprog.
 
-Jeg byggede normaliseringslaget, der rydder op i rodet input, diagramgenereringen oven på LLM-API'er, samt rendering, tilpasning, billedeksport og indlejring på andre sites. Drift, hosting og betaling er også mit.
+Jeg byggede normaliseringslaget, der rydder op i rodet input, diagramgenereringen oven på LLM-API'er, samt rendering, tilpasning, billedeksport og indlejring på andre sites. Jeg satte også hosting og udrulning op og integrerede betaling.
 
 ## WebsiteFeedback.ai {#websitefeedback}
 
@@ -29,7 +29,7 @@ Jeg byggede normaliseringslaget, der rydder op i rodet input, diagramgenereringe
 
 En AI-anmelder til landingssider og marketingsites. Den analyserer en side for klarhed, positionering og UX og giver struktureret, handlingsanvisende feedback på sekunder.
 
-Produktet dækker indhentning og udtræk af sideindhold, selve evalueringspipelinen med prompts, det strukturerede outputformat og rapportfladen samt abonnementer og betaling.
+Jeg byggede indhentning og udtræk af sideindhold, selve evalueringspipelinen med prompts, det strukturerede outputformat og rapportfladen samt abonnementer og betaling.
 
 ## ViewDiff.ai {#viewdiff}
 
@@ -37,7 +37,7 @@ Produktet dækker indhentning og udtræk af sideindhold, selve evalueringspipeli
 
 En diff-visning til professionelle skribenter og redaktionelle arbejdsgange. Den viser original og AI-ændret tekst side om side, så man kan gennemgå og godkende ændringer bevidst i stedet for at stole blindt på en sort boks.
 
-Jeg byggede diff-motoren, genereringsflowet, gennemgangsfladen og abonnementsniveauerne, og jeg driver produktet i produktion.
+Jeg byggede diff-motoren, genereringsflowet, gennemgangsfladen og abonnementsniveauerne, og jeg står for drift og support i produktion.
 
 ## alpakas.app {#alpakas}
 

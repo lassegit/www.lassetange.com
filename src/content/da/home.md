@@ -10,7 +10,7 @@ Jeg bygger software på tværs af hele stacken – fra de første arkitekturbesl
 
 Jeg har over 15 års erfaring med softwareudvikling, især for startups og offentlige institutioner i København og Berlin. Jeg står for arkitektur, udvikling, vedligeholdelse og optimering af web-, mobil- og desktopapps – fra frontend-UX og dataabstraktioner til backend-datamodellering, typesikre API'er, integrationer med tredjeparter og udrulning.
 
-Siden 2023 har jeg bygget og lanceret fire AI-produkter, og jeg arbejder indgående med anvendt AI – RAG, agentiske workflows og promptdesign. Jeg hjælper virksomheder med at integrere AI i eksisterende processer og bygge nye AI-drevne tjenester. Jeg har bygget [SQLAI.ai](/da/resume#sqlai), som har over 150.000 brugere.
+Siden 2023 har jeg arbejdet med startups om at bygge og lancere fire AI-produkter, og jeg arbejder indgående med anvendt AI – RAG, agentiske workflows og promptdesign. Jeg hjælper virksomheder med at integrere AI i eksisterende processer og bygge nye AI-drevne tjenester. Jeg har været med til at bygge [SQLAI.ai](/da/resume#sqlai), som har over 150.000 brugere.
 
 Jeg sørger for test, CI/CD, miljøer og logning, så applikationerne kører stabilt. Jeg leder også udviklingsteams, hjælper med tekniske beslutninger, gennemgår kode og er mentor for udviklere.
 
