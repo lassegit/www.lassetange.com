@@ -27,7 +27,7 @@
  * records the reference; `src/lib/content.ts` knows which documents exist and fills it in.
  *
  * Parsing happens on the server only (at build time for prerendered routes), and every document is
- * memoised by source text, so a file is parsed once per process however many pages import it.
+ * memoized by source text, so a file is parsed once per process however many pages import it.
  */
 
 import { marked } from 'marked';

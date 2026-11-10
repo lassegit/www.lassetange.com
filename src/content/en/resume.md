@@ -11,7 +11,7 @@ description: Full CV for Lasse Tange — tech lead and full-stack developer with
 
 ### AI-powered SQL multitool
 
-An AI-powered SQL multitool for generating, explaining, optimising and validating SQL without losing control. It has grown from the first paying customer to over 150,000 users across 30+ database engines.
+An AI-powered SQL multitool for generating, explaining, optimizing and validating SQL without losing control. It has grown from the first paying customer to over 150,000 users across 30+ database engines.
 
 The applied AI spans RAG, embeddings, vector search and prompt design. I also own the commercial side: Stripe and Lemon Squeezy billing, subscription lifecycle, pricing, SEO and paid acquisition.
 
@@ -21,13 +21,13 @@ The applied AI spans RAG, embeddings, vector search and prompt design. I also ow
 
 A charting tool that accepts data in any shape, reformats it automatically and produces interactive charts from a plain-language description.
 
-I built the normalisation layer that cleans up messy input, the chart generation on top of LLM APIs, and the rendering, customisation, image export and embedding. Hosting, deployment and billing are mine too.
+I built the normalization layer that cleans up messy input, the chart generation on top of LLM APIs, and the rendering, customization, image export and embedding. Hosting, deployment and billing are mine too.
 
 ## WebsiteFeedback.ai {#websitefeedback}
 
 ### AI feedback on landing pages
 
-An AI reviewer for landing pages and marketing sites. It analyses a page for clarity, positioning and UX and returns structured, actionable feedback in seconds.
+An AI reviewer for landing pages and marketing sites. It analyzes a page for clarity, positioning and UX and returns structured, actionable feedback in seconds.
 
 The product covers page ingestion and content extraction, the evaluation prompting pipeline, the structured output format and the reporting interface — plus subscriptions and billing.
 
@@ -131,7 +131,7 @@ The corporate web platform for a Danish industrial group: multisite and multilin
 
 ### Lead developer
 
-Sole developer on nmknafgoerelser.dk, the board's public database of appeal decisions. Structured search over a large corpus of decisions with Elasticsearch, a Backbone front end against a Flask backend, and containerised deployment with Docker.
+Sole developer on nmknafgoerelser.dk, the board's public database of appeal decisions. Structured search over a large corpus of decisions with Elasticsearch, a Backbone front end against a Flask backend, and containerized deployment with Docker.
 
 ## Fredninger.dk {#fredninger}
 
@@ -139,7 +139,7 @@ Sole developer on nmknafgoerelser.dk, the board's public database of appeal deci
 
 Principal front-end developer on an interactive public map platform for Denmark's protected nature areas.
 
-I built the map and geodata integration on CartoDB and SQL, geospatial search with typeahead, show-my-location and route display, the map experience for mobile and touch, embeddable map widgets for third-party sites, and print output and sharing. It was the single largest engagement of my Copenhagen years — from theme skeleton through launch, optimisation and cross-browser hardening.
+I built the map and geodata integration on CartoDB and SQL, geospatial search with typeahead, show-my-location and route display, the map experience for mobile and touch, embeddable map widgets for third-party sites, and print output and sharing. It was the single largest engagement of my Copenhagen years — from theme skeleton through launch, optimization and cross-browser hardening.
 
 ## Bolighed.dk {#bolighed}
 
@@ -151,7 +151,7 @@ Front-end and feature work for a Danish property marketplace: the BoligCV tenant
 
 ### Freelance full-stack developer
 
-A Podio API integration and CartoDB mapping layer for an international NGO federation — data import and synchronisation, a member directory across sub-sites, test deployments and technical documentation.
+A Podio API integration and CartoDB mapping layer for an international NGO federation — data import and synchronization, a member directory across sub-sites, test deployments and technical documentation.
 
 ## Akademikernes A-kasse {#akademikerne}
 
@@ -181,7 +181,7 @@ A Danish community platform for group exercise. Team and group system with role-
 
 ### Freelance front-end developer
 
-Front-end and integration work on the route platform for the Greater Copenhagen cycle superhighway network: ibikecph route maps and service-station data wired into the Drupal backend, route description display, and optimisation for mobile and tablet.
+Front-end and integration work on the route platform for the Greater Copenhagen cycle superhighway network: ibikecph route maps and service-station data wired into the Drupal backend, route description display, and optimization for mobile and tablet.
 
 ## Additional clients {#headnet-other}
 

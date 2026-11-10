@@ -1,5 +1,5 @@
 /**
- * The whole of the site's internationalisation: three locales, one dictionary of interface labels
+ * The whole of the site's internationalization: three locales, one dictionary of interface labels
  * each, and the path helpers that map a request URL onto a locale and back.
  *
  * Substantive text — everything a reader actually reads — lives in `src/content/<locale>/*.md`.
@@ -20,13 +20,13 @@ export const LOCALE_NAMES: Record<Locale, string> = { da: 'Dansk', en: 'English'
 
 /**
  * Flags for the language selector, and only there. A flag names a country rather than a language —
- * the Union Jack stands in for English by convention, not by right — so they sit beside the endonym
+ * the US flag stands in for English by convention, not by right — so they sit beside the endonym
  * as decoration, hidden from screen readers, and never carry the label on their own.
  */
-export const LOCALE_FLAGS: Record<Locale, string> = { da: '🇩🇰', en: '🇬🇧', de: '🇩🇪' };
+export const LOCALE_FLAGS: Record<Locale, string> = { da: '🇩🇰', en: '🇺🇸', de: '🇩🇪' };
 
 /** BCP 47 tags, for `<html lang>`, `hreflang` and `Intl`. */
-export const LOCALE_TAGS: Record<Locale, string> = { da: 'da-DK', en: 'en-GB', de: 'de-DE' };
+export const LOCALE_TAGS: Record<Locale, string> = { da: 'da-DK', en: 'en-US', de: 'de-DE' };
 
 export function isLocale(value: string): value is Locale {
   return (LOCALES as readonly string[]).includes(value);

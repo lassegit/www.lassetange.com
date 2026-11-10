@@ -12,7 +12,7 @@ const COLUMN_TITLE = 'mb-2 text-xs font-semibold text-ink';
 
 /**
  * A link in a column. The page being read is set in ink rather than muted — the same thing the tab
- * strip says with its rule — and the colour lives on the two states rather than on the shared class,
+ * strip says with its rule — and the color lives on the two states rather than on the shared class,
  * so neither has to out-rank the other in the stylesheet.
  */
 const COLUMN_LINK = 'inline-flex items-center gap-1.5 no-underline hover:text-accent hover:underline';

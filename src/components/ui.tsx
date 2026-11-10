@@ -44,7 +44,7 @@ export const LEAD = 'text-lg/relaxed text-muted';
 
 /**
  * The portrait, warmed a touch so it belongs on `canvas` rather than on white. The photograph is lit
- * neutrally and its grey backdrop is cooler than the paper palette, so a little desaturation and a
+ * neutrally and its gray backdrop is cooler than the paper palette, so a little desaturation and a
  * trace of sepia meet the page halfway without turning the picture into a duotone. Printed copies
  * get the photograph as shot.
  */

@@ -21,7 +21,7 @@ export interface LayoutProps {
   description?: string;
   /** Set on the 404 and 500 pages, which should not enter an index. */
   noIndex?: boolean;
-  /** Structured data for this page, serialised into a JSON-LD script. */
+  /** Structured data for this page, serialized into a JSON-LD script. */
   jsonLd?: object;
   children: ReactNode;
 }

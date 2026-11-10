@@ -28,7 +28,7 @@ Here are some of the technologies I work with.
 - Go: Gin, Echo
 - REST, GraphQL and webhooks
 - PostgreSQL, MySQL, Redis and Elasticsearch
-- Data modelling and ORMs (Prisma, Drizzle)
+- Data modeling and ORMs (Prisma, Drizzle)
 - Payments (Stripe, Lemon Squeezy)
 
 ## Delivery and operations

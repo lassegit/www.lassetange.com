@@ -23,7 +23,7 @@ import { useEffect, useRef, type ReactNode } from 'react';
  * panel back to it, so a tap on the burger closes the menu once rather than closing and reopening it. A
  * keyboard never raises `pointerdown`, so a menu opened with the keyboard is closed the way it was opened.
  *
- * Everything visible is passed in and rendered on the server; these two behaviours are all that ships.
+ * Everything visible is passed in and rendered on the server; these two behaviors are all that ships.
  */
 export function MobileMenu({ className, children }: { className?: string; children: ReactNode }) {
   const menu = useRef<HTMLDetailsElement>(null);

@@ -15,10 +15,10 @@ import { CompactEntry, LINK, PORTRAIT, Prose, Section, TechList, placeLabel } fr
  *
  * The list keeps the order the data is written in: products first because their end dates are the
  * most recent, then client work newest first. That is chronological without turning the page into
- * two labelled catalogues.
+ * two labeled catalogs.
  *
  * This page is designed to leave the browser as a PDF. `print:` variants drop the header, tabs,
- * footer and the print bar itself, the theme's colour variables swap to black on white, and entries
+ * footer and the print bar itself, the theme's color variables swap to black on white, and entries
  * carry `break-inside-avoid` — so what comes out of “Save as PDF” is a document, not a screenshot of
  * a website.
  */

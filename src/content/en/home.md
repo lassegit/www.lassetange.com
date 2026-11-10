@@ -8,7 +8,7 @@ I build software across the stack, from the first architectural decisions to shi
 
 ## About me {#about}
 
-I have 15+ years of experience building software, much of it with startups and public institutions in Copenhagen and Berlin. I architect, build, maintain and optimise web, mobile and desktop apps — from frontend UX and data abstractions to backend data modelling, type-safe APIs, third-party integrations and deployment.
+I have 15+ years of experience building software, much of it with startups and public institutions in Copenhagen and Berlin. I architect, build, maintain and optimize web, mobile and desktop apps — from frontend UX and data abstractions to backend data modeling, type-safe APIs, third-party integrations and deployment.
 
 Since 2023 I have built and launched four AI products, and I work extensively with applied AI — RAG, agentic workflows and prompt design. I help companies integrate AI into existing processes and build new AI-powered services. I built [SQLAI.ai](/resume#sqlai), which has more than 150,000 users.
 

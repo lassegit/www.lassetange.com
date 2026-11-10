@@ -5,7 +5,7 @@ import { MobileMenu } from './mobile-menu';
 import { Shell } from './ui';
 
 /** A tab in the desktop strip. Accent throughout, so the strip reads as links rather than as labels,
-    and a rule heavy enough to be seen at a glance next to its neighbours. The weight sits on the two
+    and a rule heavy enough to be seen at a glance next to its neighbors. The weight sits on the two
     states rather than on `TAB`, so the current tab is marked twice — by its rule and by its weight —
     without one class having to beat another in the stylesheet. */
 const TAB = 'block border-b-4 px-2.5 pt-2 pb-2.5 text-[0.9375rem] whitespace-nowrap no-underline';

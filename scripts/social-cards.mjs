@@ -55,8 +55,8 @@ function tagline(locale) {
 }
 
 /**
- * The photo as a square PNG data URI, framed like the round avatar on the page: centred, and biased
- * towards the top of the frame so the crop falls across the chest rather than the chin.
+ * The photo as a square PNG data URI, framed like the round avatar on the page: centered, and biased
+ * toward the top of the frame so the crop falls across the chest rather than the chin.
  *
  * Tighter than the page's crop, though. The avatar sits beside an `<h1>` that names the subject, so it
  * can afford headroom; a card has to survive being scaled down to a thumbnail in a feed, where a face
@@ -139,7 +139,7 @@ function card({ name, tagline, url, image }) {
 
   <rect width="${WIDTH}" height="${HEIGHT}" fill="${CANVAS}" />
 
-  <!-- The photo, over the same soft grey the page shows behind it. -->
+  <!-- The photo, over the same soft gray the page shows behind it. -->
   <circle cx="${circle.cx}" cy="${circle.cy}" r="${circle.r}" fill="${SURFACE}" />
   <image xlink:href="${image}" x="${circle.cx - circle.r}" y="${circle.cy - circle.r}"
          width="${circle.r * 2}" height="${circle.r * 2}" clip-path="url(#portrait)"

@@ -5,7 +5,7 @@
  * file only names the values those utilities resolve to.
  *
  * A CV should read like a document, not like an app, so the scale is deliberately small: one accent
- * colour, two greys, a measure capped near 70 characters (`max-w-shell`), and a body size of 17px.
+ * color, two grays, a measure capped near 70 characters (`max-w-shell`), and a body size of 17px.
  * ----------------------------------------------------------------------------------------------- */
 
 @theme {
@@ -31,7 +31,7 @@
   --color-canvas: #faf9f6;
   --color-surface: #f2f0ea;
   /* Form fields: a translucent veil that reads as lighter than `surface` against the canvas in both
-     palettes, rather than a second grey to keep in sync. */
+     palettes, rather than a second gray to keep in sync. */
   --color-field: rgb(255 255 255 / 0.6);
   --color-ink: #1b1b1b;
   --color-muted: #5f5d57;
