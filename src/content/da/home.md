@@ -1,6 +1,6 @@
 ---
 title: Lasse Tange
-tagline: AI-konsulent, full-stack-udvikler & tech lead
+tagline: AI-konsulent, senior full-stack-udvikler & tech lead
 description: AI-konsulent og senior full-stack-udvikler i København. Over 15 års erfaring med web-, mobil- og desktopapps og særligt fokus på anvendt AI.
 ---
 

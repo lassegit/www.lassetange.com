@@ -1,6 +1,6 @@
 ---
 title: Lasse Tange
-tagline: KI-Berater, Full-Stack-Entwickler & Tech Lead
+tagline: KI-Berater, Senior-Full-Stack-Entwickler & Tech Lead
 description: KI-Berater und Senior-Full-Stack-Entwickler in Kopenhagen. Über 15 Jahre Erfahrung mit Web-, Mobile- und Desktop-Apps, mit Fokus auf angewandte KI.
 ---
 
