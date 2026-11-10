@@ -7,6 +7,10 @@ import { Layout } from './layout';
 import { PrintButton } from './print-button';
 import { CompactEntry, LINK, PORTRAIT, Prose, Section, TechList, placeLabel } from './ui';
 
+/** Products the CV names without a link — the heading is set as plain text. They stay in `PRODUCTS`
+ *  for the front page's `sameAs` metadata. */
+const UNLINKED_PRODUCTS = new Set(['chartmaker', 'websitefeedback', 'viewdiff']);
+
 /**
  * The whole CV on one page: who, then one continuous work history, then the tools, open source,
  * languages and education. Products and client work are the same list — there is no separate product
@@ -101,7 +105,7 @@ export default function Resume({ url }: PageProps) {
                   key={product.id}
                   id={product.id}
                   title={entry.title}
-                  href={product.url}
+                  href={UNLINKED_PRODUCTS.has(product.id) ? undefined : product.url}
                   printUrl
                   period={formatPeriod(product.start, product.end, locale)}
                   role={[entry.subtitle ?? [], product.profitable ? t.profitable : []].flat().join(' · ')}

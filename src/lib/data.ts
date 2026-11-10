@@ -108,8 +108,7 @@ export const PRODUCTS: readonly Product[] = [
     url: 'https://www.sqlai.ai',
     start: '2022',
     end: '2026-09',
-    profitable: true,
-    stack: ['TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'LLM APIs', 'RAG', 'Payments', 'Cloudflare', 'IaC'],
+    stack: ['Applied AI', 'RAG', 'TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'Payments', 'Cloudflare', 'IaC'],
   },
   {
     id: 'chartmaker',
@@ -117,7 +116,7 @@ export const PRODUCTS: readonly Product[] = [
     url: 'https://www.chartmaker.io',
     start: '2024',
     end: '2026-05',
-    stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Payments', 'Cloudflare', 'IaC'],
+    stack: ['Applied AI', 'TypeScript', 'React', 'Node.js', 'Payments', 'Cloudflare', 'IaC'],
   },
   {
     id: 'websitefeedback',
@@ -125,7 +124,7 @@ export const PRODUCTS: readonly Product[] = [
     url: 'https://www.websitefeedback.ai',
     start: '2024',
     end: '2026-05',
-    stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Payments', 'Cloudflare', 'IaC'],
+    stack: ['Applied AI', 'TypeScript', 'React', 'Node.js', 'Payments', 'Cloudflare', 'IaC'],
   },
   {
     id: 'viewdiff',
@@ -133,7 +132,7 @@ export const PRODUCTS: readonly Product[] = [
     url: 'https://www.viewdiff.ai',
     start: '2025',
     end: '2026-05',
-    stack: ['TypeScript', 'React', 'Node.js', 'LLM APIs', 'Payments', 'Cloudflare', 'IaC'],
+    stack: ['Applied AI', 'TypeScript', 'React', 'Node.js', 'Payments', 'Cloudflare', 'IaC'],
   },
 ];
 

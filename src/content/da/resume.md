@@ -9,7 +9,7 @@ description: Fuldt CV for Lasse Tange, tech lead og full-stack-udvikler med 15+ 
 
 ## SQLAI.ai {#sqlai}
 
-### AI-drevet SQL-multiværktøj
+### Ledende udvikler for anvendt AI og full-stack
 
 Et AI-drevet SQL-multiværktøj til at generere, forklare, optimere og validere SQL uden at give slip på kontrollen. Produktet er vokset fra den første betalende kunde til over 150.000 brugere på tværs af 30+ databasemotorer.
 
@@ -17,7 +17,7 @@ Den anvendte AI dækker RAG, embeddings, vektorsøgning og promptdesign. Jeg eje
 
 ## Chartmaker.io {#chartmaker}
 
-### AI-drevet diagramværktøj
+### Ledende udvikler for anvendt AI og full-stack
 
 Et diagramværktøj, der tager data i vilkårlig form, formaterer dem om automatisk og laver interaktive diagrammer ud fra en beskrivelse i almindeligt sprog.
 
@@ -25,7 +25,7 @@ Jeg byggede normaliseringslaget, der rydder op i rodet input, diagramgenereringe
 
 ## WebsiteFeedback.ai {#websitefeedback}
 
-### AI-feedback på landingssider
+### Ledende udvikler for anvendt AI og full-stack
 
 En AI-anmelder til landingssider og marketingsites. Den analyserer en side for klarhed, positionering og UX og giver struktureret, handlingsanvisende feedback på sekunder.
 
@@ -33,7 +33,7 @@ Produktet dækker indhentning og udtræk af sideindhold, selve evalueringspipeli
 
 ## ViewDiff.ai {#viewdiff}
 
-### AI-assisteret diff-visning for skribenter
+### Ledende udvikler for anvendt AI og full-stack
 
 En diff-visning til professionelle skribenter og redaktionelle arbejdsgange. Den viser original og AI-ændret tekst side om side, så man kan gennemgå og godkende ændringer bevidst i stedet for at stole blindt på en sort boks.
 

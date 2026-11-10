@@ -9,7 +9,7 @@ description: Full CV for Lasse Tange — tech lead and full-stack developer with
 
 ## SQLAI.ai {#sqlai}
 
-### AI-powered SQL multitool
+### Principal Applied AI & Full-Stack Developer
 
 An AI-powered SQL multitool for generating, explaining, optimizing and validating SQL without losing control. It has grown from the first paying customer to over 150,000 users across 30+ database engines.
 
@@ -17,7 +17,7 @@ The applied AI spans RAG, embeddings, vector search and prompt design. I also ow
 
 ## Chartmaker.io {#chartmaker}
 
-### AI charting tool
+### Principal Applied AI & Full-Stack Developer
 
 A charting tool that accepts data in any shape, reformats it automatically and produces interactive charts from a plain-language description.
 
@@ -25,7 +25,7 @@ I built the normalization layer that cleans up messy input, the chart generation
 
 ## WebsiteFeedback.ai {#websitefeedback}
 
-### AI feedback on landing pages
+### Principal Applied AI & Full-Stack Developer
 
 An AI reviewer for landing pages and marketing sites. It analyzes a page for clarity, positioning and UX and returns structured, actionable feedback in seconds.
 
@@ -33,7 +33,7 @@ The product covers page ingestion and content extraction, the evaluation prompti
 
 ## ViewDiff.ai {#viewdiff}
 
-### AI-assisted diff viewer for writers
+### Principal Applied AI & Full-Stack Developer
 
 A diff viewer for professional writers and editorial workflows. It shows original and AI-modified text side by side, so changes can be reviewed and accepted deliberately instead of trusting a black box.
 
