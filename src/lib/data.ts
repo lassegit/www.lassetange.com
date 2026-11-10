@@ -119,19 +119,19 @@ export const PRODUCTS: readonly Product[] = [
     stack: ['Applied AI', 'TypeScript', 'React', 'Node.js', 'Payments', 'Cloudflare', 'IaC'],
   },
   {
-    id: 'websitefeedback',
-    name: 'WebsiteFeedback.ai',
-    url: 'https://www.websitefeedback.ai',
-    start: '2024',
-    end: '2026-05',
-    stack: ['Applied AI', 'TypeScript', 'React', 'Node.js', 'Payments', 'Cloudflare', 'IaC'],
-  },
-  {
     id: 'viewdiff',
     name: 'ViewDiff.ai',
     url: 'https://www.viewdiff.ai',
     start: '2025',
     end: '2026-05',
+    stack: ['Applied AI', 'TypeScript', 'React', 'Angular', 'Node.js', 'Payments', 'Cloudflare', 'IaC'],
+  },
+  {
+    id: 'websitefeedback',
+    name: 'WebsiteFeedback.ai',
+    url: 'https://www.websitefeedback.ai',
+    start: '2024',
+    end: '2025-10',
     stack: ['Applied AI', 'TypeScript', 'React', 'Node.js', 'Payments', 'Cloudflare', 'IaC'],
   },
 ];
