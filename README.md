@@ -116,3 +116,12 @@ file: `rshono build --deploy vercel`, or `RSHONO_DEPLOY=vercel` in CI. `dev` alw
 server, whatever the target — it is a property of the build, not of developing.
 
 Every deployment target, and what each one needs: <https://www.rshono.com/docs/deployment>
+
+## Recruiter links
+
+- https://portal.emagine.org/consultant/dashboard
+- https://brainhunt.epico.dk/profile
+- https://darize.com/
+- https://changegroup.dk/karriere-som-freelancekonsulent/
+- https://rightpeoplegroup.com/open-assignments
+- https://mjolner.dk/karriere/freelance/
