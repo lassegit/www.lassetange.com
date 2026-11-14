@@ -108,7 +108,22 @@ export const PRODUCTS: readonly Product[] = [
     url: 'https://www.sqlai.ai',
     start: '2022',
     end: '2026-09',
-    stack: ['Applied AI', 'RAG', 'TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'Payments', 'Cloudflare', 'IaC'],
+    stack: [
+      'Applied AI',
+      'RAG',
+      'LangGraph',
+      'MCP',
+      'Python',
+      'FastAPI',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Node.js',
+      'PostgreSQL',
+      'Payments',
+      'Cloudflare',
+      'IaC',
+    ],
   },
   {
     id: 'chartmaker',
@@ -132,7 +147,7 @@ export const PRODUCTS: readonly Product[] = [
     url: 'https://www.websitefeedback.ai',
     start: '2024',
     end: '2025-10',
-    stack: ['Applied AI', 'TypeScript', 'React', 'Node.js', 'Payments', 'Cloudflare', 'IaC'],
+    stack: ['Applied AI', 'Azure', 'OpenAI', 'TypeScript', 'React', 'Node.js', 'Payments', 'Cloudflare', 'IaC'],
   },
 ];
 

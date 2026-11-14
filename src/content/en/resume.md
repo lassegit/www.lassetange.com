@@ -13,7 +13,9 @@ description: Full CV for Lasse Tange — tech lead and full-stack developer with
 
 An AI-powered SQL multitool for generating, explaining, optimizing and validating SQL without losing control. It has grown to over 150,000 users across 30+ database engines.
 
-The applied AI spans RAG, embeddings, vector search and prompt design. I have also built the billing and subscription lifecycle with Stripe and Lemon Squeezy, and worked on pricing, SEO and paid acquisition.
+The applied AI spans RAG, embeddings, vector search and prompt design, with LangChain and LangGraph orchestrating the generation and agent flows. A pytest and DeepEval suite scores generated SQL against a growing set of prompts, so a change to a prompt or a model ships on measurements rather than a spot check. The schema and query tooling is also exposed over the Model Context Protocol, so assistants can work against a live database through the product.
+
+The first version ran on a Python and FastAPI backend. As the product grew I moved the service layer into TypeScript and Next.js so the whole thing shipped from one codebase, and kept Python for the evaluation tooling.
 
 ## Chartmaker.io {#chartmaker}
 
@@ -29,7 +31,7 @@ I built the normalization layer that cleans up messy input, the chart generation
 
 An AI reviewer for landing pages and marketing sites. It analyzes a page for clarity, positioning and UX and returns structured, actionable feedback in seconds.
 
-I built the page ingestion and content extraction, the evaluation prompting pipeline, the structured output format and the reporting interface, as well as subscriptions and billing.
+I built the page ingestion and content extraction, the evaluation prompting pipeline, the structured output format and the reporting interface, as well as subscriptions and billing. It runs on Azure, with ingestion and evaluation as containerised services and the model calls going through Azure OpenAI.
 
 ## ViewDiff.ai {#viewdiff}
 

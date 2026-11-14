@@ -11,6 +11,8 @@ Her er nogle af de teknologier, jeg arbejder med.
 - LangChain, LangGraph og LlamaIndex (Python)
 - RAG, embeddings og vektorsøgning
 - Promptdesign, agentiske workflows og evaluering
+- Evaluering med DeepEval og regressionstests af prompts
+- Model Context Protocol (MCP)-servere og -værktøjer
 - AI-assisteret kodning: Claude Code, Codex CLI
 
 ## Web, mobil og desktop
@@ -33,7 +35,8 @@ Her er nogle af de teknologier, jeg arbejder med.
 
 ## Levering og drift
 
-- AWS, Cloudflare og Vercel
+- Azure, AWS, Cloudflare og Vercel
+- Containeriserede udrulninger og Azure Container Apps
 - Docker, Linux og Nginx
 - Git, CI/CD og GitHub Actions
 - Infrastruktur som kode og miljøer

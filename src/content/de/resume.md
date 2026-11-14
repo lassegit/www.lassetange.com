@@ -13,7 +13,9 @@ description: Vollständiger Lebenslauf von Lasse Tange, Tech Lead und Full-Stack
 
 Ein KI-gestütztes SQL-Multitool, um SQL zu erzeugen, zu erklären, zu optimieren und zu prüfen, ohne die Kontrolle abzugeben. Mittlerweile über 150.000 Nutzerinnen und Nutzer auf mehr als 30 Datenbank-Engines.
 
-Die angewandte KI umfasst RAG, Embeddings, Vektorsuche und Prompt-Design. Ich habe außerdem Abrechnung und Abo-Verwaltung mit Stripe und Lemon Squeezy gebaut und an Preisgestaltung, SEO und bezahlter Akquise gearbeitet.
+Die angewandte KI umfasst RAG, Embeddings, Vektorsuche und Prompt-Design; LangChain und LangGraph orchestrieren Generierung und Agent-Flows. Eine Testsuite aus pytest und DeepEval bewertet generiertes SQL gegen einen wachsenden Satz von Prompts, sodass Änderungen an Prompt oder Modell auf Basis von Messwerten ausgeliefert werden statt auf Basis von Stichproben. Die Schema- und Query-Werkzeuge sind außerdem über das Model Context Protocol verfügbar, sodass Assistenten über das Produkt gegen eine laufende Datenbank arbeiten können.
+
+Die erste Version lief auf Python und FastAPI. Als das Produkt wuchs, habe ich die Service-Schicht auf TypeScript und Next.js umgestellt, sodass alles aus einer Codebasis ausgeliefert wird, und Python für die Evaluierungs-Tools behalten.
 
 ## Chartmaker.io {#chartmaker}
 
@@ -29,7 +31,7 @@ Ich habe die Normalisierungsschicht gebaut, die unsaubere Eingaben aufräumt, di
 
 Ein KI-Reviewer für Landingpages und Marketing-Websites. Er analysiert eine Seite auf Klarheit, Positionierung und UX und liefert in Sekunden strukturiertes, umsetzbares Feedback.
 
-Ich habe das Einlesen der Seite und die Inhaltsextraktion, die Prompting-Pipeline für die Bewertung, das strukturierte Ausgabeformat und die Berichtsoberfläche gebaut, dazu Abonnements und Abrechnung.
+Ich habe das Einlesen der Seite und die Inhaltsextraktion, die Prompting-Pipeline für die Bewertung, das strukturierte Ausgabeformat und die Berichtsoberfläche gebaut, dazu Abonnements und Abrechnung. Es läuft auf Azure: Seitenabruf und Bewertung als containerisierte Services, die Modellaufrufe über Azure OpenAI.
 
 ## ViewDiff.ai {#viewdiff}
 
